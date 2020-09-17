@@ -1,0 +1,93 @@
+html{
+    background: #f7f7f7;
+}
+
+.wrapper{
+    max-width: 960px;
+    margin: auto;
+    padding: 20px;
+}
+
+.card{
+    background: #fff;
+    -webkit-box-shadow: 0 10px 20px rgba(0, 0, 0, .19), 0 6px 6px rgba(0, 0, 0, .23);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, .19), 0 6px 6px rgba(0, 0, 0, .23);
+    padding: 10px 20px;
+    margin: 10px;
+}
+
+#logo {
+	width: 230px;
+	float: right;
+	margin: 10px;
+}
+
+.border-side{
+    border-left: 20px solid #947900;
+}
+
+.card header{
+    border-bottom: 1px solid rgba(26, 26, 26, 0.54);
+    color: #444;
+}
+
+#title{
+    font-size: 17pt;
+}
+
+section{
+    margin: 40px auto;
+    font-family: "Helvetica Neue", "Helvetica", sans-serif;
+}
+
+header{
+    text-align: center;
+    font-family: 'Raleway', sans-serif;
+}
+
+header h8{
+    font-family: "Helvetica Neue", "Helvetica", sans-serif;
+    font-size: 12pt;
+}
+
+.important{
+    padding: 5px 8px;
+    list-style-type: none;
+    width: fit-content;
+}
+
+footer{
+    font-family: Arial, Helvetica, sans-serif;
+	font-size: 8pt;
+}
+
+.content{
+    width: 100%;
+}
+
+img {
+    width: 100%;
+}
+
+.divider{
+    width: 100%;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.43);
+    height: 1px;
+    margin: 10px auto;
+}
+
+.divider.big-gap{
+    margin: 50px auto;
+}
+
+.green_text {
+  color: #25CE13;
+}
+
+.lightgray_text {
+  color: #95989A;
+}
+
+.darker_gray_text {
+  color: #444444;
+}
