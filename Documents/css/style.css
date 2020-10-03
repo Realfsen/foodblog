@@ -1,5 +1,5 @@
 html {
-    background: #f7f7f7;
+    background: #E3DCD1;
 }
 
 .wrapper {
@@ -14,21 +14,23 @@ html {
     box-shadow: 0 10px 20px rgba(0, 0, 0, .19), 0 6px 6px rgba(0, 0, 0, .23);
     padding: 10px 20px;
     margin: 10px;
+    line-height: 1.5;
+    color: #4D3142;
 }
 
-#logo {
+/* #logo {
     width: 230px;
     float: right;
     margin: 10px;
-}
+} */
 
 .border-side {
-    border-left: 20px solid #947900;
+    border-left: 20px solid #FCE6DE;
 }
 
 .card header {
     border-bottom: 1px solid rgba(26, 26, 26, 0.54);
-    color: #444;
+    color: #4D3142;
 }
 
 #title {
@@ -71,7 +73,7 @@ img {
 
 dt {
     font-size: 14pt;
-    color: #444444;
+    color: #4D3142;
 }
 
 dd {
@@ -93,10 +95,22 @@ li {
     margin: 50px auto;
 }
 
-.lightgray_text {
-    color: #95989A;
+table, th, td {
+    width: 100%;
+    border: 1px solid black;
+    text-align: center;
 }
 
-.darker_gray_text {
-    color: #444444;
+th {
+    background-color: #FCE6DE;
+}
+
+#fileList {
+    width: 25%;
+    float: right;
+    margin: 1rem 0;
+}
+
+#textLeft {
+    float: left
 }
