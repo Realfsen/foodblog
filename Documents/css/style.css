@@ -114,3 +114,19 @@ th {
 #textLeft {
     float: left
 }
+table{
+    width: 100%;
+    table-layout: fixed;
+}
+
+th.tblName{
+    width: 15%;
+}
+
+th.tblResp{
+    width: 15%;
+}
+
+th.tblDue{
+    width: 15%;
+}
