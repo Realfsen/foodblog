@@ -149,7 +149,6 @@
 							Logo: Logoen er plassert i øvre venstre hjørne, og består av to
 							b-er for Bestemor Borghild som gir et rent og moderne uttrykk.
 						</li>
-						<img src="img/Navbar_og_footer.png">
 					</ul>
 				</section>
 
@@ -166,8 +165,8 @@
 							utvalgte. Denne siden skal fungere som en introduksjon, og har
 							derfor bare linker videre, i tillegg til store bilder og en liten
 							tekst som en introduksjon til Borghild. Eksempel på utforming:
-							<img />
-							<!-- TODO -->
+							<br />
+							<img class="mockup_img" src="img/Front_page.png" />
 						</dd>
 						<dt>Oppskrifter - recipe_list.html</dt>
 						<dd>
@@ -179,8 +178,8 @@
 							>
 							som en kan trykke på for å gå inn på hver enkelt oppskrift som en
 							side med mer utfyllende info.
-							<img />
-							<!-- TODO -->
+							<br />
+							<img class="mockup_img" src="img/Oppskrifter.png" />
 						</dd>
 						<dt>Spesifikk oppskrift - recipe.html</dt>
 						<dd>
@@ -193,8 +192,8 @@
 							forvirre våre lesere. I den andre kolonnen til høyre vil det være
 							en detaljert fremgangsmåte som forteller brukeren trinn for trinn
 							hvordan de skal gå frem.
-							<img />
-							<!-- TODO -->
+							<br />
+							<img class="mockup_img" src="img/Spesifikk oppskrift.png" />
 						</dd>
 						<dt>Baking 101 - baking101.html</dt>
 						<dd>
@@ -205,8 +204,8 @@
 							teknikken/ingrediensen på kortet og en
 							vanskelighetsgrad-indikator. Kortet vil linke til en side som
 							utdyper hvordan teknikken fungerer eller ingrediensen brukes.
-							<img />
-							<!-- TODO -->
+							<br />
+							<img class="mockup_img" src="img/Baketips.png" />
 						</dd>
 						<dt>Baketeknikk - technique.html</dt>
 						<dd>
@@ -220,8 +219,8 @@
 							venstre siden, med en tilhørende video eller bilde på høyre side
 							av teksten avhengig av teknikken og om det er nødvendig med video
 							for å forklare til brukeren.
-							<img />
-							<!-- TODO -->
+							<br />
+							<img class="mockup_img" src="img/Baketeknikk.png" />
 						</dd>
 						<dt>Kontakt - contact.html</dt>
 						<dd>
@@ -245,6 +244,8 @@
 							“tittel”, sitt navn, eposten sin så borghild kan svare brukeren,
 							og deretter et større felt som kan ta inn selv spørsmålet eller
 							oppskriften (“Din melding”).
+							<br />
+							<img class="mockup_img" src="img/Kontakt oss.png" />
 						</dd>
 					</dl>
 				</section>
@@ -306,10 +307,8 @@
 					<header>
 						<h2>Plan</h2>
 					</header>
-					<p id="textLeft">
-						Til høyre kan en se filstrukturen i prosjektet:
-					</p>
-					<img id="fileList" src="img/file_list.png">
+					<p id="textLeft">Til høyre kan en se filstrukturen i prosjektet:</p>
+					<img id="fileList" src="img/file_list.png" />
 					<table>
 						<tr>
 							<th class="tblName">Filnavn</th>
@@ -325,25 +324,36 @@
 						</tr>
 						<tr>
 							<td>recipe.html</td>
-							<td>HTML-mal for en enkel oppskrift, med informasjon hentet inn fra JSON-fil.</td>
+							<td>
+								HTML-mal for en enkel oppskrift, med informasjon hentet inn fra
+								JSON-fil.
+							</td>
 							<td>Jeeviga</td>
 							<td>18.10</td>
 						</tr>
 						<tr>
 							<td>recipe_list.html</td>
-							<td>HTML for oppskrifter, vist som kort med bilde og beskrivelse.</td>
+							<td>
+								HTML for oppskrifter, vist som kort med bilde og beskrivelse.
+							</td>
 							<td>Inga</td>
 							<td>18.10</td>
 						</tr>
 						<tr>
 							<td>baking101.html</td>
-							<td>HTML for liste over grunnleggende baketeknikker, vist som kort med bilde og beskrivelse.</td>
+							<td>
+								HTML for liste over grunnleggende baketeknikker, vist som kort
+								med bilde og beskrivelse.
+							</td>
 							<td>Tina</td>
 							<td>18.10</td>
 						</tr>
 						<tr>
 							<td>technique.html</td>
-							<td>HTML-mal for teknikker i Baking 101, med data hentet inn fra JSON-fil.</td>
+							<td>
+								HTML-mal for teknikker i Baking 101, med data hentet inn fra
+								JSON-fil.
+							</td>
 							<td>Jeeviga</td>
 							<td>18.10</td>
 						</tr>
@@ -367,7 +377,9 @@
 						</tr>
 						<tr>
 							<td>jsonLoader.js</td>
-							<td>Script for å laste inn json-data og putte det inn i template</td>
+							<td>
+								Script for å laste inn json-data og putte det inn i template
+							</td>
 							<td>Andreas</td>
 							<td>25.10</td>
 						</tr>
@@ -391,9 +403,13 @@
 						</tr>
 						<tr>
 							<td>{x}.json</td>
-							<td>JSON-fil med innholds-data. Disse er navngitt etter innholdet, og er her mesteparten av innholdet ligger. 
-								Enhver oppksrift og baketeknikk er derfor lagret i en JSON-fil hvor innholdet er dataen som vises for brukeren.
-							Det kan for eksempel være "sjokoladekake.json", hvor oppskriften da ligger i denne filen.</td>
+							<td>
+								JSON-fil med innholds-data. Disse er navngitt etter innholdet,
+								og er her mesteparten av innholdet ligger. Enhver oppksrift og
+								baketeknikk er derfor lagret i en JSON-fil hvor innholdet er
+								dataen som vises for brukeren. Det kan for eksempel være
+								"sjokoladekake.json", hvor oppskriften da ligger i denne filen.
+							</td>
 							<td>Alle</td>
 							<td>25.10</td>
 						</tr>

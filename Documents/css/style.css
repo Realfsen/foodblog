@@ -67,10 +67,6 @@ footer {
     width: 100%;
 }
 
-img {
-    width: 100%;
-}
-
 dt {
     font-size: 14pt;
     color: #4D3142;
@@ -129,4 +125,9 @@ th.tblResp{
 
 th.tblDue{
     width: 15%;
+}
+
+.mockup_img {
+    width: 50%;
+    margin: auto 25%;
 }
