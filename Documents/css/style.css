@@ -107,6 +107,12 @@ th {
     margin: 1rem 0;
 }
 
+#frontLogo {
+    width: 15%;
+    float: right;
+    margin: 0.5rem 0.5rem;
+}
+
 #textLeft {
     float: left
 }
