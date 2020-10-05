@@ -1,0 +1,3 @@
+sjokoladekake = {
+	name: 'sjokoladekake',
+}
