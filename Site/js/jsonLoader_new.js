@@ -68,17 +68,47 @@ function parseTemplate(content, template) {
 		pairs.push(matchedObject)
 	}
 	console.log(pairs)
-	console.log(template)
+	console.log(content.ingredienser)
 
 	// Replaces the templateString with the content for all the
 	// elements in the pairs-array in the template file
 	for (let p of pairs) {
-		template = template.replace(p.templateString, p.content)
+		// If the template-string is for displaying ingredients, it's instead
+		// rendered as an ul
+		if (p.templateString === '{{ ingredienser }}') {
+			var ul = document.createElement('ul')
+			const keys = Object.keys(content.ingredienser)
+			keys.forEach((key, index) => {
+				console.log(content.ingredienser[key])
+				let li = document.createElement('li')
+				li.textContent = key + ': ' + content.ingredienser[key]
+				ul.appendChild(li)
+			})
+			template = template.replace(p.templateString, ul.outerHTML)
+		} else {
+			template = template.replace(p.templateString, p.content)
+		}
 	}
-	// Creates a div to put the template in, and returns it
+
+	// Generates the ingredient list as a ul and adds it to the div
+	// if (content.ingredienser !== undefined) {
+	// 	var ul = document.createElement('ul')
+	// 	const keys = Object.keys(content.ingredienser)
+	// 	keys.forEach((key, index) => {
+	// 		console.log(content.ingredienser[key])
+	// 		let li = document.createElement('li')
+	// 		li.textContent = key + ': ' + content.ingredienser[key]
+	// 		ul.appendChild(li)
+	// 	})
+	// 	console.log(ul)
+	// 	template.replace(p.templateString, ul.outerHTML)
+	// }
+
+	// Creates a div to put the template in
 	let div = document.createElement('div')
-	div.innerHTML = template
-	return template
+	div.innerHTML += template
+	// Returns the finished div
+	return div
 }
 
 /**
@@ -109,9 +139,7 @@ async function loadCardList() {
 				type + '/' + l,
 				'templates/' + template + '.html',
 				(content) => {
-					let div = document.createElement('div')
-					div.innerHTML += content
-					c.appendChild(div)
+					c.appendChild(content)
 				}
 			)
 		}
