@@ -90,20 +90,6 @@ function parseTemplate(content, template) {
 		}
 	}
 
-	// Generates the ingredient list as a ul and adds it to the div
-	// if (content.ingredienser !== undefined) {
-	// 	var ul = document.createElement('ul')
-	// 	const keys = Object.keys(content.ingredienser)
-	// 	keys.forEach((key, index) => {
-	// 		console.log(content.ingredienser[key])
-	// 		let li = document.createElement('li')
-	// 		li.textContent = key + ': ' + content.ingredienser[key]
-	// 		ul.appendChild(li)
-	// 	})
-	// 	console.log(ul)
-	// 	template.replace(p.templateString, ul.outerHTML)
-	// }
-
 	// Creates a div to put the template in
 	let div = document.createElement('div')
 	div.innerHTML += template
