@@ -1,0 +1,9 @@
+#contactImage{
+    width: 200px;
+    float: right;
+    margin: 0.5rem 0.5rem;
+}
+
+#jsContactForm{
+    display: "none";
+}
