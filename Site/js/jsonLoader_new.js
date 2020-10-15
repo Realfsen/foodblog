@@ -51,7 +51,7 @@ function parseTemplate(content, template) {
 	const ptrn = new RegExp(/{{\s*([a-z.]+)\s*}}/, 'g')
 	let pairs = []
 	let match
-	console.log(content)
+	// console.log(content)
 	// Continues to fill the pairs-list until no matches
 	// between template-tags and json object are found
 	while ((match = ptrn.exec(template)) !== null) {
@@ -67,8 +67,8 @@ function parseTemplate(content, template) {
 		let matchedObject = new Object(matchedData)
 		pairs.push(matchedObject)
 	}
-	console.log(pairs)
-	console.log(content.ingredienser)
+	// console.log(pairs)
+	// console.log(content.ingredienser)
 
 	// Replaces the templateString with the content for all the
 	// elements in the pairs-array in the template file
@@ -89,20 +89,6 @@ function parseTemplate(content, template) {
 			template = template.replace(p.templateString, p.content)
 		}
 	}
-
-	// Generates the ingredient list as a ul and adds it to the div
-	// if (content.ingredienser !== undefined) {
-	// 	var ul = document.createElement('ul')
-	// 	const keys = Object.keys(content.ingredienser)
-	// 	keys.forEach((key, index) => {
-	// 		console.log(content.ingredienser[key])
-	// 		let li = document.createElement('li')
-	// 		li.textContent = key + ': ' + content.ingredienser[key]
-	// 		ul.appendChild(li)
-	// 	})
-	// 	console.log(ul)
-	// 	template.replace(p.templateString, ul.outerHTML)
-	// }
 
 	// Creates a div to put the template in
 	let div = document.createElement('div')

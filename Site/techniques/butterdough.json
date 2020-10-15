@@ -1,5 +1,7 @@
 {
 	"picture": "img/butterdough.jpg",
+	"type": "technique",
+	"link": "butterdough",
 	"name": "Smørdeig",
 	"description": "Slik som vanlig deig består smørdeig av hovedsakelig mel, men som navnet foreslår er det også smør i deigen. "
 }
