@@ -1,6 +1,7 @@
-document.onload = function(){  // Make the JS version of form visibile, it hides the noJS (HTML5 validated) form.
-    document.getElementById(jsContactForm).style.visibility = "visible";
-    document.getElementById(nojsContactForm).style.display = "none";
+window.onload = function(){  // Make the JS version of form visibile, it hides the noJS (HTML5 validated) form.
+    document.getElementById("jsContactForm").style.visibility = "visible";
+    document.getElementById("jsContactForm").style.display = "block";
+    document.getElementById("nojsContactForm").style.display = "none";
 }
 
 function submitForm(){
@@ -8,16 +9,15 @@ function submitForm(){
 }
 
 function validate(){
-    var inquiry = document.getElementById("jsContactForm").inquiry;
+    var inquiry = document.getElementById("inquiry");
     var tittel = document.getElementById("jsContactForm").title;
     var navn = document.getElementById("jsContactForm").user;
     var epost = document.getElementById("jsContactForm").userEmail;
     var melding = document.getElementById("jsContactForm").userMessage;
-    // Need to fix inquiry validation
-    /*if (inquiry.value == ""){
+    if (inquiry.value == ""){
         window.alert("Velg et alternativ for din melding"); 
         return false; 
-    } else*/ if (tittel.value == ""){
+    } else if (tittel.value == ""){
         window.alert("Skriv inn en tittel for din forespørsel!"); 
         tittel.focus(); 
         return false;
