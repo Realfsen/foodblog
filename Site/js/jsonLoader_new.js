@@ -7,8 +7,7 @@
  * @param {string} template full path to the HTML file with placeholder tags
  * @param {function} callback changes the content of HTML tags
  */
-let tempfile = 'recipes/cake.json'
-let temptemplate = 'templates/template.html'
+
 async function JSONLoader(file, template, callback) {
 	// These almost identical function calls uses the async/await keywords
 	// to get the data in the order we need it

@@ -5,7 +5,6 @@ content = content.substr(1, content.length).toLowerCase()
 console.log(content)
 
 content = content.split('-')
-console.log(content)
 
 // let template = window.location.pathname
 // template = template.substr(6, template.length)
@@ -17,8 +16,8 @@ console.log(content)
 JSONLoader(
 	content[0] + 's/' + content[1] + '.json',
 	'templates/' + content[0] + '.html',
-	(content) => {
+	(result) => {
 		let container = document.getElementById('content_container')
-		container.appendChild(content)
+		container.appendChild(result)
 	}
 )

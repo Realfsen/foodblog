@@ -2,7 +2,7 @@ let cards = []
 let sorted = false
 
 function getCards() {
-	let container = document.getElementById('container')
+	let container = document.querySelector('.card-container')
 	console.log(container.firstChild)
 	console.log(document.querySelector('.card-name'))
 	for (let i = 0; i < container.childElementCount + 2; i++) {
@@ -45,7 +45,7 @@ function nameSort() {
 }
 
 function printCards() {
-	let container = document.getElementById('container')
+	let container = document.querySelector('.card-container')
 	for (let i = 0; i <= cards.length - 1; i++) {
 		console.log(cards[i])
 		container.appendChild(cards[i].html)

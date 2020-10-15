@@ -2,17 +2,13 @@
 	margin: 0;
 }
 
-header {
-	font-family: 'Poppins', 'Arial', sans-serif; /*hmm gjør dette noe?*/
-}
-
 body {
 	font-size: 16px;
+	font-family: 'Poppins', 'Arial', sans-serif;
 	/*width: 960px;*/ /*hmm men er dette lurt da?*/
 }
 
 h1 {
-	font-family: 'Poppins', 'Arial', sans-serif;
 	color: #f09ca2;
 	font-size: 56px;
 	/*text-align: center;
@@ -20,7 +16,6 @@ h1 {
 }
 
 h2 {
-	font-family: 'Poppins', 'Arial', sans-serif;
 	color: #4d3142;
 	font-size: 40px;
 	margin-left: 10%; /*satt noe tilfeldig atm*/
@@ -44,7 +39,6 @@ p,
 blockquote,
 ul,
 ol {
-	font-family: 'Poppins', 'Arial', sans-serif;
 	color: #4d3142;
 	font-size: 16px;
 	line-height: 1.5em; /*?*/
@@ -121,12 +115,53 @@ img.BestemorB {
 	margin: none;
 }
 
-/*for cardsene?*/
+/* cards */
+.card-container {
+	padding: 3rem;
+	display: grid;
+	grid-gap: 2rem;
+	grid-template-columns: repeat(auto-fit, minmax(18.2rem, 1fr));
+	width: 80%;
+	margin: auto;
+}
+
+.card-container > div {
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+	transition: 0.3s;
+	border-radius: 5px;
+	position: relative;
+	display: grid;
+	grid-template-rows: auto auto;
+	object-fit: fill;
+	width: 80%;
+	margin: 0 auto;
+}
+
+.card-container > div:hover {
+	box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+.card img {
+	border-radius: 5px 5px 0 0;
+	width: 100%;
+	height: 15rem;
+}
+
+.card-content {
+	padding: 1.25rem;
+	line-height: 150%;
+}
+
+.card-name {
+	color: #4d3142;
+	font-weight: bold;
+	font-size: 125%;
+}
 
 /*for alle linker generelt?*/
 a {
 	color: #4d3142;
-	text-decoration: none; /*hvis ikke får den underline til vanlig også, 
+	text-decoration: none !important; /*hvis ikke får den underline til vanlig også, 
     men hva med når man er innpå den siden?*/
 }
 /*for når man hover over en link*/
