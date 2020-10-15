@@ -1,4 +1,4 @@
-* {
+html{
     margin: 0;
     width: 85%;
 }
@@ -23,7 +23,7 @@ h2 {
 	font-family: 'Poppins', 'Arial', sans-serif;
 	color: #4d3142;
 	font-size: 40px;
-	margin-left: 2%; /*satt noe tilfeldig atm*/
+	margin-left: 10%; /*satt noe tilfeldig atm*/
 	margin-right: 10%; /*mulig det burde være en annen løsning her*/
     padding-top: 10%;
 }
@@ -40,7 +40,7 @@ h2:after {
 	margin-bottom: 30px; /*så ikke det under kan komme helt oppi*/
 }
 
-p, blockquote, ul, ol, div {
+p, blockquote, ul, ol, form{
 	font-family: 'Poppins', 'Arial', sans-serif;
 	color: #4d3142;
 	font-size: 16px;
@@ -103,10 +103,11 @@ img.slideshowplaceholder {
 }
 
 #introbilde {
-	float: right;
-	width: 45%;
-    height: 400px;
-    display: block;
+    width: 45%;
+    max-width: 300px;
+    height: 45%;
+    max-height: 300px;
+    display: inline-block;
 }
 
 /*for å gjøre bestemorbildet rundt, bestemme størrelse på det og plassering innad i sin "boks"*/
