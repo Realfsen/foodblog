@@ -52,6 +52,7 @@ p, blockquote, ul, ol, form{
     font-family: 'Poppins', 'Arial', sans-serif;
     color: #4d3142;
     font-size: 20px;
+    margin-top: 5%;
     margin-left: 10%;
 }
 
@@ -103,23 +104,24 @@ img.slideshowplaceholder {
 }
 
 #introbilde {
-    width: 45%;
-    max-width: 300px;
-    height: 45%;
-    max-height: 300px;
-    display: inline-block;
+    float: right;
+    width: 40%;
+    height: 400px;
 }
 
 /*for å gjøre bestemorbildet rundt, bestemme størrelse på det og plassering innad i sin "boks"*/
 img.BestemorB {
 	object-fit: cover;
 	border-radius: 50%;
-	height: 350px;
-	width: 350px;
-	display: block;
-	margin-left: auto;
+    width: 45%;
+    max-width: 300px;
+    height: 45%;
+    max-height: 300px;
+    display: inline-block;
+    margin-left: auto;
 	margin-right: 5%;
-	margin-top: 8%; /*noe, men ikke helt tilfeldig*/
+    margin-top: 8%; /*noe, men ikke helt tilfeldig*/
+    margin-bottom: 5%;
 }
 
 /*bakgrunnsfarge og sånt for "beste oppskrifter"-delen*/
