@@ -1,7 +1,12 @@
 {
+	"img":"",
 	"name": "sjokoladekake",
 	"ingredienser": {
 		"sukker": "1kg",
 		"mel": "2kg"
+	},
+	"fremgangsmaate": {
+		"1.": "Visp egg og sukker til eggedosis."
 	}
+
 }
