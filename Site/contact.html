@@ -37,7 +37,7 @@
         <input type="textarea" id="inquiry" name="userMessage"> <br>
         <button type="submit" form="jsContactForm" value="submit" onclick="return validate()">Send forespørselen.</button>
       </form>
-      <form id="nojsContactForm" method="post" action="">  <!-- Contact form for no javascript, will be changed to display:none in JS if JS loads -->
+      <form id="nojsContactForm" method="post">  <!-- Contact form for no javascript, will be changed to display:none in JS if JS loads -->
         <label for="inquiry">Hva gjelder henvendelsen?</label><br>
         <select id="inquiry" required name="inquiry">
           <option value="" selected disabled hidden>Vennligst velg at alternativ </option>

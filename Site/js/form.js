@@ -5,7 +5,7 @@ window.onload = function(){  // Make the JS version of form visibile, it hides t
 }
 
 function submitForm(){
-    window.alert("Hei "+document.getElementById("jsContactForm").user.value+"\nDin henvendelse til borghild er blitt sendt! \nBorghild vil sende svar til"+document.getElementById("jsContactForm").userEmail.value);
+    window.alert("Hei "+document.getElementById("jsContactForm").user.value+".\nDin henvendelse til borghild er blitt sendt! \nBorghild vil sende svar til"+document.getElementById("jsContactForm").userEmail.value);
 }
 
 function validate(){
