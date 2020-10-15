@@ -20,7 +20,7 @@
     </div> 
     <div id="contactUsForm">
       <h2>Kontakt</h2>
-      <form id="jsContactForm" onsubmit="return submitForm()" method="post"> <!-- Contact form for javascript, JS version will be changed to visible in JS-->
+      <form id="jsContactForm" onsubmit="return submitForm()" method="post" style="display: none"> <!-- Contact form for javascript, JS version will be changed to visible in JS-->
         <label for="inquiry">Hva gjelder henvendelsen?</label><br>
         <select id="inquiry" name="inquiry" required>
           <option value="" hidden> Vennligst velg et alternativ! </option>
@@ -37,7 +37,7 @@
         <input type="textarea" id="inquiry" name="userMessage"> <br>
         <button type="submit" form="jsContactForm" value="submit" onclick="return validate()">Send forespørselen.</button>
       </form>
-      <!--<form id="nojsContactForm" method="post" action="">  Contact form for no javascript, will be changed to hidden in JS 
+      <form id="nojsContactForm" method="post" action="">  <!-- Contact form for no javascript, will be changed to display:none in JS if JS loads -->
         <label for="inquiry">Hva gjelder henvendelsen?</label><br>
         <select id="inquiry" required name="inquiry">
           <option value="" selected disabled hidden>Vennligst velg at alternativ </option>
@@ -53,7 +53,7 @@
         <label for="inquiryText">Din melding:</label><br>
         <input type="textarea" id="inquiry" name="userMessage" required> <br>
         <button type="submit" form="nojsContactForm" value="submit">Send forespørselen.</button>
-      </form>-->
+      </form>
     </div>
     <script type="text/javascript" src="js/form.js"></script> 
   </body>
