@@ -1,5 +1,147 @@
-#contactImage{
-    width: 200px;
-    float: right;
-    margin: 0.5rem 0.5rem;
+* {
+    margin: 0;
+    width: 85%;
+}
+
+header {
+	font-family: 'Poppins', 'Arial', sans-serif; /*hmm gjør dette noe?*/
+}
+
+body {
+	font-size: 16px;
+}
+
+h1 {
+	font-family: 'Poppins', 'Arial', sans-serif;
+	color: #f09ca2;
+	font-size: 56px;
+	/*text-align: center;
+	position: relative;*/
+}
+
+h2 {
+	font-family: 'Poppins', 'Arial', sans-serif;
+	color: #4d3142;
+	font-size: 40px;
+	margin-left: 2%; /*satt noe tilfeldig atm*/
+	margin-right: 10%; /*mulig det burde være en annen løsning her*/
+    padding-top: 10%;
+}
+
+/*mulig løsning for strek under h2-elementer*/
+h2:after {
+	content: ' ';
+	display: block;
+	border: 2px solid #f09ca2;
+	background-color: #f09ca2; /*fordi det bare er en boks, så uten så blir det en hvit(ufarget) strek inni lol*/
+	width: 30%; /*lengden på streken*/
+	margin-top: 15px; /*avstand fra h2*/
+	margin-left: -2%; /*foreløpig iaf for å få streken til å starte samme sted som h2-teksten*/
+	margin-bottom: 30px; /*så ikke det under kan komme helt oppi*/
+}
+
+p, blockquote, ul, ol, div {
+	font-family: 'Poppins', 'Arial', sans-serif;
+	color: #4d3142;
+	font-size: 16px;
+	line-height: 1.5em; /*?*/
+	margin-left: 10%; /*hvis vi ikke bruker noe annet for dette*/
+}
+
+.emailLink{
+    font-family: 'Poppins', 'Arial', sans-serif;
+    color: #4d3142;
+    font-size: 20px;
+    margin-left: 10%;
+}
+
+/*ev for å sentrere innhold*/
+/*.centered {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	text-align: center;
+}*/
+
+.overskrift {
+    position: relative;
+    left: 20%;
+	display: block;
+}
+
+.headercentered {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	text-align: center;
+}
+
+img.slideshowplaceholder {
+	display: block;
+}
+
+/*sette introdelen til venstre og bildet til høyre*/
+.container {
+	background-color: sandybrown; /*kun for å lette kunne se, skal fjernes*/
+	width: auto;
+	height: 500px;
+	padding-top: 20px;
+	padding-left: 15px;
+	padding-right: 15px;
+}
+
+.intro {
+	float: left;
+    width: 40%;
+	height: 400px;
+	display: block;
+	margin-right: auto;
+    margin-left: 10%;
+    margin-top: 10%;
+}
+
+#introbilde {
+	float: right;
+	width: 45%;
+    height: 400px;
+    display: block;
+}
+
+/*for å gjøre bestemorbildet rundt, bestemme størrelse på det og plassering innad i sin "boks"*/
+img.BestemorB {
+	object-fit: cover;
+	border-radius: 50%;
+	height: 350px;
+	width: 350px;
+	display: block;
+	margin-left: auto;
+	margin-right: 5%;
+	margin-top: 8%; /*noe, men ikke helt tilfeldig*/
+}
+
+/*bakgrunnsfarge og sånt for "beste oppskrifter"-delen*/
+.utvalgteoppskrifter {
+	height: 300px;
+	background: #e3dcd1;
+	margin: none;
+}
+
+/*for cardsene?*/
+
+/*for alle linker generelt?*/
+a {
+	color: #4d3142;
+	text-decoration: none; /*hvis ikke får den underline til vanlig også, 
+    men hva med når man er innpå den siden?*/
+}
+/*for når man hover over en link*/
+a:hover, a:active {
+	text-decoration: underline;
+}
+
+textarea{
+    resize: both;
+    overflow: auto;
 }

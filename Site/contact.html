@@ -7,17 +7,18 @@
     <title>Contact</title>
     </head>
   <body>
-    <h1>Kontakt oss</h1>
-    <p>
-      Har du en oppskrit du har lyst å dele med meg? Jeg er alltid glad for å få tips til nye oppskrifter. <br>
+    <h1 class="overskrift">Kontakt oss</h1>
+    <img id="introbilde" class="BestemorB" src="img/ContactUsImage.png">
+    <p class="intro">
+      Har du en oppskrit du har lyst å dele med meg? <br>Jeg er alltid glad for å få tips til nye oppskrifter. <br>
       Eller trenger du råd og tips for å bake mine oppskrifter? <br>
       Bare send inn en e-post eller en melding via kontaktskjemaet lenger nede, så svarer jeg så fort jeg kan.
     </p>
-    <img id="contactImage" src="img/ContactUsImage.png">
     <div>
       <h2>E-post</h2>
-      <a class="emailLink" href="mailto:borghild@bestemorborghild.no">borghild@bestemorborghild.no</a>
-    </div> 
+      <p>Eposter til Borghild kan sendes til: </p>
+      <a class="emailLink" href="mailto:borghild@bestemorborghild.no"> borghild@bestemorborghild.no</a>
+    </div> <br>
     <div id="contactUsForm">
       <h2>Kontakt</h2>
       <form id="jsContactForm" onsubmit="return submitForm()" method="post" style="display: none"> <!-- Contact form for javascript, JS version will be changed to visible in JS-->
@@ -34,7 +35,7 @@
         <label for="email">E-post:</label><br>
         <input type="email" id="email" name="userEmail"><br>
         <label for="inquiryText">Din melding:</label><br>
-        <input type="textarea" id="inquiry" name="userMessage"> <br>
+        <textarea id="inquiryText" name="userMessage"></textarea> <br>
         <button type="submit" form="jsContactForm" value="submit" onclick="return validate()">Send forespørselen.</button>
       </form>
       <form id="nojsContactForm" method="post">  <!-- Contact form for no javascript, will be changed to display:none in JS if JS loads -->
@@ -51,7 +52,7 @@
         <label for="email">E-post:</label><br>
         <input type="text" id="email" name="userEmail" required><br>
         <label for="inquiryText">Din melding:</label><br>
-        <input type="textarea" id="inquiry" name="userMessage" required> <br>
+        <textarea id="inquiryText" name="userMessage" required></textarea><br>
         <button type="submit" form="nojsContactForm" value="submit">Send forespørselen.</button>
       </form>
     </div>
