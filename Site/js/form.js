@@ -25,7 +25,7 @@ function validate(){
         window.alert("Skriv inn navnet ditt så borghild vet hvem som sender meldingen!"); 
         navn.focus(); 
         return false;
-    } else if (epost.value == ""){
+    } else if (epost.value == "" || epost.value.includes("@")==false){
         window.alert("Vennligst skriv inn en epost så borghild kan svare deg!"); 
         epost.focus(); 
         return false;
