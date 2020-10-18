@@ -1,14 +1,18 @@
-* {
-	margin: 0;
+html{
+  margin: 0;
+  width: 85%;
+}
+
+header {
+	font-family: 'Poppins', 'Arial', sans-serif; /*hmm gjør dette noe?*/
 }
 
 body {
 	font-size: 16px;
-	font-family: 'Poppins', 'Arial', sans-serif;
-	/*width: 960px;*/ /*hmm men er dette lurt da?*/
 }
 
 h1 {
+  font-family: 'Poppins', 'Arial', sans-serif;
 	color: #f09ca2;
 	font-size: 56px;
 	/*text-align: center;
@@ -16,6 +20,7 @@ h1 {
 }
 
 h2 {
+	font-family: 'Poppins', 'Arial', sans-serif;
 	color: #4d3142;
 	font-size: 40px;
 	margin-left: 10%; /*satt noe tilfeldig atm*/
@@ -29,20 +34,27 @@ h2:after {
 	display: block;
 	border: 2px solid #f09ca2;
 	background-color: #f09ca2; /*fordi det bare er en boks, så uten så blir det en hvit(ufarget) strek inni lol*/
-	width: 160px; /*lengden på streken*/
+	width: 30%; /*lengden på streken*/
 	margin-top: 15px; /*avstand fra h2*/
-	margin-left: 2px; /*foreløpig iaf for å få streken til å starte samme sted som h2-teksten*/
+	margin-left: -2%; /*foreløpig iaf for å få streken til å starte samme sted som h2-teksten*/
 	margin-bottom: 30px; /*så ikke det under kan komme helt oppi*/
 }
 
-p,
-blockquote,
-ul,
-ol {
+p, blockquote, ul, ol, form{
+	font-family: 'Poppins', 'Arial', sans-serif;
 	color: #4d3142;
 	font-size: 16px;
 	line-height: 1.5em; /*?*/
 	margin-left: 10%; /*hvis vi ikke bruker noe annet for dette*/
+}
+
+
+.emailLink{
+    font-family: 'Poppins', 'Arial', sans-serif;
+    color: #4d3142;
+    font-size: 20px;
+    margin-top: 5%;
+    margin-left: 10%;
 }
 
 /*ev for å sentrere innhold*/
@@ -55,7 +67,8 @@ ol {
 }*/
 
 .overskrift {
-	position: relative;
+    position: relative;
+    left: 20%;
 	display: block;
 }
 
@@ -100,12 +113,15 @@ img.slideshowplaceholder {
 img.BestemorB {
 	object-fit: cover;
 	border-radius: 50%;
-	height: 350px;
-	width: 350px;
-	display: block;
-	margin-left: auto;
-	margin-right: auto;
-	margin-top: 8%; /*noe, men ikke helt tilfeldig*/
+  width: 45%;
+  max-width: 350px;
+  height: 45%;
+  max-height: 350px;
+  display: inline-block;
+  margin-left: auto;
+	margin-right: 5%;
+  margin-top: 8%; /*noe, men ikke helt tilfeldig*/
+  margin-bottom: 5%;
 }
 
 /*bakgrunnsfarge og sånt for "beste oppskrifter"-delen*/
@@ -165,7 +181,11 @@ a {
     men hva med når man er innpå den siden?*/
 }
 /*for når man hover over en link*/
-a:hover,
-a:active {
+a:hover, a:active {
 	text-decoration: underline;
+}
+
+textarea{
+  resize: both;
+  overflow: auto;
 }
