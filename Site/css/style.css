@@ -1,6 +1,6 @@
 html{
-    margin: 0;
-    width: 85%;
+  margin: 0;
+  width: 85%;
 }
 
 header {
@@ -12,7 +12,7 @@ body {
 }
 
 h1 {
-	font-family: 'Poppins', 'Arial', sans-serif;
+  font-family: 'Poppins', 'Arial', sans-serif;
 	color: #f09ca2;
 	font-size: 56px;
 	/*text-align: center;
@@ -25,7 +25,7 @@ h2 {
 	font-size: 40px;
 	margin-left: 10%; /*satt noe tilfeldig atm*/
 	margin-right: 10%; /*mulig det burde være en annen løsning her*/
-    padding-top: 10%;
+	padding-top: 10%;
 }
 
 /*mulig løsning for strek under h2-elementer*/
@@ -47,6 +47,7 @@ p, blockquote, ul, ol, form{
 	line-height: 1.5em; /*?*/
 	margin-left: 10%; /*hvis vi ikke bruker noe annet for dette*/
 }
+
 
 .emailLink{
     font-family: 'Poppins', 'Arial', sans-serif;
@@ -95,33 +96,32 @@ img.slideshowplaceholder {
 
 .intro {
 	float: left;
-    width: 40%;
+	width: 40%;
 	height: 400px;
 	display: block;
 	margin-right: auto;
-    margin-left: 10%;
-    margin-top: 10%;
+	margin-left: 5%;
 }
 
 #introbilde {
-    float: right;
-    width: 40%;
-    height: 400px;
+	float: right;
+	width: 50%;
+	height: 400px;
 }
 
 /*for å gjøre bestemorbildet rundt, bestemme størrelse på det og plassering innad i sin "boks"*/
 img.BestemorB {
 	object-fit: cover;
 	border-radius: 50%;
-    width: 45%;
-    max-width: 300px;
-    height: 45%;
-    max-height: 300px;
-    display: inline-block;
-    margin-left: auto;
+  width: 45%;
+  max-width: 350px;
+  height: 45%;
+  max-height: 350px;
+  display: inline-block;
+  margin-left: auto;
 	margin-right: 5%;
-    margin-top: 8%; /*noe, men ikke helt tilfeldig*/
-    margin-bottom: 5%;
+  margin-top: 8%; /*noe, men ikke helt tilfeldig*/
+  margin-bottom: 5%;
 }
 
 /*bakgrunnsfarge og sånt for "beste oppskrifter"-delen*/
@@ -131,12 +131,53 @@ img.BestemorB {
 	margin: none;
 }
 
-/*for cardsene?*/
+/* cards */
+.card-container {
+	padding: 3rem;
+	display: grid;
+	grid-gap: 2rem;
+	grid-template-columns: repeat(auto-fit, minmax(18.2rem, 1fr));
+	width: 80%;
+	margin: auto;
+}
+
+.card-container > div {
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+	transition: 0.3s;
+	border-radius: 5px;
+	position: relative;
+	display: grid;
+	grid-template-rows: auto auto;
+	object-fit: fill;
+	width: 80%;
+	margin: 0 auto;
+}
+
+.card-container > div:hover {
+	box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+.card img {
+	border-radius: 5px 5px 0 0;
+	width: 100%;
+	height: 15rem;
+}
+
+.card-content {
+	padding: 1.25rem;
+	line-height: 150%;
+}
+
+.card-name {
+	color: #4d3142;
+	font-weight: bold;
+	font-size: 125%;
+}
 
 /*for alle linker generelt?*/
 a {
 	color: #4d3142;
-	text-decoration: none; /*hvis ikke får den underline til vanlig også, 
+	text-decoration: none !important; /*hvis ikke får den underline til vanlig også, 
     men hva med når man er innpå den siden?*/
 }
 /*for når man hover over en link*/
@@ -145,6 +186,6 @@ a:hover, a:active {
 }
 
 textarea{
-    resize: both;
-    overflow: auto;
+  resize: both;
+  overflow: auto;
 }
