@@ -1,7 +1,21 @@
 {
-	"name": "fdwsa",
+	"picture":"img/chocolatecake.jpg",
+	"name": "Sjokoladekake",
 	"ingredienser": {
-		"sukker": "1kg",
-		"mel": "2kg"
+		"smør": "350 g",
+		"kakaopulver": "2 dl",
+		"egg": "4 stk",
+		"sukker": "500 g",
+		"hvetemel": "500 g",
+		"bakepulver": "2 ts",
+		"vaniljesukker": "2 ts",
+		"natron": "2 ts",
+		"kefir": "7 dl",
+		"kokesjokolade": "200 g"
+	},
+	"description": {
+		"1.": "Smelt smøret. Ta kjelen av platen og rør inn kakaopulveret helt til det løser seg opp.",
+		"2.": ""
 	}
+	
 }
