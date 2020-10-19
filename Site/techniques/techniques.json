@@ -1,3 +1,3 @@
 {
-	"techniques": ["dough.json"]
+	"list": ["dough.json", "butterdough.json", "decorating.json"]
 }
