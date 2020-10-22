@@ -1,5 +1,5 @@
 {
-	"picture":"img/chocolatecake.jpg",
+	"picture": "img/chocolatecake.jpg",
 	"name": "Sjokoladekake",
 	"type": "recipe",
 	"link": "cake",
@@ -15,9 +15,9 @@
 		"kefir": "7 dl",
 		"kokesjokolade": "200 g"
 	},
-	"description": {
+	"fremgang": {
 		"1.": "Smelt smøret. Ta kjelen av platen og rør inn kakaopulveret helt til det løser seg opp.",
 		"2.": ""
 	}
-	
+
 }
