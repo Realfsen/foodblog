@@ -11,11 +11,14 @@ document.onload = function(){
 } */
 
 
-document.onload = function(){{
+window.onload = function(){{
     console.log("Function initiated");
     var foot = document.createElement("footer");
     document.body.appendChild(foot);
+    footerLeftDiv(foot)
+    footerRightDiv(foot)
 
+function footerLeftDiv(foot){
     var innerDivL = document.createElement("div")
     innerDivL.className = "footerLeft"
     var innerImgL = document.createElement("img")
@@ -28,7 +31,8 @@ document.onload = function(){{
     innerPL.appendChild(innerTextL)
     innerDivL.appendChild(innerPL)
     foot.appendChild(innerDivL)
-
+}
+function footerRightDiv(foot){
     var innerDivR = document.createElement("div")
     innerDivR.className = "footerRight"
     var innerTextR = document.createElement("p")
@@ -41,12 +45,11 @@ document.onload = function(){{
     innerLink.href = "mailto:borghild@bestormorborghild.no"
     innerLink.appendChild(innerLinkText)
     innerDivR.appendChild(innerLink)
-
-    targ.innerHTML = innerDivL
-    targ.appendChild(innerDivL)
-    targ.appendChild(innerDivR)
+}
+    foot.appendChild(innerDivL)
+    foot.appendChild(innerDivR)
     console.log(targ)
-} }
+}}
 
 /*
 function footerLoader(){
