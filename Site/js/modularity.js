@@ -10,15 +10,11 @@ document.onload = function(){
     footerElem.innerHTML = contentFooter
 } */
 
-
 window.onload = function(){{
     console.log("Function initiated");
-    var foot = document.createElement("footer");
+    var foot = document.createElement("FOOTER");
     document.body.appendChild(foot);
-    footerLeftDiv(foot)
-    footerRightDiv(foot)
 
-function footerLeftDiv(foot){
     var innerDivL = document.createElement("div")
     innerDivL.className = "footerLeft"
     var innerImgL = document.createElement("img")
@@ -31,8 +27,7 @@ function footerLeftDiv(foot){
     innerPL.appendChild(innerTextL)
     innerDivL.appendChild(innerPL)
     foot.appendChild(innerDivL)
-}
-function footerRightDiv(foot){
+
     var innerDivR = document.createElement("div")
     innerDivR.className = "footerRight"
     var innerTextR = document.createElement("p")
@@ -45,10 +40,9 @@ function footerRightDiv(foot){
     innerLink.href = "mailto:borghild@bestormorborghild.no"
     innerLink.appendChild(innerLinkText)
     innerDivR.appendChild(innerLink)
-}
-    foot.appendChild(innerDivL)
     foot.appendChild(innerDivR)
-    console.log(targ)
+
+    console.log(foot)
 }}
 
 /*
