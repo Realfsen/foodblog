@@ -16,7 +16,6 @@ document.onload = function(){{
     var foot = document.createElement("footer");
     document.body.appendChild(foot);
 
-
     var innerDivL = document.createElement("div")
     innerDivL.className = "footerLeft"
     var innerImgL = document.createElement("img")
