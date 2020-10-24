@@ -203,7 +203,7 @@ form{
 footer{
 	position: absolute;
 	bottom: 0;
-	background-color: #f9f1c9;
+	background-color: #eae8e6;
 	width: 100%;
 	height: 12.5%;
 	margin-top: -17.5%;
@@ -233,7 +233,6 @@ footer{
 /* Based on: https://www.w3schools.com/howto/howto_css_dropdown_navbar.asp */
 /* Navbar container */
 .NavigationBar {
-	background-color: #333;
 	font-family: Arial;
 	height: 70px;
 	width: 100%;
@@ -247,7 +246,7 @@ footer{
 .NavBarBtn{
 	display: inline;
 	font-size: 23px;
-	color: white;
+	color:#4d3142;
 	text-align: center;
 	height: 100%;
 	padding: 20px 20px 5px;
@@ -297,7 +296,7 @@ footer{
   
   /* Add a red background color to navbar links on hover */
 .NavBarBtn:hover, .filteredLinks:hover .dropdownButton {
-	background-color: red;
+	background-color: #eae8e6;
 }
   
   /* Dropdown content (hidden by default) */
