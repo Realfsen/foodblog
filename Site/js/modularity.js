@@ -1,21 +1,20 @@
 (function() {
-    console.log("Navbar script initiated")
+    console.log("Navbar generation script initiated")
     // Create target and insert the div element on top of the body
     var navBar = document.createElement("div");
     navBar.className = "NavigationBar";
 
     // Input the Logo and includes link to the front/index page
     var IconButton = document.createElement("a");
-    IconButton.className = "NavBarBtn";
     IconButton.id = "NavbarIcon";
     IconButton.href = "index.html";
     var imgLink = document.createElement("img");
     imgLink.src = "img/Kun_logo_hvit.png";
     IconButton.appendChild(imgLink);
-    console.log(imgLink);
-    console.log(IconButton);
     navBar.appendChild(IconButton);
 
+    var centeredDiv = document.createElement("div");
+    centeredDiv.className = "centeredNavBarElements"
     // Input a dropdown button that can filter the baking or direct link to baking recipes
     var RecipeButton = document.createElement("div");
     RecipeButton.className = "dropdownLink";
@@ -41,7 +40,7 @@
     RecipeFilterList.appendChild(Filter2);
     dropdownButton.appendChild(RecipeFilterList);
     RecipeButton.appendChild(dropdownButton);
-    navBar.appendChild(RecipeButton);
+    centeredDiv.appendChild(RecipeButton);
 
     // Input the link to "baketips"
     var TechniqueButton = document.createElement("a");
@@ -49,23 +48,23 @@
     TechniqueButton.className = "NavBarBtn";
     TechniqueButton.href = "baking101.html";
     TechniqueButton.appendChild(TechniqueButtonText);
-    navBar.appendChild(TechniqueButton);
+    centeredDiv.appendChild(TechniqueButton);
 
     // Input the link to "Kontakt Oss"
     var ContactButton = document.createElement("a");
-    var ContactButtonText = document.createTextNode("Kontakt Oss");
+    var ContactButtonText = document.createTextNode("Kontakt oss");
     ContactButton.className = "NavBarBtn";
     ContactButton.href = "contact.html";
     ContactButton.appendChild(ContactButtonText);
-    navBar.appendChild(ContactButton);
+    centeredDiv.appendChild(ContactButton);
+    navBar.appendChild(centeredDiv);
 
-
-
+    // Append the navigation bar to the front of the <body>
     document.body.insertBefore(navBar, document.body.childNodes[0]);
-    console.log(navBar);
 })()
 
 window.onload = function(){
+    console.log("Footer generation script initiated")
     var foot = document.createElement("footer");
     document.body.appendChild(foot);
 

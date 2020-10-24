@@ -1,6 +1,6 @@
 html{
   margin: 0;
-  width: 85%;
+  width: 100%;
 }
 
 header {
@@ -14,13 +14,15 @@ body {
 	margin:0;
 	padding:0;
 	padding-bottom: 25%;
-   	height:100%;
+	height:100%;
+  
 }
 
 h1 {
-  font-family: 'Poppins', 'Arial', sans-serif;
+	font-family: 'Poppins', 'Arial', sans-serif;
 	color: #f09ca2;
 	font-size: 56px;
+	padding-top: 80px;
 	/*text-align: center;
 	position: relative;*/
 }
@@ -53,7 +55,6 @@ p, blockquote, ul, ol, form{
 	line-height: 1.5em; /*?*/
 	margin-left: 10%; /*hvis vi ikke bruker noe annet for dette*/
 }
-
 
 .emailLink{
     font-family: 'Poppins', 'Arial', sans-serif;
@@ -119,15 +120,15 @@ img.slideshowplaceholder {
 img.BestemorB {
 	object-fit: cover;
 	border-radius: 50%;
-  width: 45%;
-  max-width: 350px;
-  height: 45%;
-  max-height: 350px;
-  display: inline-block;
-  margin-left: auto;
+  	width: 45%;
+  	max-width: 350px;
+  	height: 45%;
+  	max-height: 350px;
+  	display: inline-block;
+  	margin-left: auto;
 	margin-right: 5%;
-  margin-top: 8%; /*noe, men ikke helt tilfeldig*/
-  margin-bottom: 5%;
+  	margin-top: 8%; /*noe, men ikke helt tilfeldig*/
+  	margin-bottom: 5%;
 }
 
 /*bakgrunnsfarge og sånt for "beste oppskrifter"-delen*/
@@ -196,7 +197,7 @@ textarea{
   overflow: auto;
 }
 form{
-	padding-bottom: 50px;
+	padding-bottom: 10%;
 }
 /* Styling of the footer */
 footer{
@@ -206,7 +207,7 @@ footer{
 	width: 100%;
 	height: 12.5%;
 	margin-top: -17.5%;
-	clear: both;
+	clear: inline-start;
 }
 #footerLogo{
 	object-fit: contain;
@@ -229,21 +230,42 @@ footer{
 }
 
 /* Navigation Bar styling */
+/* Based on: https://www.w3schools.com/howto/howto_css_dropdown_navbar.asp */
 /* Navbar container */
 .NavigationBar {
 	background-color: #333;
 	font-family: Arial;
-	height: 60px;
-	text-align: center;
+	height: 70px;
+	width: 100%;
+	display: inline-block;
+	position: fixed;
+	top: 0;
+	z-index: 5;
 }
 
-.NavigationBar a{
-	float: left;
-	font-size: 20px;
+/* Format the text links */
+.NavBarBtn{
+	display: inline;
+	font-size: 23px;
 	color: white;
 	text-align: center;
-	padding: 20px 16px 18px 25px;
+	height: 100%;
+	padding: 20px 20px 5px;
+	margin: auto;
 	text-decoration: none;
+}
+.centeredNavBarElements{
+	float: none;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+}
+
+#NavbarIcon{
+	float: left;
+	height: 100%;
+	padding: 10px 0px 10px 20px;
 }
 
 #NavbarIcon img{
@@ -252,13 +274,12 @@ footer{
 	box-sizing: fill;
 	max-height: 50px;
 	max-width: 75px;
-	padding: 0;
 	margin: 0;
 }
  
   /* The dropdown container */
 .dropdownLink {
-	float: left;
+	display: inline;
 	overflow: hidden;
 }
   
@@ -275,7 +296,7 @@ footer{
 }
   
   /* Add a red background color to navbar links on hover */
-.NavigationBar a:hover, .filteredLinks:hover .dropdownButton {
+.NavBarBtn:hover, .filteredLinks:hover .dropdownButton {
 	background-color: red;
 }
   
@@ -293,7 +314,7 @@ footer{
 .filteredLinks a{
 	float: none;
 	color: black;
-	padding: 12px 16px;
+	padding: 20px 16px;
 	text-decoration: none;
 	display: block;
 	text-align: left;
