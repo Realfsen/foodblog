@@ -1,7 +1,19 @@
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="css/style.css">
+	<title>Teknikk</title>
+
+</head>
+
+
 <div class="card">
+	<h4>{{ name }}</h4>
 	<div class="container">
-		<img src="{{ picture }}" alt="" />
-		<h4>{{ name }}</h4>
-		<p>{{ description }}</p>
+		
+		<p class="techniquetext">{{ description }}</p>
+		<img class="techniqueimage" src="{{ picture }}" alt="" />
 	</div>
 </div>
