@@ -198,7 +198,7 @@ textarea{
 form{
 	padding-bottom: 50px;
 }
-
+/* Styling of the footer */
 footer{
 	position: absolute;
 	bottom: 0;
@@ -208,14 +208,12 @@ footer{
 	margin-top: -17.5%;
 	clear: both;
 }
-
 #footerLogo{
 	object-fit: contain;
 	width: 20%;
 	padding: 2%;
 	margin-left: 15%;
 }
-
 .footerLeft{
 	width: 37%;
 	Float: left;
@@ -223,10 +221,90 @@ footer{
 	padding: 2%;
 	padding-left: 10%;
 }
-
 .footerRight{
 	width: 47%;
 	Float: left;
 	display:block;
 	padding: 2%;
+}
+
+/* Navigation Bar styling */
+/* Navbar container */
+.NavigationBar {
+	background-color: #333;
+	font-family: Arial;
+	height: 60px;
+	text-align: center;
+}
+
+.NavigationBar a{
+	float: left;
+	font-size: 20px;
+	color: white;
+	text-align: center;
+	padding: 20px 16px 18px 25px;
+	text-decoration: none;
+}
+
+#NavbarIcon img{
+	height: auto;
+	width: auto;
+	box-sizing: fill;
+	max-height: 50px;
+	max-width: 75px;
+	padding: 0;
+	margin: 0;
+}
+ 
+  /* The dropdown container */
+.dropdownLink {
+	float: left;
+	overflow: hidden;
+}
+  
+  /* Dropdown button */
+.dropdownLink .dropdownButton {
+	font-size: 16px;
+	border: none;
+	outline: none;
+	color: white;
+	padding: 0;
+	background-color: inherit;
+	font-family: inherit; /* Important for vertical align on mobile phones */
+	margin: 0; /* Important for vertical align on mobile phones */
+}
+  
+  /* Add a red background color to navbar links on hover */
+.NavigationBar a:hover, .filteredLinks:hover .dropdownButton {
+	background-color: red;
+}
+  
+  /* Dropdown content (hidden by default) */
+.filteredLinks {
+	display: none;
+	position: absolute;
+	background-color: #f9f9f9;
+	min-width: 160px;
+	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+	z-index: 1;
+}
+  
+  /* Links inside the dropdown */
+.filteredLinks a{
+	float: none;
+	color: black;
+	padding: 12px 16px;
+	text-decoration: none;
+	display: block;
+	text-align: left;
+}
+  
+  /* Add a grey background color to dropdown links on hover */
+.filteredLinks a:hover {
+	background-color: #ddd;
+}
+  
+  /* Show the dropdown menu on hover */
+.dropdownLink:hover .filteredLinks {
+	display: block;
 }

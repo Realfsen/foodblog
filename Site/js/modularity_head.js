@@ -17,6 +17,7 @@
     head.appendChild(styleSheet);
 
     // Favicons and compatability with a lot of devices!
+    // Includes short-cut images, mac touchbar icons, windows start icon etc.
     // Favicons and input code generatored by http://www.realfavicongenerator.net based on "Kun_logo.png" found in /img.
     var faviconLink = document.createElement("link");
     faviconLink.rel = "apple-touch-icon";
@@ -62,7 +63,7 @@
     head.appendChild(faviconMeta3);
 })()
 
-/* Raw code from realfavicongenerator.net 
+/* Raw code from realfavicongenerator.net to be included in the head element.
 <link rel="apple-touch-icon" sizes="180x180" href="/img/favicons/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="/img/favicons/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="/img/favicons/favicon-16x16.png">
