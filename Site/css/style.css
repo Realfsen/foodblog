@@ -217,14 +217,16 @@ footer{
 }
 
 .footerLeft{
-	width: 39%;
+	width: 37%;
 	Float: left;
 	display:block;
+	padding: 2%;
 	padding-left: 10%;
 }
-	
+
 .footerRight{
-	width: 49%;
+	width: 47%;
 	Float: left;
 	display:block;
+	padding: 2%;
 }
