@@ -23,52 +23,43 @@
     faviconLink.sizes = "180x180";
     faviconLink.href = "./img/favicons/apple-touch-icon.png";
     head.appendChild(faviconLink);
-    console.log(head)
     var faviconLink2 = document.createElement("link");
     faviconLink2.rel = "icon";
     faviconLink2.type = "image/png";
     faviconLink2.sizes = "32x32";
     faviconLink2.href = "./img/favicons/favicon-32x32.png";
     head.appendChild(faviconLink2);
-    console.log(head)
     var faviconLink3 = document.createElement("link");
     faviconLink3.rel = "icon";
     faviconLink3.type = "image/png";
     faviconLink3.sizes = "16x16";
     faviconLink3.href = "./img/favicons/favicon-16x16.png";
     head.appendChild(faviconLink3);
-    console.log(head)
     var faviconLink4 = document.createElement("link");
     faviconLink4.rel = "manifest";
     faviconLink4.href = "./img/favicons/site.webmanifest";
     head.appendChild(faviconLink4);
-    console.log(head)
     var faviconLink5 = document.createElement("link");
     faviconLink5.rel = "mask-icon";
     faviconLink5.href = "./img/favicons/safari-pinned-tab.svg";
     faviconLink5.color = "#5bbad5";
     head.appendChild(faviconLink5);
-    console.log(head)
     var faviconLink6 = document.createElement("link");
     faviconLink6.rel = "shortcut icon";
     faviconLink6.href = "./img/favicons/favicon.ico";
     head.appendChild(faviconLink6);
-    console.log(head)
     var faviconMeta1 = document.createElement("meta");
     faviconMeta1.name = "msapplication-TileColor";
     faviconMeta1.content = "#da532c";
     head.appendChild(faviconMeta1);
-    console.log(head)
     var faviconMeta2 = document.createElement("meta");
     faviconMeta2.name = "msapplication-config";
-    faviconMeta2.content = "/img/favicons/browserconfig.xml";
+    faviconMeta2.content = "./img/favicons/browserconfig.xml";
     head.appendChild(faviconMeta2);
-    console.log(head)
     var faviconMeta3 = document.createElement("meta");
     faviconMeta3.name = "theme-color";
     faviconMeta3.content = "#ffffff";
     head.appendChild(faviconMeta3);
-    console.log(head)
 })()
 
 /* Raw code from realfavicongenerator.net 
