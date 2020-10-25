@@ -13,36 +13,19 @@
     IconButton.appendChild(imgLink);
     navBar.appendChild(IconButton);
 
+    // Create the centeredDiv element
     var centeredDiv = document.createElement("div");
     centeredDiv.className = "centeredNavBarElements"
-    // Input a dropdown button that can filter the baking or direct link to baking recipes
-    var RecipeButton = document.createElement("div");
-    RecipeButton.className = "dropdownLink";
-    var dropdownButton = document.createElement("button");
-    dropdownButton.className = "dropdownButton";
-    var RecipeLink = document.createElement("a");
-    var RecipeLinkText = document.createTextNode("Oppskrifter");
-    RecipeLink.className = "NavBarBtn";
-    RecipeLink.href = "recipe_list.html";
-    RecipeLink.appendChild(RecipeLinkText);
-    dropdownButton.appendChild(RecipeLink);
-    var RecipeFilterList = document.createElement("div");
-    RecipeFilterList.className = "filteredLinks";
-    var Filter1 = document.createElement("a");
-    var Filter1Text = document.createTextNode("Filter 1");
-    Filter1.href = "recipe_list.html";
-    Filter1.appendChild(Filter1Text);
-    var Filter2 = document.createElement("a");
-    var Filter2Text = document.createTextNode("Filter 2");
-    Filter2.href = "recipe_list.html";
-    Filter2.appendChild(Filter2Text);
-    RecipeFilterList.appendChild(Filter1);
-    RecipeFilterList.appendChild(Filter2);
-    dropdownButton.appendChild(RecipeFilterList);
-    RecipeButton.appendChild(dropdownButton);
+
+    // Input the link to "Oppskrifter", appended to centeredDiv
+    var RecipeButton = document.createElement("a");
+    var RecipeButtonText = document.createTextNode("Oppskrifter");
+    RecipeButton.className = "NavBarBtn";
+    RecipeButton.href = "recipe_list.html";
+    RecipeButton.appendChild(RecipeButtonText);
     centeredDiv.appendChild(RecipeButton);
 
-    // Input the link to "baketips"
+    // Input the link to "baketips", appended to centeredDiv
     var TechniqueButton = document.createElement("a");
     var TechniqueButtonText = document.createTextNode("Baketips");
     TechniqueButton.className = "NavBarBtn";
@@ -50,7 +33,7 @@
     TechniqueButton.appendChild(TechniqueButtonText);
     centeredDiv.appendChild(TechniqueButton);
 
-    // Input the link to "Kontakt Oss"
+    // Input the link to "Kontakt Oss", appended to centeredDiv
     var ContactButton = document.createElement("a");
     var ContactButtonText = document.createTextNode("Kontakt oss");
     ContactButton.className = "NavBarBtn";
