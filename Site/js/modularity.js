@@ -1,5 +1,5 @@
 (function() {
-    console.log("Navbar generation script initiated")
+    // NAVIGATION BAR ADDED BELOW HERE
     // Create target and insert the div element on top of the body
     var navBar = document.createElement("div");
     navBar.className = "NavigationBar";
@@ -44,9 +44,8 @@
 
     // Append the navigation bar to the front of the <body>
     document.body.insertBefore(navBar, document.body.childNodes[0]);
-    /*
-    GENERATES THE FOOTER
-    */
+  
+    // FOOTER ADDED BELOW HERE
     console.log("Footer generation script initiated")
     var foot = document.createElement("footer");
     document.body.appendChild(foot);
