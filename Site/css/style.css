@@ -560,7 +560,8 @@ footer{
   /* Add a background color to navbar links on hover 
   Inspired by: https://www.w3schools.com/howto/howto_css_navbar_border.asp
   */
+  /*
 a.NavBarBtn:hover{
-	background-color: #E3DCD1;
-	padding-bottom: 3px red;
-}
+	text-decoration: underline;
+	text-decoration-color: #4D3142;
+} */

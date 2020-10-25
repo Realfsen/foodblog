@@ -23,6 +23,9 @@
     RecipeButton.className = "NavBarBtn";
     RecipeButton.href = "recipe_list.html";
     RecipeButton.id = "NavBarRecipes";
+    // Event listeners to format element on mouseover
+    RecipeButton.addEventListener('mouseover', function(){this.style.borderBottom = "0.2vw solid #4D3142"});
+    RecipeButton.addEventListener('mouseout', function(){this.style.borderBottom = "0 solid transparent"});
     RecipeButton.appendChild(RecipeButtonText);
     centeredDiv.appendChild(RecipeButton);
 
@@ -32,6 +35,9 @@
     TechniqueButton.className = "NavBarBtn";
     TechniqueButton.href = "baking101.html";
     TechniqueButton.id = "NavBarTechnique";
+    // Event listeners to format element on mouseover
+    TechniqueButton.addEventListener('mouseover', function(){this.style.borderBottom = "0.2vw solid #4D3142"});
+    TechniqueButton.addEventListener('mouseout', function(){this.style.borderBottom = "0 solid transparent"});
     TechniqueButton.appendChild(TechniqueButtonText);
     centeredDiv.appendChild(TechniqueButton);
 
@@ -41,6 +47,9 @@
     ContactButton.className = "NavBarBtn";
     ContactButton.href = "contact.html";
     ContactButton.id = "NavBarContact";
+    // Event listeners to format element on mouseover
+    ContactButton.addEventListener('mouseover', function(){this.style.borderBottom = "0.2vw solid #4D3142"});
+    ContactButton.addEventListener('mouseout', function(){this.style.borderBottom = "0 solid transparent"});
     ContactButton.appendChild(ContactButtonText);
     centeredDiv.appendChild(ContactButton);
     navBar.appendChild(centeredDiv);
@@ -82,12 +91,9 @@
 
     // Coloring active site in navigation bar.
     var fullURL = window.location.href;
-    console.log(fullURL)
     stringPositionStart = fullURL.lastIndexOf('/Site/')+6; // Finds the place in the URL (starting from the back) where "/Site" is and return the index. +6 means we start after the /Site/
     stringPositionEnd = fullURL.lastIndexOf('.html'); // Find the ".html" in the URL 
-    console.log(stringPositionStart, stringPositionEnd)
     var subPage = fullURL.slice(stringPositionStart, stringPositionEnd);
-    console.log(subPage)
     var activeBarStyling = "0.2vw solid #4D3142"; // Just to make it quicker to change values
     // Check what page we are on and retrieve the correct element based on the URL
     if (subPage.toLowerCase()==="contact"){ // For "kontakt oss"
