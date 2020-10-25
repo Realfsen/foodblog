@@ -15,13 +15,18 @@
 
     // Create the centeredDiv element
     var centeredDiv = document.createElement("div");
-    centeredDiv.className = "centeredNavBarElements"
+    centeredDiv.className = "centeredNavBarElements";
 
     // Input the link to "Oppskrifter", appended to centeredDiv
     var RecipeButton = document.createElement("a");
     var RecipeButtonText = document.createTextNode("Oppskrifter");
     RecipeButton.className = "NavBarBtn";
     RecipeButton.href = "recipe_list.html";
+    RecipeButton.id = "NavBarRecipes";
+    // Event listeners to format element on mouseover in the navigation bar.
+    RecipeButton.addEventListener('mouseover', function(){this.style.borderBottom = "0.2vw solid #4D3142"});
+    RecipeButton.addEventListener('mouseout', function(){this.style.borderBottom = "0 solid transparent"});
+    RecipeButton.addEventListener('mouseout', persistantActiveNavigationBar);
     RecipeButton.appendChild(RecipeButtonText);
     centeredDiv.appendChild(RecipeButton);
 
@@ -30,6 +35,11 @@
     var TechniqueButtonText = document.createTextNode("Baketips");
     TechniqueButton.className = "NavBarBtn";
     TechniqueButton.href = "baking101.html";
+    TechniqueButton.id = "NavBarTechnique";
+    // Event listeners to format element on mouseover in the navigation bar.
+    TechniqueButton.addEventListener('mouseover', function(){this.style.borderBottom = "0.2vw solid #4D3142"});
+    TechniqueButton.addEventListener('mouseout', function(){this.style.borderBottom = "0 solid transparent"});
+    TechniqueButton.addEventListener('mouseout', persistantActiveNavigationBar);
     TechniqueButton.appendChild(TechniqueButtonText);
     centeredDiv.appendChild(TechniqueButton);
 
@@ -38,6 +48,11 @@
     var ContactButtonText = document.createTextNode("Kontakt oss");
     ContactButton.className = "NavBarBtn";
     ContactButton.href = "contact.html";
+    ContactButton.id = "NavBarContact";
+    // Event listeners to format element on mouseover in the navigation bar.
+    ContactButton.addEventListener('mouseover', function(){this.style.borderBottom = "0.2vw solid #4D3142"});
+    ContactButton.addEventListener('mouseout', function(){this.style.borderBottom = "0 solid transparent"});
+    ContactButton.addEventListener('mouseout', persistantActiveNavigationBar);
     ContactButton.appendChild(ContactButtonText);
     centeredDiv.appendChild(ContactButton);
     navBar.appendChild(centeredDiv);
@@ -76,4 +91,31 @@
     innerLink.appendChild(innerLinkText);
     innerDivR.appendChild(innerLink);
     foot.appendChild(innerDivR);
+
+    // Function run to add bar beneath the currently active page in the navigation bar.
+    persistantActiveNavigationBar()
 })()
+
+function persistantActiveNavigationBar(){
+    // Coloring active site in navigation bar.
+    var fullURL = window.location.href;
+    stringPositionStart = fullURL.lastIndexOf('/Site/')+6; // Finds the place in the URL (starting from the back) where "/Site" is and return the index. +6 means we start after the /Site/
+    stringPositionEnd = fullURL.lastIndexOf('.html'); // Find the ".html" in the URL 
+    var subPage = fullURL.slice(stringPositionStart, stringPositionEnd);
+    var activeBarStyling = "0.2vw solid #4D3142"; // Just to make it quicker to change values
+    // Check what page we are on and retrieve the correct element based on the URL
+    if (subPage.toLowerCase()==="contact"){ // For "kontakt oss"
+        var currentElement = document.getElementById("NavBarContact");
+            console.log(currentElement)
+            currentElement.style.borderBottom = activeBarStyling;
+    } else if (subPage.toLowerCase()==="baking101") { // For "Baketips"
+            console.log(currentElement)
+            var currentElement = document.getElementById("NavBarTechnique");
+            currentElement.style.borderBottom = activeBarStyling;
+    } else if (subPage.toLowerCase()==="recipe_list"){ // For "Oppskrifter"
+            console.log(currentElement)
+            var currentElement = document.getElementById("NavBarRecipes");
+            currentElement.style.borderBottom = activeBarStyling;
+    } else {}
+}
+
