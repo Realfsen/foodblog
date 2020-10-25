@@ -73,7 +73,7 @@ window.onload = function(){
     var innerLink = document.createElement("a");
     var innerLinkText = document.createTextNode("Send oss en melding.");
     innerLink.className = "emailLink";
-    innerLink.href = "mailto:borghild@bestormorborghild.no";
+    innerLink.href = "contact.html";
     innerLink.appendChild(innerLinkText);
     innerDivR.appendChild(innerLink);
     foot.appendChild(innerDivR);
