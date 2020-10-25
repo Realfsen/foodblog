@@ -6,14 +6,19 @@
     <title>Contact</title>
     </head>
   <body>
-    <div>
-      <h1 class="overskrift">Kontakt oss</h1>
-      <img id="contactUsBilde" class="BestemorB" src="img/ContactUsImage.png" alt="Portrett av borghild.">
-      <p class="intro">
-        Har du en oppskrit du har lyst å dele med meg? <br>Jeg er alltid glad for å få tips til nye oppskrifter. <br>
-        Eller trenger du råd og tips for å bake mine oppskrifter? <br>
-        Bare send inn en e-post eller en melding via kontaktskjemaet lenger nede, så svarer jeg så fort jeg kan.
-      </p>
+    <div class="todelt"> 	    <div>
+      <div class="intro">	      <h1 class="overskrift">Kontakt oss</h1>
+        <h2>Kontakt oss</h2>	      <img id="contactUsBilde" class="BestemorB" src="img/ContactUsImage.png" alt="Portrett av borghild.">
+        <p id="kontakttekst">Har du en oppskrift som du har lyst til å dele med meg? Jeg er alltid like glad i å få tips til nye oppskrifter. <br><br>	      <p class="intro">
+            Eller trenger du råd og tips? <br><br>	        Har du en oppskrit du har lyst å dele med meg? <br>Jeg er alltid glad for å få tips til nye oppskrifter. <br>
+            Bare send inn en e-post eller en melding via kontaktskjemaet lenger nede, så svarer jeg så fort jeg kan.	        Eller trenger du råd og tips for å bake mine oppskrifter? <br>
+        </p>	        Bare send inn en e-post eller en melding via kontaktskjemaet lenger nede, så svarer jeg så fort jeg kan.
+      </div>	      </p>
+
+      <div class="bildeklipp" id="kontaktbilde">	
+        <img class="BestemorB"  src="img/BestemorB2.jpeg" 	
+             alt="Illustrasjonsbilde av Bestemor Borghild.">	
+      </div>
     </div>
     <div>
       <h2>E-post</h2>
@@ -21,13 +26,13 @@
       <a class="emailLink" href="mailto:borghild@bestemorborghild.no"> borghild@bestemorborghild.no</a>
     </div>
     <div id="contactUsForm">
-      <h2>Kontakt</h2>
+      <h3>KONTAKT</h3>
       <form id="jsContactForm" onsubmit="return submitForm()" method="post" style="display: none"> <!-- Contact form for javascript, JS version will be changed to visible in JS-->
-        <label for="inquiry">Hva gjelder henvendelsen?</label><br>
+        <!-- <label for="inquiry">Hva gjelder henvendelsen?</label><br> -->
         <select id="inquiry" name="inquiry" required>
-          <option value="" hidden> Vennligst velg et alternativ! </option>
-          <option value="recipe"> Sende inn egen oppskrift. </option>
-          <option value="question"> Sende spørsmål om en oppskrift eller teknikk. </option>
+          <option value="" hidden> Type henvendelse </option>
+          <option value="recipe"> Send inn egen oppskrift </option>
+          <option value="question"> Spørsmål om en oppskrift eller teknikk </option>
         </select><br>
         <label for="contactTitle">Tittel på henvendelsen:</label><br>
         <input type="text" id="contactTitle" name="title" value=""><br>
@@ -37,7 +42,7 @@
         <input type="email" id="email" name="userEmail"><br>
         <label for="inquiryText">Din melding:</label><br>
         <textarea id="inquiryText" name="userMessage"></textarea> <br>
-        <button type="submit" form="jsContactForm" value="submit" onclick="return validate()">Send forespørselen.</button>
+        <button id="sendinn" type="submit" form="jsContactForm" value="submit" onclick="return validate()">Send inn</button>
       </form>
       <form id="nojsContactForm" method="post">  <!-- Contact form for no javascript, will be changed to display:none in JS if JS loads -->
         <label for="inquiry">Hva gjelder henvendelsen?</label><br>
@@ -54,7 +59,7 @@
         <input type="text" name="userEmail" required><br>
         <label for="inquiryText">Din melding:</label><br>
         <textarea name="userMessage" required></textarea><br>
-        <button type="submit" form="nojsContactForm" value="submit">Send forespørselen.</button>
+        <button id="sendinnnojs" type="submit" form="nojsContactForm" value="submit">Send inn</button>
       </form>
     </div>
     <script src="js/modularity.js"></script>
