@@ -2,19 +2,19 @@
 	margin: 0;
 }
 
-html{
-  margin: 0;
-  width: 100%;
+html {
+	margin: 0;
+	width: 100%;
 }
 
 body {
 	font-size: 16px;
 	padding-bottom: 2.5rem;
-	position:relative;
-	margin:0;
-	padding:0;
+	position: relative;
+	margin: 0;
+	padding: 0;
 	padding-bottom: 25%;
-	height:100%;
+	height: 100%;
 	font-family: 'Poppins', Arial, sans-serif;
 	background-color: white;
 }
@@ -114,10 +114,10 @@ form {
 }
 
 .emailLink {
-    color: #4d3142;
-    font-size: 20px;
-    margin-top: 5%;
-    margin-left: 10%;
+	color: #4d3142;
+	font-size: 20px;
+	margin-top: 5%;
+	margin-left: 10%;
 }
 
 /*media query for skriftstørrelser*/
@@ -232,15 +232,15 @@ img {
 img.BestemorB {
 	object-fit: cover;
 	border-radius: 50%;
-  	width: 45%;
-  	max-width: 350px;
-  	height: 45%;
-  	max-height: 350px;
-  	display: inline-block;
-  	margin-left: auto;
+	width: 45%;
+	max-width: 350px;
+	height: 45%;
+	max-height: 350px;
+	display: inline-block;
+	margin-left: auto;
 	margin-right: 5%;
-  	margin-top: 8%; /*noe, men ikke helt tilfeldig*/
-  	margin-bottom: 5%;
+	margin-top: 8%; /*noe, men ikke helt tilfeldig*/
+	margin-bottom: 5%;
 }
 
 /*bakgrunnsfarge og sånt for "beste oppskrifter"-delen*/
@@ -262,7 +262,7 @@ img.BestemorB {
 .epostbilde {
 	margin-left: 10%;
 	display: inline;
-	width: 40px;
+	/* width: 40px; */
 	border-radius: 50%;
 	transform: translate(0%, 45%);
 }
@@ -461,45 +461,46 @@ a.emailLink {
 	text-decoration: underline;
 }
 
-textarea{
-  resize: both;
-  overflow: auto;
+textarea {
+	resize: both;
+	overflow: auto;
 }
-form{
+form {
 	padding-bottom: 10%;
 }
-#nojsContactForm textarea, #jsContactForm textarea{
+#nojsContactForm textarea,
+#jsContactForm textarea {
 	height: 200px;
 	width: 60%;
 }
 
 /* Styling of the footer */
-footer{
+footer {
 	position: absolute;
 	bottom: 0;
-	background-color: #E3DCD1;
+	background-color: #e3dcd1;
 	width: 100%;
 	height: 12.5%;
 	margin-top: -17.5%;
 	clear: inline-start;
 }
-#footerLogo{
+#footerLogo {
 	object-fit: contain;
 	width: 20%;
 	padding: 2%;
 	margin-left: 15%;
 }
-.footerLeft{
+.footerLeft {
 	width: 37%;
-	Float: left;
-	display:block;
+	float: left;
+	display: block;
 	padding: 2%;
 	padding-left: 10%;
 }
-.footerRight{
+.footerRight {
 	width: 47%;
-	Float: left;
-	display:block;
+	float: left;
+	display: block;
 	padding: 2%;
 }
 
@@ -507,7 +508,7 @@ footer{
 /* Navbar container */
 .NavigationBar {
 	font-family: Arial;
-	background-color: #FFFFFF;
+	background-color: #ffffff;
 	height: 80px;
 	width: 100%;
 	display: inline-block;
@@ -518,36 +519,34 @@ footer{
 }
 
 /* Format the text links */
-.NavBarBtn{
+.NavBarBtn {
 	display: inline;
 	font-size: 26px;
-	color:#4d3142;
+	color: #4d3142;
 	text-align: center;
-	height: 100%;
 	padding: 20px 20px 5px;
 	border: 5px 5px 5px;
 	margin: auto;
 	text-decoration: none;
 }
-.centeredNavBarElements{
+.centeredNavBarElements {
 	float: none;
 	position: absolute;
 	top: 50%;
 	left: 50%;
-	transform: translate(-50%,-50%);
-	white-space:nowrap;
+	transform: translate(-50%, -50%);
+	white-space: nowrap;
 	padding-right: 20px;
-
 }
 
-#NavbarIcon{
+#NavbarIcon {
 	float: left;
 	height: 100%;
 	padding: 10px 0px 10px 20px;
 	z-index: 10;
 }
 
-#NavbarIcon img{
+#NavbarIcon img {
 	height: auto;
 	width: auto;
 	box-sizing: fill;
@@ -556,11 +555,93 @@ footer{
 	margin: 0;
 	z-index: 12;
 }
- 
-  /* Add a background color to navbar links on hover 
+
+/* Add a background color to navbar links on hover 
   Inspired by: https://www.w3schools.com/howto/howto_css_navbar_border.asp
   */
-a.NavBarBtn:hover{
-	background-color: #E3DCD1;
+a.NavBarBtn:hover {
+	background-color: #e3dcd1;
 	padding-bottom: 3px red;
 }
+
+/* SLIDESHOW */
+#left,
+#right {
+	position: absolute;
+	top: 80px;
+	width: 7%;
+	height: 91vh;
+	font-size: 1000%;
+	z-index: 4;
+	text-align: center;
+	color: rgba(158, 158, 158, 0.5);
+	-moz-user-select: none;
+	-webkit-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	-o-user-select: none;
+}
+
+#left:hover,
+#right:hover {
+	background-color: rgba(165, 165, 165, 0.116);
+}
+
+#left {
+	left: 0;
+}
+
+#right {
+	right: 0;
+}
+
+.arrow_position {
+	margin-top: 330%;
+	position: relative;
+}
+
+.arrow_left_upper,
+.arrow_left_lower,
+.arrow_right_upper,
+.arrow_right_lower {
+	width: 25px;
+	height: 3px;
+	background-color: rgba(255, 255, 255, 0.781);
+	margin: 0px;
+	padding: 0px;
+	position: absolute;
+}
+
+.arrow_left_upper,
+.arrow_left_lower {
+	left: 17%;
+}
+.arrow_right_upper,
+.arrow_right_lower {
+	right: 17%;
+}
+
+.arrow_left_lower,
+.arrow_right_upper {
+	top: 16px;
+}
+
+.arrow_left_upper,
+.arrow_right_upper {
+	-ms-transform: rotate(-45deg); /* IE 9 */
+	-webkit-transform: rotate(-45deg); /* Safari */
+	transform: rotate(-45deg);
+}
+
+.arrow_left_lower,
+.arrow_right_lower {
+	-ms-transform: rotate(45deg); /* IE 9 */
+	-webkit-transform: rotate(45deg); /* Safari */
+	transform: rotate(45deg);
+}
+.slideshowplaceholder {
+	margin: 0px;
+	width: 100%;
+	height: 100vh;
+}
+/* END SLIDESHOW */
