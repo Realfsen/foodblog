@@ -44,9 +44,9 @@
 
     // Append the navigation bar to the front of the <body>
     document.body.insertBefore(navBar, document.body.childNodes[0]);
-})()
-
-window.onload = function(){
+    /*
+    GENERATES THE FOOTER
+    */
     console.log("Footer generation script initiated")
     var foot = document.createElement("footer");
     document.body.appendChild(foot);
@@ -77,4 +77,4 @@ window.onload = function(){
     innerLink.appendChild(innerLinkText);
     innerDivR.appendChild(innerLink);
     foot.appendChild(innerDivR);
-}
+})()
