@@ -512,6 +512,7 @@ footer {
 	padding-right: 3%;
 }
 
+
 #NavbarIcon {
 	float: left;
 	height: 100%;
@@ -538,6 +539,11 @@ a.NavBarBtn:hover {
 	/* padding-bottom: 3px red; */
 	text-decoration: underline;
 }
+/*
+a.NavBarBtn:hover{
+	text-decoration: underline;
+	text-decoration-color: #4D3142;
+} */
 
 /* Media queries for navbar*/
 @media (min-width: 800px) {
@@ -570,3 +576,4 @@ a.NavBarBtn:hover {
 		margin-left: 8%;
 	}
 }
+
