@@ -88,17 +88,17 @@
     console.log(stringPositionStart, stringPositionEnd)
     var subPage = fullURL.slice(stringPositionStart, stringPositionEnd);
     console.log(subPage)
-    var activeBarStyling = "0.2vw solid #4D3142";
+    var activeBarStyling = "0.2vw solid #4D3142"; // Just to make it quicker to change values
     // Check what page we are on and retrieve the correct element based on the URL
-    if (subPage.toLowerCase()==="contact"){
+    if (subPage.toLowerCase()==="contact"){ // For "kontakt oss"
         var currentElement = document.getElementById("NavBarContact");
             console.log(currentElement)
             currentElement.style.borderBottom = activeBarStyling;
-    } else if (subPage.toLowerCase()==="baking101") {
+    } else if (subPage.toLowerCase()==="baking101") { // For "Baketips"
             console.log(currentElement)
             var currentElement = document.getElementById("NavBarTechnique");
             currentElement.style.borderBottom = activeBarStyling;
-    } else if (subPage.toLowerCase()==="recipe_list"){
+    } else if (subPage.toLowerCase()==="recipe_list"){ // For "Oppskrifter"
             console.log(currentElement)
             var currentElement = document.getElementById("NavBarRecipes");
             currentElement.style.borderBottom = activeBarStyling;
