@@ -2,8 +2,19 @@
 	margin: 0;
 }
 
+html{
+  margin: 0;
+  width: 100%;
+}
+
 body {
 	font-size: 16px;
+	padding-bottom: 2.5rem;
+	position:relative;
+	margin:0;
+	padding:0;
+	padding-bottom: 25%;
+	height:100%;
 	font-family: 'Poppins', Arial, sans-serif;
 	background-color: white;
 }
@@ -12,6 +23,9 @@ body {
 media-queries vil brukes for at større sider blir som beskrevet i oppgaven.*/
 /*over-overskrift, kun brukt på index-siden*/
 h1 {
+	font-family: 'Poppins', 'Arial', sans-serif;
+	color: #f09ca2;
+	padding-top: 80px;
 	font-weight: bold;
 	color: #f09ca2;
 	font-size: 7vw;
@@ -100,8 +114,10 @@ form {
 }
 
 .emailLink {
-	color: #4d3142;
-	font-size: 14px;
+    color: #4d3142;
+    font-size: 20px;
+    margin-top: 5%;
+    margin-left: 10%;
 }
 
 /*media query for skriftstørrelser*/
@@ -212,7 +228,22 @@ img {
 	}
 }
 
-/*bakgrunnsfarge og sånt for "beste oppskrifter"-delen på indexsiden*/
+/*for å gjøre bestemorbildet rundt, bestemme størrelse på det og plassering innad i sin "boks"*/
+img.BestemorB {
+	object-fit: cover;
+	border-radius: 50%;
+  	width: 45%;
+  	max-width: 350px;
+  	height: 45%;
+  	max-height: 350px;
+  	display: inline-block;
+  	margin-left: auto;
+	margin-right: 5%;
+  	margin-top: 8%; /*noe, men ikke helt tilfeldig*/
+  	margin-bottom: 5%;
+}
+
+/*bakgrunnsfarge og sånt for "beste oppskrifter"-delen*/
 .utvalgteoppskrifter {
 	/* height: auto; */
 	height: 500px; /*midlertidig for å kunne se, må endres når cards legges til*/
@@ -430,7 +461,106 @@ a.emailLink {
 	text-decoration: underline;
 }
 
-textarea {
-	resize: both;
-	overflow: auto;
+textarea{
+  resize: both;
+  overflow: auto;
+}
+form{
+	padding-bottom: 10%;
+}
+#nojsContactForm textarea, #jsContactForm textarea{
+	height: 200px;
+	width: 60%;
+}
+
+/* Styling of the footer */
+footer{
+	position: absolute;
+	bottom: 0;
+	background-color: #E3DCD1;
+	width: 100%;
+	height: 12.5%;
+	margin-top: -17.5%;
+	clear: inline-start;
+}
+#footerLogo{
+	object-fit: contain;
+	width: 20%;
+	padding: 2%;
+	margin-left: 15%;
+}
+.footerLeft{
+	width: 37%;
+	Float: left;
+	display:block;
+	padding: 2%;
+	padding-left: 10%;
+}
+.footerRight{
+	width: 47%;
+	Float: left;
+	display:block;
+	padding: 2%;
+}
+
+/* Navigation Bar styling */
+/* Navbar container */
+.NavigationBar {
+	font-family: Arial;
+	background-color: #FFFFFF;
+	height: 80px;
+	width: 100%;
+	display: inline-block;
+	position: fixed;
+	top: 0;
+	z-index: 5;
+	padding-right: 100px;
+}
+
+/* Format the text links */
+.NavBarBtn{
+	display: inline;
+	font-size: 26px;
+	color:#4d3142;
+	text-align: center;
+	height: 100%;
+	padding: 20px 20px 5px;
+	border: 5px 5px 5px;
+	margin: auto;
+	text-decoration: none;
+}
+.centeredNavBarElements{
+	float: none;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	white-space:nowrap;
+	padding-right: 20px;
+
+}
+
+#NavbarIcon{
+	float: left;
+	height: 100%;
+	padding: 10px 0px 10px 20px;
+	z-index: 10;
+}
+
+#NavbarIcon img{
+	height: auto;
+	width: auto;
+	box-sizing: fill;
+	max-height: 50px;
+	max-width: 75px;
+	margin: 0;
+	z-index: 12;
+}
+ 
+  /* Add a background color to navbar links on hover 
+  Inspired by: https://www.w3schools.com/howto/howto_css_navbar_border.asp
+  */
+a.NavBarBtn:hover{
+	background-color: #E3DCD1;
+	padding-bottom: 3px red;
 }
