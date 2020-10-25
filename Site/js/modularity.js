@@ -15,12 +15,14 @@
 
     // Create the centeredDiv element
     var centeredDiv = document.createElement("div");
-    centeredDiv.className = "centeredNavBarElements";
+    centeredDiv.className = "headercentered"
+
 
     // Input the link to "Oppskrifter", appended to centeredDiv
     var RecipeButton = document.createElement("a");
-    var RecipeButtonText = document.createTextNode("Oppskrifter");
+    var RecipeButtonText = document.createTextNode("OPPSKRIFTER");
     RecipeButton.className = "NavBarBtn";
+    RecipeButton.id = "recipeBtn"
     RecipeButton.href = "recipe_list.html";
     RecipeButton.id = "NavBarRecipes";
     // Event listeners to format element on mouseover in the navigation bar.
@@ -32,7 +34,7 @@
 
     // Input the link to "baketips", appended to centeredDiv
     var TechniqueButton = document.createElement("a");
-    var TechniqueButtonText = document.createTextNode("Baketips");
+    var TechniqueButtonText = document.createTextNode("BAKETIPS");
     TechniqueButton.className = "NavBarBtn";
     TechniqueButton.href = "baking101.html";
     TechniqueButton.id = "NavBarTechnique";
@@ -45,7 +47,7 @@
 
     // Input the link to "Kontakt Oss", appended to centeredDiv
     var ContactButton = document.createElement("a");
-    var ContactButtonText = document.createTextNode("Kontakt oss");
+    var ContactButtonText = document.createTextNode("KONTAKT OSS");
     ContactButton.className = "NavBarBtn";
     ContactButton.href = "contact.html";
     ContactButton.id = "NavBarContact";
@@ -73,7 +75,7 @@
     innerImgL.id = "footerLogo";
     innerDivL.appendChild(innerImgL);
     var innerPL = document.createElement("p");
-    var innerTextL = document.createTextNode("Bestemor borghild \n Bestemor Borghilds Bakebonanza 2020");
+    var innerTextL = document.createTextNode("BESTEMOR BORGHILD \n Bestemor Borghilds Bakebonanza 2020");
     innerPL.appendChild(innerTextL);
     innerDivL.appendChild(innerPL);
     foot.appendChild(innerDivL);
