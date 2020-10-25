@@ -118,3 +118,4 @@ function persistantActiveNavigationBar(){
             currentElement.style.borderBottom = activeBarStyling;
     } else {}
 }
+
