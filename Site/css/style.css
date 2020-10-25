@@ -421,10 +421,10 @@ a {
     men hva med når man er innpå den siden?*/
 }
 /*for når man hover over en link*/
-a:hover,
+/* a:hover,
 a:active {
 	text-decoration: underline;
-}
+} */
 
 a.emailLink {
 	text-decoration: underline;
