@@ -2,35 +2,30 @@
 	margin: 0;
 }
 
-html{
-  margin: 0;
-  width: 100%;
-}
-
 body {
 	font-size: 16px;
+	font-family: 'Poppins', Arial, sans-serif;
+	background-color: white;
+	position: relative;
 	padding-bottom: 2.5rem;
-	position:relative;
-	margin:0;
+	padding-top: 80px; /*gjør plass til navbaren*/
+	/* margin:0;
 	padding:0;
 	padding-bottom: 25%;
 	height:100%;
-	font-family: 'Poppins', Arial, sans-serif;
-	background-color: white;
+	 */
 }
 
 /*bruker vw (viewport width) som enhet for mindre sider, for et responsivt design. Da vil det skalere dynamisk.
 media-queries vil brukes for at større sider blir som beskrevet i oppgaven.*/
 /*over-overskrift, kun brukt på index-siden*/
 h1 {
-	font-family: 'Poppins', 'Arial', sans-serif;
-	color: #f09ca2;
-	padding-top: 80px;
 	font-weight: bold;
 	color: #f09ca2;
 	font-size: 7vw;
 	text-align: center;
 	position: relative;
+	/* padding-top: 80px; */ /*må ev med fordi navbaren tar plass*/
 }
 
 /*for å sentrere tekst, setter overskriften midt i slideshowet/bildet på indexsiden*/
@@ -58,7 +53,6 @@ h2 {
 	/*for å få det litt inn på siden, som i design-eksemplene. skjer flere steder*/
 	margin-left: 10%;
 	margin-right: 10%; /*mulig det burde være en annen løsning her*/
-	/* padding-top: 10%; */
 	margin-top: 10%;
 }
 
@@ -114,10 +108,8 @@ form {
 }
 
 .emailLink {
-    color: #4d3142;
-    font-size: 20px;
-    margin-top: 5%;
-    margin-left: 10%;
+	color: #4d3142;
+	font-size: 14px;
 }
 
 /*media query for skriftstørrelser*/
@@ -228,21 +220,6 @@ img {
 	}
 }
 
-/*for å gjøre bestemorbildet rundt, bestemme størrelse på det og plassering innad i sin "boks"*/
-img.BestemorB {
-	object-fit: cover;
-	border-radius: 50%;
-  	width: 45%;
-  	max-width: 350px;
-  	height: 45%;
-  	max-height: 350px;
-  	display: inline-block;
-  	margin-left: auto;
-	margin-right: 5%;
-  	margin-top: 8%; /*noe, men ikke helt tilfeldig*/
-  	margin-bottom: 5%;
-}
-
 /*bakgrunnsfarge og sånt for "beste oppskrifter"-delen*/
 .utvalgteoppskrifter {
 	/* height: auto; */
@@ -252,6 +229,7 @@ img.BestemorB {
 	sjekk html-delen for å se. mulig ekstra div, eller å style cards direkte (hvis det ikke alt er gjort)*/
 	/* margin: none; */
 	/* margin-bottom: 10%; */
+	padding-top: 2.5%;
 }
 
 /*for epost-delen på contact-side*/
@@ -264,7 +242,7 @@ img.BestemorB {
 	display: inline;
 	width: 40px;
 	border-radius: 50%;
-	transform: translate(0%, 45%);
+	transform: translate(0%, 40%);
 }
 
 .emailLink {
@@ -461,93 +439,87 @@ a.emailLink {
 	text-decoration: underline;
 }
 
-textarea{
-  resize: both;
-  overflow: auto;
+textarea {
+	resize: both;
+	overflow: auto;
 }
-form{
+
+/*fiks herfra og ned for modularity*/
+form {
 	padding-bottom: 10%;
 }
-#nojsContactForm textarea, #jsContactForm textarea{
+#nojsContactForm textarea,
+#jsContactForm textarea {
 	height: 200px;
 	width: 60%;
 }
 
 /* Styling of the footer */
-footer{
+.boldfooter {
+	font-weight: bold;
+}
+
+footer {
 	position: absolute;
 	bottom: 0;
-	background-color: #E3DCD1;
+	background-color: #eae8e6;
 	width: 100%;
 	height: 12.5%;
 	margin-top: -17.5%;
 	clear: inline-start;
 }
-#footerLogo{
+#footerLogo {
 	object-fit: contain;
 	width: 20%;
 	padding: 2%;
 	margin-left: 15%;
 }
-.footerLeft{
+.footerLeft {
 	width: 37%;
-	Float: left;
-	display:block;
+	float: left;
+	display: block;
 	padding: 2%;
 	padding-left: 10%;
 }
-.footerRight{
+.footerRight {
 	width: 47%;
-	Float: left;
-	display:block;
+	float: left;
+	display: block;
 	padding: 2%;
 }
 
 /* Navigation Bar styling */
 /* Navbar container */
 .NavigationBar {
-	font-family: Arial;
-	background-color: #FFFFFF;
+	font-family: 'Poppins', Arial, sans-serif;
+	background-color: #ffffff;
 	height: 80px;
 	width: 100%;
 	display: inline-block;
 	position: fixed;
 	top: 0;
 	z-index: 5;
-	padding-right: 100px;
 }
 
 /* Format the text links */
-.NavBarBtn{
+.NavBarBtn {
 	display: inline;
-	font-size: 26px;
-	color:#4d3142;
+	font-size: 2.5vw;
+	color: #4d3142;
 	text-align: center;
 	height: 100%;
-	padding: 20px 20px 5px;
-	border: 5px 5px 5px;
-	margin: auto;
-	text-decoration: none;
-}
-.centeredNavBarElements{
-	float: none;
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%,-50%);
-	white-space:nowrap;
-	padding-right: 20px;
-
+	padding-left: 3%;
+	padding-right: 3%;
 }
 
-#NavbarIcon{
+#NavbarIcon {
 	float: left;
 	height: 100%;
-	padding: 10px 0px 10px 20px;
+	padding: 15px 0 0 2.5%;
 	z-index: 10;
 }
 
-#NavbarIcon img{
+#NavbarIcon img {
 	height: auto;
 	width: auto;
 	box-sizing: fill;
@@ -556,11 +528,45 @@ footer{
 	margin: 0;
 	z-index: 12;
 }
- 
-  /* Add a background color to navbar links on hover 
+
+/* Add a background color to navbar links on hover 
   Inspired by: https://www.w3schools.com/howto/howto_css_navbar_border.asp
   */
-a.NavBarBtn:hover{
-	background-color: #E3DCD1;
-	padding-bottom: 3px red;
+/*som så ble endret siden vi skulle ha noe annet der*/
+a.NavBarBtn:hover {
+	/* background-color: #e3dcd1; */
+	/* padding-bottom: 3px red; */
+	text-decoration: underline;
+}
+
+/* Media queries for navbar*/
+@media (min-width: 800px) {
+	.NavBarBtn {
+		font-size: 20px;
+	}
+}
+
+/*str for navbaren, og at den "forsvinner" når det scrolles opp på små skjermer*/
+@media (max-width: 580px) {
+	.NavBarBtn {
+		font-size: 0.9em;
+		display: inline-block;
+		padding: 0.3em 4% 0.3em 4%;
+	}
+	/*disse to henger sammen!*/
+	.NavigationBar {
+		position: relative;
+	}
+	body {
+		padding-top: 0;
+	}
+}
+
+@media (max-width: 450px) {
+	#recipeBtn {
+		margin-left: 10%;
+	}
+	.NavBarBtn {
+		margin-left: 8%;
+	}
 }
