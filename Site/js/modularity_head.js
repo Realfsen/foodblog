@@ -16,6 +16,18 @@
     styleSheet.href = "css/style.css";
     head.appendChild(styleSheet);
 
+    // Adding some new fonts
+    var fontPoppins = document.createElement("link");
+    fontPoppins.href = "https://fonts.googleapis.com/css2?family=Poppins&display=swap";
+    fontPoppins.rel = "stylesheet";
+    head.appendChild(fontPoppins);
+
+    var fontPoppins2 = document.createElement("link");
+    fontPoppins2.href = "https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap";
+    fontPoppins2.ref = "stylesheet";
+    head.appendChild(fontPoppins2);
+
+
     // Favicons and compatability with a lot of devices!
     // Includes short-cut images, mac touchbar icons, windows start icon etc.
     // Favicons and input code generatored by http://www.realfavicongenerator.net based on "Kun_logo.png" found in /img.
