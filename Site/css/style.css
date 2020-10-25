@@ -524,9 +524,9 @@ footer{
 	color:#4d3142;
 	text-align: center;
 	height: 100%;
-	padding: 20px 20px 5px;
-	border: 5px 5px 5px;
-	margin: auto;
+	padding: 20px 0px 0px 0px;
+	margin-left: 20px;
+	border-bottom: 5px solid transparent;
 	text-decoration: none;
 }
 .centeredNavBarElements{
@@ -536,7 +536,7 @@ footer{
 	left: 50%;
 	transform: translate(-50%,-50%);
 	white-space:nowrap;
-	padding-right: 20px;
+	padding: 0px 20px 10px 0px;
 
 }
 
