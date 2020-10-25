@@ -3,21 +3,38 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>BB Oppskrifter</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
+    <title>Oppskrifter</title>
   </head>
   <body>
 
+    <div>
+      <button class="sorteringsknapp" id="borghildknapp" onclick="nameSort()">Bordhilds oppskrifter</button>
+      <button class="sorteringsknapp" id="brukereknapp" onclick="nameSort()">Brukernes oppskrifter</button>
+    </div>
     <div class="borghildsoppskrifter">
-      <h2>Borghilds oppskrifter</h2>
-      <div card-list="recipes" data-template="card" data-file="recipes"></div>
+      <h2 id="borghildsoppskrifter">Borghilds oppskrifter</h2>
+      <div 
+      class="card-container"
+      card-list="recipes" 
+      data-template="card" 
+      data-file="recipes"
+      ></div>
     </div>
 
     <div class="brukernesoppskrifter">
       <h2>Brukernes oppskrifter</h2>
+      <div 
+      class="card-container"
+      card-list="recipes" 
+      data-template="card" 
+      data-file="recipes"
+      ></div>
     </div>
   
 
+    <script src="js/jsonLoader_new.js"></script>
   </body>
-  <script src="js/jsonLoader_new.js"></script>
 </html>

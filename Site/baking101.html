@@ -4,20 +4,25 @@
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Baking 101</title>
+		<link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
 		<link rel="stylesheet" href="css/style.css" />
+		
 	</head>
 
 	<body>
-		<h1>Bestemor Borghilds baketips</h1>
-		<button onclick="nameSort()">Sort by name</button>
+		<h2>Bestemor Borghilds baketips</h2>
+		<button class="sorteringsknapp" id="teknikknapp" onclick="nameSort()">Sorter etter navn</button>
 		<div
 			class="card-container"
 			card-list="techniques"
 			data-template="card"
 			data-file="techniques"
 		></div>
-	</body>
+
 	<script src="js/jsonLoader_new.js"></script>
 	<script src="js/filter.js"></script>
-	<!-- <script src="js/contentFromUrl_new.js"></script> -->
+	<!-- <script src="js/contentFromUrl_new.js"></script> -->	
+	</body>
+	
 </html>

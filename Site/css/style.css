@@ -1,10 +1,10 @@
+* {
+	margin: 0;
+}
+
 html{
   margin: 0;
   width: 100%;
-}
-
-header {
-	font-family: 'Poppins', 'Arial', sans-serif; /*hmm gjør dette noe?*/
 }
 
 body {
@@ -15,105 +15,217 @@ body {
 	padding:0;
 	padding-bottom: 25%;
 	height:100%;
-  
+	font-family: 'Poppins', Arial, sans-serif;
+	background-color: white;
 }
 
+/*bruker vw (viewport width) som enhet for mindre sider, for et responsivt design. Da vil det skalere dynamisk.
+media-queries vil brukes for at større sider blir som beskrevet i oppgaven.*/
+/*over-overskrift, kun brukt på index-siden*/
 h1 {
 	font-family: 'Poppins', 'Arial', sans-serif;
 	color: #f09ca2;
-	font-size: 56px;
 	padding-top: 80px;
-	/*text-align: center;
-	position: relative;*/
+	font-weight: bold;
+	color: #f09ca2;
+	font-size: 7vw;
+	text-align: center;
+	position: relative;
 }
 
+/*for å sentrere tekst, setter overskriften midt i slideshowet/bildet på indexsiden*/
+.headercentered {
+	position: absolute;
+	top: 50%;
+	left: 10%;
+	right: 10%;
+	transform: translate(0%, -50%);
+	text-align: center;
+}
+.overskrift {
+	position: relative;
+	display: block;
+}
+img.slideshowplaceholder {
+	display: block;
+}
+
+/*underoverskrift, eller overskriften brukt på alle sider (den med streken under)*/
 h2 {
-	font-family: 'Poppins', 'Arial', sans-serif;
+	font-weight: bold;
 	color: #4d3142;
-	font-size: 40px;
-	margin-left: 10%; /*satt noe tilfeldig atm*/
+	font-size: 5vw;
+	/*for å få det litt inn på siden, som i design-eksemplene. skjer flere steder*/
+	margin-left: 10%;
 	margin-right: 10%; /*mulig det burde være en annen løsning her*/
-	padding-top: 10%;
+	/* padding-top: 10%; */
+	margin-top: 10%;
 }
 
-/*mulig løsning for strek under h2-elementer*/
+/*fungerende løsning for strek under h2-elementer*/
 h2:after {
 	content: ' ';
 	display: block;
 	border: 2px solid #f09ca2;
 	background-color: #f09ca2; /*fordi det bare er en boks, så uten så blir det en hvit(ufarget) strek inni lol*/
-	width: 30%; /*lengden på streken*/
+	width: 20vw; /*lengden på streken*/
 	margin-top: 15px; /*avstand fra h2*/
-	margin-left: -2%; /*foreløpig iaf for å få streken til å starte samme sted som h2-teksten*/
+	margin-left: 2px; /*foreløpig iaf for å få streken til å starte samme sted som h2-teksten*/
 	margin-bottom: 30px; /*så ikke det under kan komme helt oppi*/
 }
 
-p, blockquote, ul, ol, form{
-	font-family: 'Poppins', 'Arial', sans-serif;
+/*under-underoverskrifter, brukes på contact-siden*/
+h3 {
 	color: #4d3142;
 	font-size: 16px;
-	line-height: 1.5em; /*?*/
+	margin-left: 10%;
+	margin-bottom: 10px;
+}
+
+/*er egentlig ganske lik h2, bruker for feks den enkelte teknikksiden*/
+h4 {
+	font-weight: bold;
+	color: #4d3142;
+	font-size: 5vw;
+	margin-left: 10%;
+	margin-right: 10%;
+	margin-top: 10%;
+}
+h4:after {
+	content: ' ';
+	display: block;
+	border: 2px solid #f09ca2;
+	background-color: #f09ca2; /*fordi det bare er en boks, så uten så blir det en hvit(ufarget) strek inni lol*/
+	width: 20vw; /*lengden på streken*/
+	margin-top: 15px; /*avstand fra h2*/
+	margin-left: 2px; /*foreløpig iaf for å få streken til å starte samme sted som h2-teksten*/
+	margin-bottom: 20%; /*så ikke det under kan komme helt oppi*/
+}
+
+/*div vanlig skrift*/
+p,
+blockquote,
+ul,
+ol,
+form {
+	color: #4d3142;
+	font-size: 14px;
 	margin-left: 10%; /*hvis vi ikke bruker noe annet for dette*/
 }
 
-.emailLink{
-    font-family: 'Poppins', 'Arial', sans-serif;
+.emailLink {
     color: #4d3142;
     font-size: 20px;
     margin-top: 5%;
     margin-left: 10%;
 }
 
-/*ev for å sentrere innhold*/
-/*.centered {
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
-	text-align: center;
-}*/
+/*media query for skriftstørrelser*/
+/*stor skjerm*/
+@media (min-width: 800px) {
+	h1 {
+		font-size: 56px;
+	}
+	h2 {
+		font-size: 40px;
+	}
+	h2:after {
+		width: 160px;
+	}
+	h3 {
+		font-size: 18px;
+	}
+	p,
+	blockquote,
+	ul,
+	ol,
+	form,
+	.emailLink {
+		font-size: 16px;
+	}
+}
 
-.overskrift {
-    position: relative;
-    left: 20%;
+/*veldig liten skjerm, så ting ikke blir knøttsmått*/
+@media (max-width: 350px) {
+	h1 {
+		font-size: 24px;
+	}
+	h2 {
+		font-size: 18px;
+	}
+	h2:after {
+		width: 70px;
+	}
+	h3 {
+		font-size: 16px;
+	}
+	p,
+	blockquote,
+	ul,
+	ol,
+	form,
+	.emailLink {
+		font-size: 14px;
+	}
+}
+
+/*sette intro/info-delen til venstre og bildet til høyre*/
+.todelt {
 	display: block;
+	margin-bottom: 12.5%;
+	margin-left: 1%; /*for å få ting til å ha likt innrykk*/
 }
 
-.headercentered {
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
-	text-align: center;
-}
-
-img.slideshowplaceholder {
-	display: block;
-}
-
-/*sette introdelen til venstre og bildet til høyre*/
-.container {
-	background-color: sandybrown; /*kun for å lette kunne se, skal fjernes*/
-	width: auto;
-	height: 500px;
-	padding-top: 20px;
-	padding-left: 15px;
-	padding-right: 15px;
-}
-
+/*tekstdel i .todelt*/
 .intro {
-	float: left;
-	width: 40%;
-	height: 400px;
 	display: block;
-	margin-right: auto;
-	margin-left: 5%;
+	margin-right: 10%; /*så teksten ikke går helt bort i kanten på høyre siden*/
+	margin-bottom: 10%; /*margin til bildet under*/
+	position: relative;
 }
 
-#introbilde {
-	float: right;
-	width: 50%;
-	height: 400px;
+/*bildedel i .todelt. inkl å gjøre det rundt*/
+.bildeklipp {
+	width: 50vw;
+	height: 50vw;
+	max-width: 350px;
+	max-height: 350px;
+	position: relative;
+	overflow: hidden;
+	border-radius: 50%;
+	margin-left: 10%;
+	margin-bottom: 10%;
+}
+
+/*annen str for kontaktbildet på contact*/
+#kontaktbilde {
+	width: 45vw;
+	height: 45vw;
+	max-width: 250px;
+	max-height: 250px;
+}
+
+/*for bilder generelt*/
+img {
+	display: block;
+	height: 100%; /*la stå. tas dette vekk forsvinner liksom innholdet i bildet lol?*/
+}
+
+/*media query for bildene ved siden av teksten istedenfor under*/
+@media (min-width: 800px) {
+	.todelt {
+		margin-top: 10%;
+		margin-left: 6%;
+		display: grid;
+		grid-template-columns: 50% 50%;
+	}
+
+	.bildeklipp {
+		margin-right: 10%;
+		margin-left: auto;
+		margin-top: auto;
+		margin-bottom: auto;
+	}
 }
 
 /*for å gjøre bestemorbildet rundt, bestemme størrelse på det og plassering innad i sin "boks"*/
@@ -133,10 +245,162 @@ img.BestemorB {
 
 /*bakgrunnsfarge og sånt for "beste oppskrifter"-delen*/
 .utvalgteoppskrifter {
-	height: 300px;
+	/* height: auto; */
+	height: 500px; /*midlertidig for å kunne se, må endres når cards legges til*/
 	background: #e3dcd1;
-	margin: none;
+	/*noe form for marginer må kanskje legges til på en litt annen måte, 
+	sjekk html-delen for å se. mulig ekstra div, eller å style cards direkte (hvis det ikke alt er gjort)*/
+	/* margin: none; */
+	/* margin-bottom: 10%; */
 }
+
+/*for epost-delen på contact-side*/
+#epost {
+	margin-bottom: 100px;
+}
+
+.epostbilde {
+	margin-left: 10%;
+	display: inline;
+	width: 40px;
+	border-radius: 50%;
+	transform: translate(0%, 45%);
+}
+
+.emailLink {
+	margin-top: auto;
+	margin-left: 2.5%;
+	margin-bottom: 30px;
+	text-decoration: underline;
+}
+
+@media (max-width: 350px) {
+	.emailLink {
+		display: block;
+		margin-left: 10%;
+		margin-top: 40px;
+	}
+	#epost {
+		margin-bottom: 15%;
+	}
+}
+
+/*forms/kontaktskjemaet*/
+form {
+	margin-left: 10%;
+}
+
+form input,
+textarea,
+select {
+	margin-top: 10px;
+	margin-bottom: 30px;
+	border-radius: 3px;
+	border: 1px solid #4d3142;
+}
+
+form label {
+	font-weight: bold;
+}
+
+form input {
+	padding: 10px;
+	width: 80%;
+	max-width: 278px;
+}
+
+form select {
+	padding: 10px;
+	width: 86%;
+	max-width: 300px;
+}
+
+form textarea {
+	padding: 10px;
+	width: 80%;
+	/* max-width: 300px; */
+	height: 150px;
+}
+
+/*media query for forms*/
+@media (min-width: 800px) {
+	form textarea {
+		width: 50%;
+		min-width: 578px;
+	}
+}
+
+/*send inn-knapp på kontaktsiden*/
+#sendinn,
+#sendinnnojs {
+	background-color: #4d3142;
+	font-size: 16px;
+	font-weight: bold;
+	color: white;
+	cursor: pointer;
+	width: 250px;
+	height: 50px;
+	border-radius: 7.5px;
+	border: none;
+	margin-bottom: 50px;
+}
+/* ev andre ting    */
+#sendinn:hover {
+	background-color: #3d2634;
+}
+
+/*sorteringsknapper*/
+.sorteringsknapp {
+	font-size: 16px;
+	color: #4d3142;
+	cursor: pointer;
+	width: 200px;
+	height: 50px;
+	border-radius: 50px;
+	border: #4d3142 solid 1px;
+	background-color: #ffffff;
+	/* margin-top: 5%; */
+	/* margin-bottom: 50px; */
+}
+#borghildknapp {
+	margin-left: 10%;
+	margin-top: 10%;
+	margin-bottom: 5%;
+}
+
+#brukereknapp {
+	margin-left: 25px;
+}
+
+#borghildsoppskrifter {
+	margin-top: 30px;
+}
+
+#teknikknapp {
+	margin-left: 10%;
+}
+
+@media (max-width: 500px) {
+	#brukereknapp {
+		margin-left: 10%;
+		margin-top: 2%;
+		margin-bottom: 5%;
+		display: block;
+	}
+}
+
+/*for den spesifikke teknikksiden, må ordnes*/
+
+/* .techniquetext {
+	max-width: 40%;
+}
+
+.techniqueimage {
+	display: inline;
+	max-width: 30%;
+	float: right;
+	margin-right: 10%;
+} */
 
 /* cards */
 .card-container {
@@ -184,11 +448,16 @@ img.BestemorB {
 /*for alle linker generelt?*/
 a {
 	color: #4d3142;
-	text-decoration: none !important; /*hvis ikke får den underline til vanlig også, 
+	text-decoration: none; /*hvis ikke får den underline til vanlig også, 
     men hva med når man er innpå den siden?*/
 }
 /*for når man hover over en link*/
-a:hover, a:active {
+/* a:hover,
+a:active {
+	text-decoration: underline;
+} */
+
+a.emailLink {
 	text-decoration: underline;
 }
 
