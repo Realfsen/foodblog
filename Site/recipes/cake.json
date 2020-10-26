@@ -4,7 +4,7 @@
 	"type": "recipe",
 	"link": "cake",
 	"ingredienser": {
-		"Smør": "350 g",
+		"500 g": "sukker",
 		"Kakaopulver": "2 dl",
 		"Egg": "4 stk",
 		"Sukker": "500 g",
@@ -12,7 +12,7 @@
 		"Bakepulver": "2 ts",
 		"Vaniljesukker": "2 ts",
 		"Natron": "2 ts",
-		"Kefir": "7 dl",
+		"7 dl": "kefir",
 		"Kokesjokolade": "200 g"
 	},
 	"fremgang": {
