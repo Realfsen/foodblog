@@ -2,6 +2,7 @@
 	"picture": "img/sjokoladeKake.jpg",
 	"name": "Sjokoladekake",
 	"type": "recipe",
+	"link": "sjokoladekake",
 	"description": "[Description]",
 	"ingredienser": {
 		"sukker": "1kg",
