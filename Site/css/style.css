@@ -197,7 +197,6 @@ form {
 	max-height: 250px;
 }
 
-<<<<<<< HEAD
 .ingredientlist {
 	float:left;
 }
@@ -210,10 +209,9 @@ form {
 	float: left;
 	width: 40%;
 	height: 400px;
-=======
+	
 /*for bilder generelt*/
 img {
->>>>>>> a518a0f8c8f51b986f786b4843a6b21b2e42ff7f
 	display: block;
 	height: 100%; /*la stå. tas dette vekk forsvinner liksom innholdet i bildet lol?*/
 }
