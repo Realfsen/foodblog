@@ -78,12 +78,22 @@ function parseTemplate(content, template) {
 			var ul = document.createElement('ul')
 			const keys = Object.keys(content.ingredienser)
 			keys.forEach((key, index) => {
-				console.log(content.ingredienser[key])
 				let li = document.createElement('li')
 				li.textContent = key + ': ' + content.ingredienser[key]
 				ul.appendChild(li)
 			})
 			template = template.replace(p.templateString, ul.outerHTML)
+		}
+		// If it's the cooking process, it's an ordered list
+		else if (p.templateString === '{{ fremgang }}') {
+			var ol = document.createElement('ol')
+			const keys = Object.keys(content.fremgang)
+			keys.forEach((key, index) => {
+				let li = document.createElement('li')
+				li.textContent = content.fremgang[key]
+				ol.appendChild(li)
+			})
+			template = template.replace(p.templateString, ol.outerHTML)
 		} else {
 			template = template.replace(p.templateString, p.content)
 		}

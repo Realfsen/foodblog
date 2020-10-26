@@ -1,9 +1,9 @@
 {
-	"picture":"img/chocolatecake.jpg",
+	"picture": "img/chocolatecake.jpg",
 	"name": "Sjokoladekake",
 	"type": "recipe",
 	"link": "cake",
-	"ingredients": {
+	"ingredienser": {
 		"Smør": "350 g",
 		"Kakaopulver": "2 dl",
 		"Egg": "4 stk",
@@ -15,10 +15,10 @@
 		"Kefir": "7 dl",
 		"Kokesjokolade": "200 g"
 	},
-	"directions": {
+	"fremgang": {
 		"1.": "Smelt smøret. Ta kjelen av platen og rør inn kakaopulveret helt til det løser seg opp.",
 		"2.": "Pisk egg og sukker til eggedosis, og rør inn blandingen av sjokoladen og smøret. Sikt sammen mel, bakepulver, vaniljesukker og natron. Bland inn dette vekselsvis med kefir og rør til du får en jevn røre.",
 		"3.": "Dekk langpannen (30 x 40 cm) med bakepapir, og smør kantene og bunnen. Hell i røren, og stek kaken midt i ovnen ved 200°C i 30-35 minuttter."
 	}
-	
+
 }

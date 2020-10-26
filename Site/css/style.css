@@ -94,6 +94,14 @@ img.slideshowplaceholder {
 	padding-right: 15px;
 }
 
+.ingredientlist {
+	float:left;
+}
+
+.fremgangliste {
+	float:right;
+}
+
 .intro {
 	float: left;
 	width: 40%;
