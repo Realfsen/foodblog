@@ -1,11 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
+<!-- <head>
 	<meta charset="UTF-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	<title>BB forside</title>
+	<script type="text/javascript" src="js/modularity_head.js"></script>
+	<link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="css/style.css">
+	<title>Bestemor Borghild</title>
+
+</head> -->
+
+<head id="pageHeader">
+    <meta charset="UTF-8" />
+    <script src="js/modularity_head.js"></script> 
+    <title>Bestemor Borghilds Bakebonanza</title>
 </head>
 
 <body>
@@ -16,41 +26,34 @@
 		<img class="slideshowplaceholder" src="img/butterdough.jpg" alt="placeholder til slideshow" style="width: 100%;">
 	</div>
 
-	<div class="container"> 
-
+	<div class="todelt"> 
 		<div class="intro">
 			<h2>Møt Borghild</h2>
-
-			<section id="ombordhild">
-				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut 
+			<p id="ombordhild">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut 
 				labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco 
 				laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit 
 				in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat 
 				cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-				</p>
-			</section>
+			</p>
 		</div>
 		
-		<div id="introbilde">
-			<img class="BestemorB" src="img/BestemorB.jpeg" 
+		<div class="bildeklipp" id="introbilde">
+			<img class="BestemorB" src="img/BestemorB2.jpeg" 
 					 alt="Illustrasjonsbilde av Bestemor Borghild.">
 		</div>
 	</div>
 
-	<!--eksempel på link-->
-	<!--
-	<div class="five">
-        <a href="https://developer.mozilla.org/en-US/docs/Web/CSS" target="_blank">Testlink CSS is awesome fra øv3</a>
-	</div>
-	-->
-
 	<div class="utvalgteoppskrifter">
 		<h2>Borghilds beste oppskrifter</h2>
+
+		<div card-list="recipes" data-template="card" data-file="recipes">
+		</div>
 	</div>
 	
-	<div card-list="recipes" data-template="card" data-file="recipes"></div>
+	<script src="js/modularity.js"></script>
+	<script src="js/slideshow.js"></script>
+	<script src="js/jsonLoader_new.js"></script>
+	<script src="js/contentFromUrl_new.js"></script>
 </body>
-<script src="js/jsonLoader_new.js"></script>
-<script src="js/contentFromUrl_new.js"></script>
 
 </html>
