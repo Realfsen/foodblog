@@ -1,5 +1,8 @@
 {
-	"name": "fdwsa",
+	"picture": "img/sjokoladeKake.jpg",
+	"name": "Sjokoladekake",
+	"type": "recipe",
+	"description": "[Description]",
 	"ingredienser": {
 		"sukker": "1kg",
 		"mel": "2kg"
