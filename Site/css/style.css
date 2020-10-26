@@ -508,10 +508,10 @@ footer {
 	color: #4d3142;
 	text-align: center;
 	height: 100%;
-	padding-left: 3%;
-	padding-right: 3%;
+	padding: 20px 0px 0px 0px;	
+	margin-left: 20px;
+	border-bottom: 5px solid transparent;
 }
-
 
 #NavbarIcon {
 	float: left;
@@ -529,21 +529,6 @@ footer {
 	margin: 0;
 	z-index: 12;
 }
-
-/* Add a background color to navbar links on hover 
-  Inspired by: https://www.w3schools.com/howto/howto_css_navbar_border.asp
-  */
-/*som så ble endret siden vi skulle ha noe annet der*/
-a.NavBarBtn:hover {
-	/* background-color: #e3dcd1; */
-	/* padding-bottom: 3px red; */
-	text-decoration: underline;
-}
-/*
-a.NavBarBtn:hover{
-	text-decoration: underline;
-	text-decoration-color: #4D3142;
-} */
 
 /* Media queries for navbar*/
 @media (min-width: 800px) {
