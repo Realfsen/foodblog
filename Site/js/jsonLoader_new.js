@@ -67,23 +67,29 @@ function parseTemplate(content, template) {
 		pairs.push(matchedObject)
 	}
 	// console.log(pairs)
-	// console.log(content.ingredienser)
+	// console.log(content.ingredients)
 
 	// Replaces the templateString with the content for all the
 	// elements in the pairs-array in the template file
 	for (let p of pairs) {
 		// If the template-string is for displaying ingredients, it's instead
 		// rendered as an ul
-		if (p.templateString === '{{ ingredienser }}') {
+		if (p.templateString === '{{ ingredients }}') {
 			var ul = document.createElement('ul')
-			const keys = Object.keys(content.ingredienser)
-			keys.forEach((key, index) => {
-				console.log(content.ingredienser[key])
+			for (let i of content.ingredients) {
 				let li = document.createElement('li')
-				li.textContent = key + ': ' + content.ingredienser[key]
+				li.textContent = i.amount + ' ' + i.name
 				ul.appendChild(li)
-			})
+			}
 			template = template.replace(p.templateString, ul.outerHTML)
+		} else if (p.templateString === '{{ steps }}') {
+			var ol = document.createElement('ol')
+			for (let i of content.steps) {
+				let li = document.createElement('li')
+				li.textContent = i
+				ol.appendChild(li)
+			}
+			template = template.replace(p.templateString, ol.outerHTML)
 		} else {
 			template = template.replace(p.templateString, p.content)
 		}

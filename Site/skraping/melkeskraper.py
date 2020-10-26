@@ -17,6 +17,7 @@ def recipes(url):
             # Title
             title = soup.h1.get_text()
             title = decode(title)
+            title = title.replace('"', '')
             # Description
             desc_el = soup.select_one("[class~=article-preface]")
             desc = desc_el.get_text()
@@ -32,6 +33,7 @@ def recipes(url):
             for ingredient in ingredient_list:
                 amount_tag = ingredient.select_one(".o-recipe-ingredients--container__list__amount")
                 amount = amount_tag.string
+                amount = amount.replace("Â", "")
                 # print(amount)
                 if (ingredient.select_one("span") == None):
                     ingredient_tag = ingredient.select_one("a")
@@ -53,11 +55,15 @@ def recipes(url):
             picture_src = picture_src.replace("90", "720")
 
             # Process
-            steps = soup.select_one(".o-recipe-steps--group__list")
+            steps = soup.select_one(".o-recipe-steps")
             steps_list = steps.find_all("li")
             finished_steps = []
             for step in steps_list:
-                finished_steps.append(decode(step.p.text))
+                step_text = step.p.text
+                step_text = decode(step_text)
+                step_text = step_text.replace("\r", "")
+                step_text = step_text.replace("\n", "")
+                finished_steps.append(step_text)
 
             recipe = {
                 'name': title,
@@ -85,8 +91,10 @@ def recipes(url):
 
 # For fixing unicode issues
 def decode(s):
+    s = s.strip()
     s_utf8 = s.encode('latin1')
-    return s_utf8.decode('utf-8')
+    s_utf8 = s_utf8.decode('utf-8')
+    return s_utf8
 
 # Opens the URL-list and runs the function for each line
 recipe_list = []
@@ -95,7 +103,7 @@ for line in F:
     recipe = recipes(line)
     recipe = str(recipe)+".json"
     recipe_list.append(recipe)
-    time.sleep(5)
+    time.sleep(0.5)
 
 recipe_list_obj = {
     "list": recipe_list

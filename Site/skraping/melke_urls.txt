@@ -1,3 +1,5 @@
+/oppskrifter/desserter/is-og-sorbet/barnas-iskake
+/oppskrifter/kaker/krem-og-sjokoladekaker/hjertepavlova
 /oppskrifter/bakst/sot-gjarbakst/tr%C3%B8nderrose
 /oppskrifter/bakst/sot-gjarbakst/prinsessekake
 /oppskrifter/kaker/krem-og-sjokoladekaker/gulrotkake-med-kremostlokk
@@ -13,8 +15,6 @@
 /oppskrifter/kaker/krem-og-sjokoladekaker/gullrush
 /oppskrifter/kaker/is-og-ostekaker/ost-og-n%C3%B8tterulade
 /oppskrifter/kaker/frukt-og-barkaker/smuldreepleformer
-/oppskrifter/kaker/krem-og-sjokoladekaker/hjertepavlova
-/oppskrifter/desserter/is-og-sorbet/barnas-iskake
 /oppskrifter/kaker/krem-og-sjokoladekaker/knust-pavlova-med-bakt-bringeb%C3%A6rsaus
 /oppskrifter/kaker/krem-og-sjokoladekaker/loot-llama-fortnite-kake
 /oppskrifter/kaker/frukt-og-barkaker/no-bake-plomme-pai
