@@ -117,7 +117,8 @@ async function loadCardList() {
 		template = template === null ? 'default' : template
 		type = type === null ? 'default' : type
 		// Gets the json "master"-list over recipes/techniques
-		let list = await getFile(type + '/' + type + '.json')
+		let file = c.getAttribute('data-file')
+		let list = await getFile(type + '/' + file + '.json')
 			.then((data) => {
 				return data.json()
 			})
