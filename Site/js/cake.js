@@ -1,3 +1,0 @@
-sjokoladekake = {
-	name: 'sjokoladekake',
-}
