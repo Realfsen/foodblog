@@ -213,6 +213,14 @@ form {
 	margin-right: 10%;
 }
 
+.recipeimage {
+	max-width: 100%;
+	height: 800px;
+	object-fit: contain;
+	margin-left: 10%;
+	margin-right: 10%;
+}
+
 .intro {
 	float: left;
 	width: 40%;
