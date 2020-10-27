@@ -4,7 +4,7 @@ content = content.substr(1, content.length).toLowerCase()
 
 console.log(content)
 
-content = content.split('-')
+content = content.split('_')
 
 // let template = window.location.pathname
 // template = template.substr(6, template.length)
