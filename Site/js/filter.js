@@ -69,3 +69,36 @@ function printCards() {
 	}
 	cards = []
 }
+
+/**
+ * toggleContent
+ * shows and hides the recipes from the respective content creators
+ * @param {string} who either 'bb' or 'user' depending on which button was pressed
+ */
+function toggleContent(who) {
+	if (who === 'bb') {
+		const div = document.querySelector('.borghildsoppskrifter')
+		const knapp = document.querySelector('#borghildknapp')
+		if (div.style.display === 'none') {
+			console.log('show')
+			div.style.display = 'block'
+			knapp.classList.add('selected')
+		} else {
+			console.log('hide')
+			div.style.display = 'none'
+			knapp.classList.remove('selected')
+		}
+	} else if (who === 'user') {
+		const div = document.querySelector('.brukernesoppskrifter')
+		const knapp = document.querySelector('#brukereknapp')
+		if (div.style.display === 'none') {
+			console.log('show')
+			div.style.display = 'block'
+			knapp.classList.add('selected')
+		} else {
+			console.log('hide')
+			div.style.display = 'none'
+			knapp.classList.remove('selected')
+		}
+	}
+}

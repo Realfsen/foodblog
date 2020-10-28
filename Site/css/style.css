@@ -387,6 +387,10 @@ form textarea {
 	margin-left: 10%;
 }
 
+.selected {
+	background-color: #aa6e92;
+}
+
 @media (max-width: 500px) {
 	#brukereknapp {
 		margin-left: 10%;
@@ -459,13 +463,12 @@ form textarea {
 }
 
 /* For å få mellomrom mellom disse og footer. */
-.brukernesoppskrifter{ 
+.brukernesoppskrifter {
 	padding-bottom: 15vh;
 }
-.card-container{
+.card-container {
 	padding-bottom: 18%;
 }
-
 
 /*for alle linker generelt?*/
 a {

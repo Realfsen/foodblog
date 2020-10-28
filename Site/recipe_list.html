@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-  <!-- <head>
+	<!-- <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script type="text/javascript" src="js/modularity_head.js"></script>
@@ -10,39 +10,51 @@
     <title>Oppskrifter</title>
   </head> -->
 
-  <head id="pageHeader">
-    <meta charset="UTF-8" />
-    <script src="./js/modularity_head.js"></script> 
-    <title>Oppskrifter - Bestemor Borghild</title>
-</head>
+	<head id="pageHeader">
+		<meta charset="UTF-8" />
+		<script src="./js/modularity_head.js"></script>
+		<title>Oppskrifter - Bestemor Borghild</title>
+	</head>
 
-  <body>
+	<body>
+		<div>
+			<button
+				class="sorteringsknapp selected"
+				id="borghildknapp"
+				onclick="toggleContent('bb')"
+			>
+				Bordhilds oppskrifter
+			</button>
+			<button
+				class="sorteringsknapp selected"
+				id="brukereknapp"
+				onclick="toggleContent('user')"
+			>
+				Brukernes oppskrifter
+			</button>
+		</div>
+		<div class="borghildsoppskrifter">
+			<h2 id="borghildsoppskrifter">Borghilds oppskrifter</h2>
+			<div
+				class="card-container"
+				card-list="recipes"
+				data-template="card"
+				data-file="recipes"
+			></div>
+		</div>
 
-    <div>
-      <button class="sorteringsknapp" id="borghildknapp" onclick="nameSort()">Bordhilds oppskrifter</button>
-      <button class="sorteringsknapp" id="brukereknapp" onclick="nameSort()">Brukernes oppskrifter</button>
-    </div>
-    <div class="borghildsoppskrifter">
-      <h2 id="borghildsoppskrifter">Borghilds oppskrifter</h2>
-      <div 
-      class="card-container"
-      card-list="recipes" 
-      data-template="card" 
-      data-file="recipes"
-      ></div>
-    </div>
+		<div class="brukernesoppskrifter">
+			<h2>Brukernes oppskrifter</h2>
+			<div
+				class="card-container"
+				card-list="recipes"
+				data-template="card"
+				data-file="user-recipes"
+			></div>
+		</div>
 
-    <div class="brukernesoppskrifter">
-      <h2>Brukernes oppskrifter</h2>
-      <div 
-      class="card-container"
-      card-list="recipes" 
-      data-template="card" 
-      data-file="recipes"
-      ></div>
-    </div>
-  
-      <script src="./js/modularity.js"></script> 
-      <script src="./js/jsonLoader_new.js"></script>
-  </body>
+		<script src="./js/filter.js"></script>
+		<script src="./js/modularity.js"></script>
+		<script src="./js/jsonLoader_new.js"></script>
+	</body>
 </html>
