@@ -143,12 +143,6 @@ form {
 	position: relative;
 }
 
-.intro {
-	float: left;
-	width: 40%;
-	height: 400px;
-}
-
 /*bildedel i .todelt. inkl å gjøre det rundt*/
 .bildeklipp {
 	width: 50vw;
@@ -215,8 +209,6 @@ form {
 	grid-area: image;
 }
 
-
-=======
 @media all and (min-width: 40em) {
 	.ingredientlist {
 		width: 50%;
