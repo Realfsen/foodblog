@@ -459,6 +459,15 @@ form textarea {
 	padding-bottom: 20vh;
 }
 
+/* For å få mellomrom mellom disse og footer. */
+.brukernesoppskrifter{ 
+	padding-bottom: 15vh;
+}
+.card-container{
+	padding-bottom: 18%;
+}
+
+
 /*for alle linker generelt?*/
 a {
 	color: #4d3142;
@@ -500,7 +509,7 @@ footer {
 	bottom: 0;
 	background-color: #eae8e6;
 	width: 100%;
-	height: 10%;
+	max-height: 25%;
 	clear: inline-start;
 }
 #footerLogo {
