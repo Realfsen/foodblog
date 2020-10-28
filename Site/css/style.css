@@ -10,6 +10,11 @@ body {
 	padding-bottom: 2.5rem;
 	padding-top: 80px; /*gjør plass til navbaren*/
 	display: grid;
+	grid-template-areas: 'content' 'footer';
+}
+
+.bodyContent {
+	grid-template-areas: content;
 }
 
 /*bruker vw (viewport width) som enhet for mindre sider, for et responsivt design. Da vil det skalere dynamisk.
@@ -318,6 +323,8 @@ img {
 	margin-left: 2.5%;
 	margin-bottom: 30px;
 	text-decoration: underline;
+	position: relative;
+	top: 5%;
 }
 
 @media (max-width: 350px) {
@@ -561,31 +568,53 @@ textarea {
 }
 
 footer {
-	position: absolute;
+	/* position: absolute;
 	bottom: 0;
 	background-color: #eae8e6;
 	width: 100%;
 	max-height: 25%;
-	clear: inline-start;
+	clear: inline-start; */
+	grid-template-areas: footer;
+	display: grid;
+	grid-template-columns: 33% 33% 33%;
+	background-color: #eae8e6;
 }
 #footerLogo {
-	object-fit: contain;
+	/* object-fit: contain;
 	width: 20%;
 	padding: 2% 2% 0 2%;
-	margin-left: 15%;
+	margin-left: 15%; */
+	width: 15%;
+	object-fit: contain;
+	position: relative;
+	left: 10%;
 }
 .footerLeft {
-	width: 37%;
+	/* width: 37%;
 	float: left;
 	display: block;
 	padding: 2% 2% 0 2%;
-	padding-left: 10%;
+	padding-left: 10%; */
+	display: grid;
+	grid-template-rows: 50% 25% 25%;
+	padding: 10%;
 }
 .footerRight {
-	width: 47%;
+	/* width: 47%;
 	float: left;
 	display: block;
-	padding: 2% 2% 0 2%;
+	padding: 2% 2% 0 2%; */
+	padding: 10%;
+}
+
+.footerRight p {
+	margin: 0 0 1rem 0;
+}
+
+.footerEmailIcon {
+	object-fit: contain;
+	height: 25%;
+	float: left;
 }
 
 /* Navigation Bar styling */
