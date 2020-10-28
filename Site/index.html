@@ -1,52 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<!-- <head>
-	<meta charset="UTF-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	<script type="text/javascript" src="js/modularity_head.js"></script>
-	<link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
-	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
-	<link rel="stylesheet" href="css/style.css">
-	<title>Bestemor Borghild</title>
-
-</head> -->
-
 <head id="pageHeader">
     <meta charset="UTF-8" />
-    <script src="js/modularity_head.js"></script> 
+    <script src="./js/modularity_head.js"></script> 
     <title>Bestemor Borghilds Bakebonanza</title>
 </head>
-
-<body>
-	<div class="overskrift">
-		<div class="headercentered">
-			<h1>Velkommen til <br> Bestemor Borghilds <br> Bakebonanza</h1>
+  
+	<body>
+		<div class="overskrift">
+			<div class="headercentered">
+				<h1>
+					Velkommen til <br />
+					Bestemor Borghilds <br />
+					Bakebonanza
+				</h1>
+			</div>
+			<img
+				class="slideshowplaceholder"
+				src="img/butterdough.jpg"
+				alt="placeholder til slideshow"
+				style="width: 100%"
+			/>
 		</div>
-		<img class="slideshowplaceholder" src="img/butterdough.jpg" alt="placeholder til slideshow" style="width: 100%;">
-	</div>
 
-	<div class="todelt"> 
-		<div class="intro">
-			<h2>Møt Borghild</h2>
-			<p id="ombordhild">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut 
-				labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco 
-				laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit 
-				in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat 
-				cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-			</p>
+		<div class="todelt">
+			<div class="intro">
+				<h2>Møt Borghild</h2>
+				<p id="ombordhild">
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+					eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+					minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+					aliquip ex ea commodo consequat. Duis aute irure dolor in
+					reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+					pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+					culpa qui officia deserunt mollit anim id est laborum.
+				</p>
+			</div>
+
+			<div class="bildeklipp" id="introbilde">
+				<img
+					class="BestemorB"
+					src="img/BestemorB2.jpeg"
+					alt="Illustrasjonsbilde av Bestemor Borghild."
+				/>
+			</div>
 		</div>
-		
-		<div class="bildeklipp" id="introbilde">
-			<img class="BestemorB" src="img/BestemorB2.jpeg" 
-					 alt="Illustrasjonsbilde av Bestemor Borghild.">
-		</div>
-	</div>
 
-	<div class="utvalgteoppskrifter">
-		<h2>Borghilds beste oppskrifter</h2>
+		<div class="utvalgteoppskrifter">
+			<h2>Borghilds beste oppskrifter</h2>
 
-		<div card-list="recipes" data-template="card" data-file="recipes">
+			<div
+				class="card-container"
+				card-list="recipes"
+				data-template="card"
+				data-file="beste"
+			></div>
 		</div>
 	</div>
 	

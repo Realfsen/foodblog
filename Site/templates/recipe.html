@@ -1,7 +1,14 @@
-<div class="card">
-  <div class="container">
-	<h4>{{ name }}</h4> 
-    <img class="recipeimage" src="{{ picture }}" alt="" />
+  <div class="recipe">
+      <img class="recipeimage" src="{{ picture }}" alt="placeholder til oppskrift"/>
+    </div>
+    <h2>{{ name }}</h2>
+    <div class="ingredientlist">
+      <h3>INGREDIENSER</h3>
+      <p>{{ ingredients }}</p>
+    </div>
+    <div class="fremgangliste">
+      <h3>FREMGANGSMÅTE</h3>
+      <p>{{ steps }}</p>
+    </div>
     <p>{{ description }}</p>
   </div>
-</div>
