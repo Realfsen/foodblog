@@ -1,0 +1,15 @@
+{
+    "picture": "img/troffelkake.jpg",
+    "name": "Tradisjonell trøffelkake",
+    "type": "recipe",
+    "link": "troffelkake",
+    "description": "En tradisjonell sjokoladekake type med smak av sjokolade og rom",
+	"ingredienser": {
+		"sukker": "600 g",
+        "mel": "600 g",
+        "egg": "4 stk",
+        "sjokolade": "100 g",
+        "bakepulver": "6 ts",
+        "romessens": "20 dråper"
+	}
+}
