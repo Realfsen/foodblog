@@ -198,17 +198,16 @@ form {
 	max-height: 250px;
 }
 
-
 .ingredientlist {
 	width: 50%;
-	float:left;
+	float: left;
 	max-width: 300px;
 	margin-left: 10%;
 }
 
 .fremgangliste {
 	width: 50%;
-	float:right;
+	float: right;
 	max-width: 500px;
 	margin-right: 10%;
 }
@@ -270,7 +269,7 @@ img {
 .epostbilde {
 	margin-left: 10%;
 	display: inline;
-	width: 40px;
+	/* width: 40px; */
 	border-radius: 50%;
 	transform: translate(0%, 40%);
 }
@@ -408,7 +407,6 @@ form textarea {
 .techniqueimage {
 	display: inline;
 	max-width: 22%;
-	float: right;
 	margin-right: 10%;
 }
 
@@ -455,7 +453,8 @@ form textarea {
 	font-size: 125%;
 }
 
-.content_container, .container{
+.content_container,
+.container {
 	padding-bottom: 20vh;
 }
 
@@ -542,8 +541,7 @@ footer {
 	font-size: 2.5vw;
 	color: #4d3142;
 	text-align: center;
-	height: 100%;
-	padding: 20px 0px 0px 0px;	
+	padding: 20px 0px 0px 0px;
 	margin-left: 20px;
 	border-bottom: 5px solid transparent;
 }
@@ -564,6 +562,96 @@ footer {
 	margin: 0;
 	z-index: 12;
 }
+
+/* Add a background color to navbar links on hover 
+  Inspired by: https://www.w3schools.com/howto/howto_css_navbar_border.asp
+  */
+a.NavBarBtn:hover {
+	background-color: #e3dcd1;
+	padding-bottom: 3px red;
+}
+
+/* SLIDESHOW */
+#left,
+#right {
+	position: absolute;
+	top: 0;
+	width: 7%;
+	height: 100vh;
+	font-size: 1000%;
+	z-index: 4;
+	text-align: center;
+	color: rgba(158, 158, 158, 0.5);
+	-moz-user-select: none;
+	-webkit-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	-o-user-select: none;
+}
+
+#left:hover,
+#right:hover {
+	background-color: rgba(165, 165, 165, 0.116);
+}
+
+#left {
+	left: 0;
+}
+
+#right {
+	right: 0;
+}
+
+.arrow_position {
+	margin-top: 50vh;
+	position: relative;
+}
+
+.arrow_left_upper,
+.arrow_left_lower,
+.arrow_right_upper,
+.arrow_right_lower {
+	width: 25px;
+	height: 3px;
+	background-color: rgba(255, 255, 255, 0.781);
+	margin: 0px;
+	padding: 0px;
+	position: absolute;
+}
+
+.arrow_left_upper,
+.arrow_left_lower {
+	left: 17%;
+}
+.arrow_right_upper,
+.arrow_right_lower {
+	right: 17%;
+}
+
+.arrow_left_lower,
+.arrow_right_upper {
+	top: 16px;
+}
+
+.arrow_left_upper,
+.arrow_right_upper {
+	-ms-transform: rotate(-45deg); /* IE 9 */
+	-webkit-transform: rotate(-45deg); /* Safari */
+	transform: rotate(-45deg);
+}
+
+.arrow_left_lower,
+.arrow_right_lower {
+	-ms-transform: rotate(45deg); /* IE 9 */
+	-webkit-transform: rotate(45deg); /* Safari */
+	transform: rotate(45deg);
+}
+.slideshowplaceholder {
+	margin: 0px;
+	width: 100%;
+	height: 100vh;
+}
+/* END SLIDESHOW */
 
 /* Media queries for navbar*/
 @media (min-width: 800px) {
@@ -596,4 +684,3 @@ footer {
 		margin-left: 8%;
 	}
 }
-
