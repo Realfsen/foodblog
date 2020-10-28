@@ -1,4 +1,4 @@
-const bilder = ['img/decorating.jpg', 'img/dough.jpg', 'img/butterdough.jpg']
+const bilder = ['img/slide_1.jpg', 'img/slide_2.jpg', 'img/slide_3.jpg']
 
 let imgTag = document.querySelector('#imgTag')
 let index = 0

@@ -1,0 +1,16 @@
+{
+    "picture": "img/vafler.jpg",
+    "name": "Enkle vafler",
+    "type": "recipe",
+    "link": "vafler",
+    "description": "En enkel oppskrift for vafler",
+	"ingredienser": {
+		"sukker": "5 ss",
+        "mel": "4 dl",
+        "bakepulver": "1 ts",
+        "kardemomme": "1 ts",
+        "melk": "4 dl",
+        "egg": "3 stk",
+        "smeltet smør": "100 g"
+	}
+}

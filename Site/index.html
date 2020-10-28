@@ -1,20 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link
-			href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
-			rel="stylesheet"
-		/>
-		<link
-			href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap"
-			rel="stylesheet"
-		/>
-		<link rel="stylesheet" href="css/style.css" />
-		<title>Bestemor Borghild</title>
-	</head>
 
+<head id="pageHeader">
+    <meta charset="UTF-8" />
+    <script src="./js/modularity_head.js"></script> 
+    <title>Bestemor Borghilds Bakebonanza</title>
+</head>
+  
 	<body>
 		<div class="overskrift">
 			<div class="headercentered">
@@ -27,10 +19,11 @@
 			<img
 				id="imgTag"
 				class="slideshowplaceholder"
-				src="img/butterdough.jpg"
+				src="img/slide_1.jpg"
 				alt="placeholder til slideshow"
 				style="width: 100%"
 			/>
+			<!-- Picture credits to the people at https://unsplash.com -->
 			<div id="left" onclick="backward()">
 				<div class="arrow_position">
 					<div class="arrow_left_upper"></div>
@@ -71,13 +64,19 @@
 		<div class="utvalgteoppskrifter">
 			<h2>Borghilds beste oppskrifter</h2>
 
-			<div card-list="recipes" data-template="card" data-file="recipes"></div>
+			<div
+				class="card-container"
+				card-list="recipes"
+				data-template="card"
+				data-file="beste"
+			></div>
 		</div>
+	</div>
+	
+	<script src="./js/modularity.js"></script>
+	<script src="./js/slideshow.js"></script>
+	<script src="./js/jsonLoader_new.js"></script>
+	<script src="./js/contentFromUrl_new.js"></script>
+</body>
 
-		<script src="js/modularity.js"></script>
-		<!--skal noe mer her for at topp og bunn kommer med? :S-->
-		<script src="js/slideshow.js"></script>
-		<script src="js/jsonLoader_new.js"></script>
-		<script src="js/contentFromUrl_new.js"></script>
-	</body>
 </html>
