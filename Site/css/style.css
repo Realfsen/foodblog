@@ -173,12 +173,6 @@ form {
 	position: relative;
 }
 
-.intro {
-	float: left;
-	width: 40%;
-	height: 400px;
-}
-
 /*bildedel i .todelt. inkl å gjøre det rundt*/
 .bildeklipp {
 	width: 50vw;
