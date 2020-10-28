@@ -75,7 +75,7 @@
     innerImgL.id = "footerLogo";
     innerDivL.appendChild(innerImgL);
     var innerPL = document.createElement("p");
-    var innerTextL = document.createTextNode("BESTEMOR BORGHILD \n Bestemor Borghilds Bakebonanza 2020");
+    var innerTextL = document.createTextNode("BESTEMOR BORGHILD - Bestemor Borghilds Bakebonanza 2020");
     innerPL.appendChild(innerTextL);
     innerDivL.appendChild(innerPL);
     foot.appendChild(innerDivL);
@@ -83,7 +83,7 @@
     var innerDivR = document.createElement("div");
     innerDivR.className = "footerRight";
     var innerTextR = document.createElement("p");
-    var innerTextContent = document.createTextNode("Trenger du hjelp?\nVi svarer gjerne på spørsmålene dine.");
+    var innerTextContent = document.createTextNode("Trenger du hjelp? Vi svarer gjerne på spørsmålene dine.");
     innerTextR.appendChild(innerTextContent);
     innerDivR.appendChild(innerTextR);
     var innerLink = document.createElement("a");
@@ -98,6 +98,7 @@
     persistantActiveNavigationBar()
 })()
 
+    // Function that adds a underline to the current page in the header.
 function persistantActiveNavigationBar(){
     // Coloring active site in navigation bar.
     var fullURL = window.location.href;
@@ -120,4 +121,3 @@ function persistantActiveNavigationBar(){
             currentElement.style.borderBottom = activeBarStyling;
     } else {}
 }
-

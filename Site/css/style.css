@@ -457,7 +457,7 @@ form textarea {
 	font-size: 125%;
 }
 
-.content_container,
+#content_container,
 .container {
 	padding-bottom: 20vh;
 }
@@ -468,9 +468,13 @@ form textarea {
 }
 .card-container {
 	padding-bottom: 18%;
+	overflow: hidden;
 }
 .utvalgteoppskrifter{
 	padding-bottom: 40%;
+}
+.ingredientlist, .fremgangliste{
+	padding-bottom: 30%;
 }
 
 /*for alle linker generelt?*/
