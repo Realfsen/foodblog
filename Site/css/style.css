@@ -9,11 +9,7 @@ body {
 	position: relative;
 	padding-bottom: 2.5rem;
 	padding-top: 80px; /*gjør plass til navbaren*/
-	/* margin:0;
-	padding:0;
-	padding-bottom: 25%;
-	height:100%;
-	 */
+	display: grid;
 }
 
 /*bruker vw (viewport width) som enhet for mindre sider, for et responsivt design. Da vil det skalere dynamisk.
@@ -177,6 +173,12 @@ form {
 	position: relative;
 }
 
+.intro {
+	float: left;
+	width: 40%;
+	height: 400px;
+}
+
 /*bildedel i .todelt. inkl å gjøre det rundt*/
 .bildeklipp {
 	width: 50vw;
@@ -198,33 +200,99 @@ form {
 	max-height: 250px;
 }
 
+/* START recipe.html */
+
 .ingredientlist {
-	width: 50%;
-	float: left;
-	max-width: 300px;
-	margin-left: 10%;
+	margin: 0 0 10% 5%;
+	grid-area: ingredients;
+}
+
+.ingredientlist ul {
+	list-style-type: none;
 }
 
 .fremgangliste {
-	width: 50%;
-	float: right;
-	max-width: 500px;
-	margin-right: 10%;
+	max-width: 90%;
+	margin: auto;
+	grid-area: process;
+	position: relative;
+	right: 5%;
+}
+
+.recipe {
+	margin: auto;
+	display: grid;
+	grid-template-areas:
+		'image'
+		'nameIntro'
+		'ingredients'
+		'process';
+}
+
+.recipe h2 {
+	margin-top: 2rem;
+}
+
+.nameIntro {
+	margin-bottom: 2rem;
+	grid-area: nameIntro;
 }
 
 .recipeimage {
-	max-width: 100%;
-	height: 800px;
+	max-width: 100vw;
 	object-fit: contain;
-	margin-left: 10%;
-	margin-right: 10%;
+	margin: auto;
+	grid-area: image;
 }
 
-.intro {
-	float: left;
-	width: 40%;
-	height: 400px;
+@media all and (min-width: 40em) {
+	.ingredientlist {
+		width: 50%;
+		float: left;
+		max-width: 300px;
+		margin: 0 0 10% 5%;
+		grid-area: ingredients;
+	}
+
+	.ingredientlist ul {
+		list-style-type: none;
+	}
+
+	.fremgangliste {
+		max-width: 50%;
+		margin: auto;
+		grid-area: process;
+	}
+
+	.recipe {
+		width: 80%;
+		margin: auto;
+		display: grid;
+		grid-template-areas:
+			'image image'
+			'nameIntro nameIntro'
+			'ingredients process';
+		grid-template-columns: 50% 50%;
+	}
+
+	.recipe h2 {
+		margin-top: 3rem;
+	}
+
+	.nameIntro {
+		margin-bottom: 3rem;
+		grid-area: nameIntro;
+	}
+
+	.recipeimage {
+		max-height: 80vh;
+		object-fit: contain;
+		margin: auto;
+		grid-area: image;
+	}
 }
+
+/* END recipe.html */
 
 /*for bilder generelt*/
 img {
@@ -470,7 +538,7 @@ form textarea {
 	padding-bottom: 18%;
 	overflow: hidden;
 }
-.utvalgteoppskrifter{
+.utvalgteoppskrifter {
 	padding-bottom: 40%;
 }
 .ingredientlist, .fremgangliste{
