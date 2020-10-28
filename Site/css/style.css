@@ -10,6 +10,11 @@ body {
 	padding-bottom: 2.5rem;
 	padding-top: 80px; /*gjør plass til navbaren*/
 	display: grid;
+	grid-template-areas: 'content' 'footer';
+}
+
+.bodyContent {
+	grid-template-areas: content;
 }
 
 /*bruker vw (viewport width) som enhet for mindre sider, for et responsivt design. Da vil det skalere dynamisk.
@@ -49,7 +54,7 @@ h2 {
 	/*for å få det litt inn på siden, som i design-eksemplene. skjer flere steder*/
 	margin-left: 10%;
 	margin-right: 10%; /*mulig det burde være en annen løsning her*/
-	margin-top: 10%;
+	margin-top: 50px; /*?*/
 }
 
 /*fungerende løsning for strek under h2-elementer*/
@@ -67,30 +72,10 @@ h2:after {
 /*under-underoverskrifter, brukes på contact-siden*/
 h3 {
 	color: #4d3142;
-	font-size: 12px;
+	font-size: 16px;
 	margin-left: 10%;
 	margin-bottom: 10px;
 	letter-spacing: 3px;
-}
-
-/*er egentlig ganske lik h2, bruker for feks den enkelte teknikksiden*/
-h4 {
-	font-weight: bold;
-	color: #4d3142;
-	font-size: 5vw;
-	margin-left: 10%;
-	margin-right: 10%;
-	margin-top: 10%;
-}
-h4:after {
-	content: ' ';
-	display: block;
-	border: 2px solid #f09ca2;
-	background-color: #f09ca2; /*fordi det bare er en boks, så uten så blir det en hvit(ufarget) strek inni lol*/
-	width: 20vw; /*lengden på streken*/
-	margin-top: 15px; /*avstand fra h2*/
-	margin-left: 2px; /*foreløpig iaf for å få streken til å starte samme sted som h2-teksten*/
-	margin-bottom: 20%; /*så ikke det under kan komme helt oppi*/
 }
 
 /*div vanlig skrift*/
@@ -145,17 +130,6 @@ form {
 	h2:after {
 		width: 70px;
 	}
-	h3 {
-		font-size: 16px;
-	}
-	p,
-	blockquote,
-	ul,
-	ol,
-	form,
-	.emailLink {
-		font-size: 14px;
-	}
 }
 
 /*sette intro/info-delen til venstre og bildet til høyre*/
@@ -163,6 +137,7 @@ form {
 	display: block;
 	margin-bottom: 12.5%;
 	margin-left: 1%; /*for å få ting til å ha likt innrykk*/
+	margin-top: 0;
 }
 
 /*tekstdel i .todelt*/
@@ -286,6 +261,7 @@ form {
 	}
 }
 
+
 /* END recipe.html */
 
 /*for bilder generelt*/
@@ -301,6 +277,12 @@ img {
 		margin-left: 6%;
 		display: grid;
 		grid-template-columns: 50% 50%;
+	}
+
+	/*spesifikt for contactsiden*/
+	#contacttodelt {
+		margin-top: 1.5em;
+		margin-bottom: 1.5em;
 	}
 
 	.bildeklipp {
@@ -341,6 +323,8 @@ img {
 	margin-left: 2.5%;
 	margin-bottom: 30px;
 	text-decoration: underline;
+	position: relative;
+	top: 5%;
 }
 
 @media (max-width: 350px) {
@@ -354,7 +338,7 @@ img {
 	}
 }
 
-/*forms/kontaktskjemaet*/
+/*html-forms/kontaktskjemaet*/
 form {
 	margin-left: 10%;
 }
@@ -386,14 +370,32 @@ form select {
 
 form textarea {
 	padding: 10px;
-	width: 80%;
+	width: 90%;
 	/* max-width: 300px; */
-	height: 150px;
+	height: 200px;
 }
 
 /*media query for forms*/
 @media (min-width: 800px) {
 	form textarea {
+		width: 50%;
+		min-width: 578px;
+	}
+}
+
+/*js-form*/
+form {
+	padding-bottom: 10%;
+}
+#nojsContactForm textarea,
+#jsContactForm textarea {
+	height: 200px;
+	width: 80%;
+}
+
+@media (min-width: 800px) {
+	#nojsContactForm textarea,
+	#jsContactForm textarea {
 		width: 50%;
 		min-width: 578px;
 	}
@@ -418,7 +420,6 @@ form textarea {
 	background-color: #3d2634;
 }
 
-/*sorteringsknapper*/
 .sorteringsknapp {
 	font-size: 16px;
 	color: #4d3142;
@@ -430,11 +431,12 @@ form textarea {
 	background-color: #ffffff;
 	/* margin-top: 5%; */
 	/* margin-bottom: 50px; */
+	outline: none;
 }
 #borghildknapp {
 	margin-left: 10%;
-	margin-top: 10%;
-	margin-bottom: 5%;
+	margin-top: 35px;
+	margin-bottom: 25px;
 }
 
 #brukereknapp {
@@ -450,7 +452,8 @@ form textarea {
 }
 
 .selected {
-	background-color: #aa6e92;
+	background-color: #4d3142;
+	color: #ffffff;
 }
 
 @media (max-width: 500px) {
@@ -496,6 +499,7 @@ form textarea {
 	object-fit: fill;
 	width: 80%;
 	margin: 0 auto;
+	background-color: #ffffff;
 }
 
 .card-container > div:hover {
@@ -561,14 +565,6 @@ textarea {
 }
 
 /*fiks herfra og ned for modularity*/
-form {
-	padding-bottom: 10%;
-}
-#nojsContactForm textarea,
-#jsContactForm textarea {
-	height: 200px;
-	width: 60%;
-}
 
 /* Styling of the footer */
 .boldfooter {
@@ -576,31 +572,53 @@ form {
 }
 
 footer {
-	position: absolute;
+	/* position: absolute;
 	bottom: 0;
 	background-color: #eae8e6;
 	width: 100%;
 	max-height: 25%;
-	clear: inline-start;
+	clear: inline-start; */
+	grid-template-areas: footer;
+	display: grid;
+	grid-template-columns: 33% 33% 33%;
+	background-color: #eae8e6;
 }
 #footerLogo {
-	object-fit: contain;
+	/* object-fit: contain;
 	width: 20%;
 	padding: 2% 2% 0 2%;
-	margin-left: 15%;
+	margin-left: 15%; */
+	width: 15%;
+	object-fit: contain;
+	position: relative;
+	left: 10%;
 }
 .footerLeft {
-	width: 37%;
+	/* width: 37%;
 	float: left;
 	display: block;
 	padding: 2% 2% 0 2%;
-	padding-left: 10%;
+	padding-left: 10%; */
+	display: grid;
+	grid-template-rows: 50% 25% 25%;
+	padding: 10%;
 }
 .footerRight {
-	width: 47%;
+	/* width: 47%;
 	float: left;
 	display: block;
-	padding: 2% 2% 0 2%;
+	padding: 2% 2% 0 2%; */
+	padding: 10%;
+}
+
+.footerRight p {
+	margin: 0 0 1rem 0;
+}
+
+.footerEmailIcon {
+	object-fit: contain;
+	height: 25%;
+	float: left;
 }
 
 /* Navigation Bar styling */
@@ -623,7 +641,8 @@ footer {
 	color: #4d3142;
 	text-align: center;
 	padding: 20px 0px 0px 0px;
-	margin-left: 20px;
+	margin-left: 2em;
+	margin-right: 2em;
 	border-bottom: 5px solid transparent;
 }
 
@@ -650,6 +669,33 @@ footer {
 a.NavBarBtn:hover {
 	background-color: #e3dcd1;
 	padding-bottom: 3px red;
+}
+
+/*str for navbaren, og at den "forsvinner" når det scrolles opp på små skjermer*/
+@media (max-width: 580px) {
+	.NavBarBtn {
+		font-size: 0.9em;
+		display: inline-block;
+		padding: 0.3em 4% 0.3em 4%;
+	}
+	/*disse to henger sammen!*/
+	.NavigationBar {
+		position: relative;
+	}
+	body {
+		padding-top: 0;
+	}
+}
+
+@media (max-width: 450px) {
+	#recipeBtn {
+		margin-left: 10%;
+	}
+	.NavBarBtn {
+		margin-left: 8%;
+		margin-top: 0;
+		padding-bottom: 0;
+	}
 }
 
 /* SLIDESHOW */
@@ -738,30 +784,5 @@ a.NavBarBtn:hover {
 @media (min-width: 800px) {
 	.NavBarBtn {
 		font-size: 20px;
-	}
-}
-
-/*str for navbaren, og at den "forsvinner" når det scrolles opp på små skjermer*/
-@media (max-width: 580px) {
-	.NavBarBtn {
-		font-size: 0.9em;
-		display: inline-block;
-		padding: 0.3em 4% 0.3em 4%;
-	}
-	/*disse to henger sammen!*/
-	.NavigationBar {
-		position: relative;
-	}
-	body {
-		padding-top: 0;
-	}
-}
-
-@media (max-width: 450px) {
-	#recipeBtn {
-		margin-left: 10%;
-	}
-	.NavBarBtn {
-		margin-left: 8%;
 	}
 }
