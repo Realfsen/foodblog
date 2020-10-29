@@ -150,6 +150,12 @@ form {
 	}
 }
 
+/*for bilder generelt*/
+img {
+	display: block;
+	height: 100%;
+}
+
 /*sette intro/info-delen til venstre og bildet til høyre*/
 .todelt {
 	display: block;
@@ -193,7 +199,7 @@ form {
 /* START recipe.html */
 
 .ingredientlist {
-	margin: 0 0 10% 5%;
+	margin: 0 0 10% 0;
 	grid-area: ingredients;
 }
 
@@ -225,6 +231,7 @@ form {
 
 .nameIntro {
 	margin-bottom: 2rem;
+	margin-right: 5%;
 	grid-area: nameIntro;
 }
 
@@ -232,15 +239,16 @@ form {
 	max-width: 100vw;
 	object-fit: contain;
 	margin: auto;
-	grid-area: image;
+	width: 100%;
+	height: auto;
 }
 
 @media all and (min-width: 40em) {
 	.ingredientlist {
-		width: 50%;
 		float: left;
 		max-width: 300px;
-		margin: 0 0 10% 5%;
+		margin-top: 0;
+		margin-left: 0;
 		grid-area: ingredients;
 	}
 
@@ -249,8 +257,9 @@ form {
 	}
 
 	.fremgangliste {
-		max-width: 50%;
-		margin: auto;
+		float: left;
+		max-width: 90%;
+		margin-top: 0;
 		grid-area: process;
 	}
 
@@ -265,17 +274,34 @@ form {
 		grid-template-columns: 50% 50%;
 	}
 
-	.recipe h2 {
+	.recipe h2,
+	.recipe p {
 		margin-top: 3rem;
+		margin-left: 0;
+		padding-left: 0;
+	}
+
+	.recipe h3,
+	.recipe ul {
+		margin-top: 0;
+		margin-left: 0;
+		padding-left: 0;
+	}
+
+	.recipe ol {
+		margin-top: 3rem;
+		margin-left: 0;
+		padding-left: 1em;
 	}
 
 	.nameIntro {
 		margin-bottom: 3rem;
+		margin-right: 0;
 		grid-area: nameIntro;
 	}
 
 	.recipeimage {
-		max-height: 80vh;
+		/* max-height: 80vh; */
 		object-fit: contain;
 		margin: auto;
 		grid-area: image;
@@ -283,13 +309,6 @@ form {
 }
 
 /* END recipe.html */
-
-/*for bilder generelt*/
-img {
-	display: block;
-	height: 100%;
-	/*la stå. tas dette vekk forsvinner liksom innholdet i bildet lol?*/
-}
 
 /*media query for bildene ved siden av teksten istedenfor under*/
 @media (min-width: 800px) {
@@ -497,15 +516,34 @@ form {
 /*for den spesifikke teknikksiden, må ordnes*/
 
 .techniquetext {
-	max-width: 35%;
+	width: 80%;
+	display: block;
 	float: left;
 	margin-left: 10%;
+	margin-bottom: 10%;
 }
 
 .techniqueimage {
-	display: inline;
-	max-width: 22%;
-	margin-right: 10%;
+	display: block;
+	width: 80%;
+	margin-left: 10%;
+}
+
+/*media query for spesifikke teknikker*/
+@media (min-width: 800px) {
+	.techniquetext {
+		max-width: 40%;
+		float: left;
+		margin-left: 10%;
+	}
+
+	.techniqueimage {
+		display: inline;
+		float: right;
+		width: 35%;
+		margin-right: 10%;
+		margin-left: 0;
+	}
 }
 
 /* cards */
@@ -690,7 +728,7 @@ footer {
 #NavbarIcon img {
 	height: auto;
 	width: auto;
-	box-sizing: fill;
+	/* box-sizing: fill; */
 	max-height: 50px;
 	max-width: 75px;
 	margin: 0;
@@ -700,6 +738,7 @@ footer {
 /* Add a background color to navbar links on hover 
   Inspired by: https://www.w3schools.com/howto/howto_css_navbar_border.asp
   */
+
 
 /*str for navbaren, og at den "forsvinner" når det scrolles opp på små skjermer*/
 @media (max-width: 580px) {
