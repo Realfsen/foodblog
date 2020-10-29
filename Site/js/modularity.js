@@ -116,7 +116,7 @@
 	mailIcon.className = 'footerEmailIcon'
 	let innerLink = document.createElement('a')
 	innerLink.appendChild(mailIcon)
-	let innerLinkText = document.createTextNode('Send oss en melding.')
+	let innerLinkText = document.createTextNode('Send oss en melding')
 	innerLink.className = 'emailLink'
 	innerLink.href = 'contact.html'
 	innerLink.appendChild(innerLinkText)
