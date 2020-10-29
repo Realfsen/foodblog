@@ -14,7 +14,11 @@ content = content.split('_')
 
 // Loads the article with the filename gotten from the URL and puts it in the element with the "article_container" id
 JSONLoader(
-	content[0] + 's/' + content[1] + '.json',
+	content[0] +
+		's/' +
+		content[1].charAt(0).toUpperCase() +
+		content[1].slice(1) +
+		'.json',
 	'templates/' + content[0] + '.html',
 	(result) => {
 		let container = document.getElementById('content_container')

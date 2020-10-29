@@ -1,1 +1,55 @@
-{"description": "En rose til gjestene - ikke bare i Trøndelag. Dette er en klassisk og dekorativ krans fylt med sukker, kanel, mandler og rosiner. Du kan gjerne pynte den med melisglasur. Smaker aller best rykende fersk.", "submitter": "bb", "steps": ["Sett stekeovnen på 200 °C.", "Smuldre hvetemel og sukker i en bolle med smøret til du får en grynete masse. Tilsett salt og revet sitronskall.", "Varm melken til den er fingervarm (ca. 37 ºC). Rør gjæren ut i melken og bland med sammenpisket egg.", "Rør væsken inn i melet og elt til en smidig deig som knapt slipper bakebollen. Sett deigen til heving under plast ca. 30 minutter.", "Ta deigen opp på bakebordet. Trill den ut til en ca. 1 meter lang pølse. Kjevle pølsen ut slik at den blir ca. 25 cm bred.", "Rør sammen smør, sukker og kanel, og smør dette på deigen. Dryss mandler og rosiner over. Rull deigen fast sammen til en rund pølse.", "Skjær deiglengden i to langsetter. Sno de to delene sammen slik at snittflatene vender opp. Legg deigen som en rund eller oval krans på stekeplaten.", "Etterhev kransen på et lunt sted i ca. 30 minutter. Pensle med sammenpisket egg og strø på hakkede mandler.", "Stek kransen  i  25 - 30 minutter og avkjøl på rist."], "ingredients": [{"amount": "500 g", "name": "hvetemel"}, {"amount": "60 g", "name": "sukker"}, {"amount": "100 g", "name": "TINE Meierismør"}, {"amount": "½ ts", "name": "salt"}, {"amount": "1 ½ ts", "name": "sitronskall"}, {"amount": "2 ½ dl", "name": "TINE® Lettmelk 1,0 % fett"}, {"amount": "1 stk", "name": "egg"}, {"amount": "25 g", "name": "gjær"}, {"amount": "2 ½ ss", "name": "TINE Meierismør"}, {"amount": "2 ½ ss", "name": "sukker"}, {"amount": "1 ts", "name": "kanel"}, {"amount": "1 dl", "name": "rosiner"}, {"amount": "¾ dl", "name": "mandler"}, {"amount": "1 stk", "name": "egg"}, {"amount": "1 ss", "name": "mandler"}], "picture": "https://www.tine.no/_/recipeimage/w_1028%2Ch_720%2Cc_fill%2Cx_1500%2Cy_1218%2Cg_xy_center/recipeimage/393632.jpg", "type": "recipe", "link": "Trønderrose", "name": "Trønderrose"}
+{
+    "description": "En rose til gjestene - ikke bare i Trøndelag. Dette er en klassisk og dekorativ krans fylt med sukker, kanel, mandler og rosiner. Du kan gjerne pynte den med melisglasur. Smaker aller best rykende fersk.",
+    "submitter": "bb",
+    "steps": ["Sett stekeovnen på 200 °C.", "Smuldre hvetemel og sukker i en bolle med smøret til du får en grynete masse. Tilsett salt og revet sitronskall.", "Varm melken til den er fingervarm (ca. 37 ºC). Rør gjæren ut i melken og bland med sammenpisket egg.", "Rør væsken inn i melet og elt til en smidig deig som knapt slipper bakebollen. Sett deigen til heving under plast ca. 30 minutter.", "Ta deigen opp på bakebordet. Trill den ut til en ca. 1 meter lang pølse. Kjevle pølsen ut slik at den blir ca. 25 cm bred.", "Rør sammen smør, sukker og kanel, og smør dette på deigen. Dryss mandler og rosiner over. Rull deigen fast sammen til en rund pølse.", "Skjær deiglengden i to langsetter. Sno de to delene sammen slik at snittflatene vender opp. Legg deigen som en rund eller oval krans på stekeplaten.", "Etterhev kransen på et lunt sted i ca. 30 minutter. Pensle med sammenpisket egg og strø på hakkede mandler.", "Stek kransen  i  25 - 30 minutter og avkjøl på rist."],
+    "ingredients": [{
+        "amount": "500 g",
+        "name": "hvetemel"
+    }, {
+        "amount": "60 g",
+        "name": "sukker"
+    }, {
+        "amount": "100 g",
+        "name": "TINE Meierismør"
+    }, {
+        "amount": "½ ts",
+        "name": "salt"
+    }, {
+        "amount": "1 ½ ts",
+        "name": "sitronskall"
+    }, {
+        "amount": "2 ½ dl",
+        "name": "TINE® Lettmelk 1,0 % fett"
+    }, {
+        "amount": "1 stk",
+        "name": "egg"
+    }, {
+        "amount": "25 g",
+        "name": "gjær"
+    }, {
+        "amount": "2 ½ ss",
+        "name": "TINE Meierismør"
+    }, {
+        "amount": "2 ½ ss",
+        "name": "sukker"
+    }, {
+        "amount": "1 ts",
+        "name": "kanel"
+    }, {
+        "amount": "1 dl",
+        "name": "rosiner"
+    }, {
+        "amount": "¾ dl",
+        "name": "mandler"
+    }, {
+        "amount": "1 stk",
+        "name": "egg"
+    }, {
+        "amount": "1 ss",
+        "name": "mandler"
+    }],
+    "picture": "https://www.tine.no/_/recipeimage/w_1028%2Ch_720%2Cc_fill%2Cx_1500%2Cy_1218%2Cg_xy_center/recipeimage/393632.jpg",
+    "type": "recipe",
+    "link": "Trønderrose",
+    "name": "Trønderrose"
+}
