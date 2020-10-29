@@ -3,13 +3,13 @@
     "name": "Tradisjonell trøffelkake",
     "type": "recipe",
     "link": "Troffelkake",
-    "description": "En tradisjonell sjokoladekake type med smak av sjokolade og rom",
-	"ingredienser": {
-		"sukker": "600 g",
-        "mel": "600 g",
-        "egg": "4 stk",
-        "sjokolade": "100 g",
-        "bakepulver": "6 ts",
-        "romessens": "20 dråper"
-	}
+    "description": "En tradisjonell sjokoladekake med smak av sjokolade og rom",
+	"ingredients": [
+        {"amount": "600 g", "name":"sukker"},
+        {"amount": "600 g", "name": "mel"},
+        {"amount": "4 stk", "name": "egg"},
+        {"amount": "100 g", "name": "sjokolade"},
+        {"amount": "6 ts", "name": "bakepulver"},
+        {"amount": "20 dråper", "name": "romessens"}],
+    "steps": ["Rør sammen smør og sukker til blanding får en hvit farge. Tilsett så eggene", "Smelt sjokoladen med litt av melken, når sjokoladen er smeltet bland in resten; melk, romessens, hvetemel, bakepulver","Overfør røren til en rund kakeform. Sett kakeformen på nederste rist i ovnen og stek den ved 190°C i omtrent 45 minutter."]
 }

@@ -1,16 +1,16 @@
 {
-    "picture": "img/vafler.jpg",
+    "picture": "./img/vafler.jpg",
     "name": "Enkle vafler",
     "type": "recipe",
     "link": "Vafler",
-    "description": "En enkel oppskrift for vafler",
-	"ingredienser": {
-		"sukker": "5 ss",
-        "mel": "4 dl",
-        "bakepulver": "1 ts",
-        "kardemomme": "1 ts",
-        "melk": "4 dl",
-        "egg": "3 stk",
-        "smeltet smør": "100 g"
-	}
+    "description": "Om du feirer bursdag eller bare har lyst på noe godt er vafler alltid et godt valg. Her er en enkel oppskrift for vafler",
+	"ingredients": [
+        {"amount": "5 ss", "name": "sukker"},
+        {"amount": "4 dl", "name": "mel"}, 
+        {"amount": "1 ts", "name": "bakepulver"},
+        {"amount": "1 ts", "name": "kardemomme"},
+        {"amount": "4 dl", "name": "melk"},
+        {"amount": "3 stk", "name": "egg"},
+        {"amount": "100 g", "name": "smeltet smør"}],
+    "steps": ["Ha alt det tørre i en bolle og spe med litt av melken om gangen. Pass på å rør godt for å unngå klumper av mel.","Rør inn smeltet smør og egg. La røren svelle i 20-30 minutter.", "Stek vaflene til de har en gylden farge."]
 }
