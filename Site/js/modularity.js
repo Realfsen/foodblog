@@ -138,17 +138,14 @@ function persistantActiveNavigationBar() {
 	if (subPage.toLowerCase() === 'contact') {
 		// For "kontakt oss"
 		let currentElement = document.getElementById('NavBarContact')
-		console.log(currentElement)
 		currentElement.style.borderBottom = activeBarStyling
 	} else if (subPage.toLowerCase() === 'baking101') {
 		// For "Baketips"
 		let currentElement = document.getElementById('NavBarTechnique')
-		console.log(currentElement)
 		currentElement.style.borderBottom = activeBarStyling
 	} else if (subPage.toLowerCase() === 'recipe_list') {
 		// For "Oppskrifter"
 		let currentElement = document.getElementById('NavBarRecipes')
-		console.log(currentElement)
 		currentElement.style.borderBottom = activeBarStyling
 	} else {
 	}
