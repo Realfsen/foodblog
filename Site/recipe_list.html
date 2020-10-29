@@ -17,42 +17,63 @@
 	</head>
 
 	<body>
-		<div>
-			<button
-				class="sorteringsknapp selected"
-				id="borghildknapp"
-				onclick="toggleContent('bb')"
-			>
-				Bordhilds oppskrifter
-			</button>
-			<button
-				class="sorteringsknapp selected"
-				id="brukereknapp"
-				onclick="toggleContent('user')"
-			>
-				Brukernes oppskrifter
-			</button>
-		</div>
-		<div class="borghildsoppskrifter">
-			<h2 id="borghildsoppskrifter">Borghilds oppskrifter</h2>
-			<div
-				class="card-container"
-				card-list="recipes"
-				data-template="card"
-				data-file="recipes"
-			></div>
-		</div>
+		<div class="bodyContent">
+			<div>
+				<button
+					class="sorteringsknapp selected"
+					id="borghildknapp"
+					onclick="toggleContent('bb')"
+				>
+					Bordhilds oppskrifter
+				</button>
+				<button
+					class="sorteringsknapp"
+					id="brukereknapp"
+					onclick="toggleContent('user')"
+				>
+					Brukernes oppskrifter
+				</button>
+			</div>
+			<div class="borghildsoppskrifter">
+				<h2 id="borghildsoppskrifter">Borghilds oppskrifter</h2>
+				<button
+					class="sorteringsknapp"
+					id="brukereknapp"
+					onclick="nameSort('bb')"
+				>
+					Sorter alfabetisk
+				</button>
+				<div
+					id="bb-cards"
+					class="card-container"
+					card-list="recipes"
+					data-template="card"
+					data-file="recipes"
+				></div>
+			</div>
 
-		<div class="brukernesoppskrifter">
-			<h2>Brukernes oppskrifter</h2>
-			<div
-				class="card-container"
-				card-list="recipes"
-				data-template="card"
-				data-file="user-recipes"
-			></div>
-		</div>
+			<div class="brukernesoppskrifter" style="display: none">
+				<h2>Brukernes oppskrifter</h2>
+				<button
+					class="sorteringsknapp"
+					id="brukereknapp"
+					onclick="nameSort('user')"
+				>
+					Sorter alfabetisk
+				</button>
+				<div
+					id="usr-cards"
+					class="card-container"
+					card-list="recipes"
+					data-template="card"
+					data-file="user-recipes"
+				></div>
+			</div>
 
+			<div class="tommeoppskrifter" style="display: none">
+				<h2>Ingen oppskrifter er valgt</h2>
+			</div>
+		</div>
 		<script src="./js/filter.js"></script>
 		<script src="./js/jsonLoader_new.js"></script>
 		<script src="./js/modularity.js"></script>
