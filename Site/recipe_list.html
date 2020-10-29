@@ -33,13 +33,18 @@
 				>
 					Brukernes oppskrifter
 				</button>
-				<button class="sorteringsknapp" id="brukereknapp" onclick="nameSort()">
-					Sorter alfabetisk
-				</button>
 			</div>
 			<div class="borghildsoppskrifter">
 				<h2 id="borghildsoppskrifter">Borghilds oppskrifter</h2>
+				<button
+					class="sorteringsknapp"
+					id="brukereknapp"
+					onclick="nameSort('bb')"
+				>
+					Sorter alfabetisk
+				</button>
 				<div
+					id="bb-cards"
 					class="card-container"
 					card-list="recipes"
 					data-template="card"
@@ -49,7 +54,15 @@
 
 			<div class="brukernesoppskrifter" style="display: none">
 				<h2>Brukernes oppskrifter</h2>
+				<button
+					class="sorteringsknapp"
+					id="brukereknapp"
+					onclick="nameSort('user')"
+				>
+					Sorter alfabetisk
+				</button>
 				<div
+					id="usr-cards"
 					class="card-container"
 					card-list="recipes"
 					data-template="card"

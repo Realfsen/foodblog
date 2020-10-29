@@ -5,30 +5,38 @@ let sorted = false
  * getCards
  * gets all the HTML elements with the .card-container class
  * pushes all of them into the cards-array and removes them from the page
- *
+ * @param {string} who string that decides which list to sort
  */
-function getCards() {
-	let container = document.querySelector('.card-container')
-	console.log(container.firstChild)
-	console.log(document.querySelector('.card-name'))
-	for (let i = 0; i < container.childElementCount + 2; i++) {
+function getCards(who) {
+	if (who === 'bb') {
+		var container = document.querySelector('#bb-cards')
+		var name = '#bb-cards '
+	} else if (who === 'user') {
+		var container = document.querySelector('#usr-cards')
+		var name = '#usr-cards '
+	} else if (who === 'tech') {
+		var container = document.querySelector('.card-container')
+		var name = ''
+	}
+	let count = container.childElementCount
+	for (let i = 0; i < count; i++) {
 		let cardObj = {
-			name: document.querySelector('.card-name').textContent,
+			name: document.querySelector(name + '.card-name').textContent,
 			html: container.firstChild,
 		}
-		container.removeChild(container.firstChild)
 		cards.push(cardObj)
+		container.removeChild(container.firstChild)
 	}
-	console.log(cards)
 }
 
 /**
  * nameSort
  * sorts the cards-array by the name property
+ * @param {string} who string that decides which list to sort
  */
-function nameSort() {
+function nameSort(who) {
 	// Gets the cards first
-	getCards()
+	getCards(who)
 	// If unsorted, sort by name descending
 	if (!sorted) {
 		cards.sort((a, b) => {
@@ -54,18 +62,26 @@ function nameSort() {
 		})
 		sorted = false
 	}
+	console.log(cards)
 	// Then adds the sorted cards to the page
-	printCards()
+	printCards(who)
 }
 
 /**
  * printCards
  * prints out all the cards in the .card-container-element
+ * @param {string} who string that decides which list to sort
  */
-function printCards() {
-	let container = document.querySelector('.card-container')
+function printCards(who) {
+	if (who === 'bb') {
+		var container = document.querySelector('#bb-cards')
+	} else if (who === 'user') {
+		var container = document.querySelector('#usr-cards')
+	} else if (who === 'tech') {
+		var container = document.querySelector('.card-container')
+	}
 	for (let i = 0; i <= cards.length - 1; i++) {
-		console.log(cards[i])
+		// console.log(cards[i])
 		container.appendChild(cards[i].html)
 	}
 	cards = []
