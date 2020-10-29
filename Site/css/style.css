@@ -8,9 +8,10 @@ body {
 	background-color: white;
 	position: relative;
 	padding-bottom: 2.5rem;
-	padding-top: 80px; /*gjør plass til navbaren*/
+	padding-top: 80px;
+	/*gjør plass til navbaren*/
 	display: grid;
-	grid-template-areas: 'content' 'footer';
+	grid-template-areas: 'content''footer';
 }
 
 .bodyContent {
@@ -22,11 +23,12 @@ media-queries vil brukes for at større sider blir som beskrevet i oppgaven.*/
 /*over-overskrift, kun brukt på index-siden*/
 h1 {
 	font-weight: bold;
-	color: #f09ca2;
+	color: #e3dcd1;
 	font-size: 7vw;
 	text-align: center;
 	position: relative;
-	/* padding-top: 80px; */ /*må ev med fordi navbaren tar plass*/
+	/* padding-top: 80px; */
+	/*må ev med fordi navbaren tar plass*/
 }
 
 /*for å sentrere tekst, setter overskriften midt i slideshowet/bildet på indexsiden*/
@@ -38,10 +40,12 @@ h1 {
 	transform: translate(0%, -50%);
 	text-align: center;
 }
+
 .overskrift {
 	position: relative;
 	display: block;
 }
+
 img.slideshowplaceholder {
 	display: block;
 }
@@ -53,8 +57,10 @@ h2 {
 	font-size: 5vw;
 	/*for å få det litt inn på siden, som i design-eksemplene. skjer flere steder*/
 	margin-left: 10%;
-	margin-right: 10%; /*mulig det burde være en annen løsning her*/
-	margin-top: 50px; /*?*/
+	margin-right: 10%;
+	/*mulig det burde være en annen løsning her*/
+	margin-top: 50px;
+	/*?*/
 }
 
 /*fungerende løsning for strek under h2-elementer*/
@@ -62,11 +68,16 @@ h2:after {
 	content: ' ';
 	display: block;
 	border: 2px solid #f09ca2;
-	background-color: #f09ca2; /*fordi det bare er en boks, så uten så blir det en hvit(ufarget) strek inni lol*/
-	width: 20vw; /*lengden på streken*/
-	margin-top: 15px; /*avstand fra h2*/
-	margin-left: 2px; /*foreløpig iaf for å få streken til å starte samme sted som h2-teksten*/
-	margin-bottom: 30px; /*så ikke det under kan komme helt oppi*/
+	background-color: #f09ca2;
+	/*fordi det bare er en boks, så uten så blir det en hvit(ufarget) strek inni lol*/
+	width: 20vw;
+	/*lengden på streken*/
+	margin-top: 15px;
+	/*avstand fra h2*/
+	margin-left: 2px;
+	/*foreløpig iaf for å få streken til å starte samme sted som h2-teksten*/
+	margin-bottom: 30px;
+	/*så ikke det under kan komme helt oppi*/
 }
 
 /*under-underoverskrifter, brukes på contact-siden*/
@@ -86,7 +97,8 @@ ol,
 form {
 	color: #4d3142;
 	font-size: 14px;
-	margin-left: 10%; /*hvis vi ikke bruker noe annet for dette*/
+	margin-left: 10%;
+	/*hvis vi ikke bruker noe annet for dette*/
 }
 
 .emailLink {
@@ -100,15 +112,19 @@ form {
 	h1 {
 		font-size: 56px;
 	}
+
 	h2 {
 		font-size: 40px;
 	}
+
 	h2:after {
 		width: 160px;
 	}
+
 	h3 {
 		font-size: 18px;
 	}
+
 	p,
 	blockquote,
 	ul,
@@ -124,9 +140,11 @@ form {
 	h1 {
 		font-size: 24px;
 	}
+
 	h2 {
 		font-size: 18px;
 	}
+
 	h2:after {
 		width: 70px;
 	}
@@ -136,15 +154,18 @@ form {
 .todelt {
 	display: block;
 	margin-bottom: 12.5%;
-	margin-left: 1%; /*for å få ting til å ha likt innrykk*/
+	margin-left: 1%;
+	/*for å få ting til å ha likt innrykk*/
 	margin-top: 0;
 }
 
 /*tekstdel i .todelt*/
 .intro {
 	display: block;
-	margin-right: 10%; /*så teksten ikke går helt bort i kanten på høyre siden*/
-	margin-bottom: 10%; /*margin til bildet under*/
+	margin-right: 10%;
+	/*så teksten ikke går helt bort i kanten på høyre siden*/
+	margin-bottom: 10%;
+	/*margin til bildet under*/
 	position: relative;
 }
 
@@ -267,7 +288,8 @@ form {
 /*for bilder generelt*/
 img {
 	display: block;
-	height: 100%; /*la stå. tas dette vekk forsvinner liksom innholdet i bildet lol?*/
+	height: 100%;
+	/*la stå. tas dette vekk forsvinner liksom innholdet i bildet lol?*/
 }
 
 /*media query for bildene ved siden av teksten istedenfor under*/
@@ -296,7 +318,8 @@ img {
 /*bakgrunnsfarge og sånt for "beste oppskrifter"-delen*/
 .utvalgteoppskrifter {
 	/* height: auto; */
-	height: 500px; /*midlertidig for å kunne se, må endres når cards legges til*/
+	height: 500px;
+	/*midlertidig for å kunne se, må endres når cards legges til*/
 	background: #e3dcd1;
 	/*noe form for marginer må kanskje legges til på en litt annen måte, 
 	sjekk html-delen for å se. mulig ekstra div, eller å style cards direkte (hvis det ikke alt er gjort)*/
@@ -333,6 +356,7 @@ img {
 		margin-left: 10%;
 		margin-top: 40px;
 	}
+
 	#epost {
 		margin-bottom: 15%;
 	}
@@ -387,6 +411,7 @@ form textarea {
 form {
 	padding-bottom: 10%;
 }
+
 #nojsContactForm textarea,
 #jsContactForm textarea {
 	height: 200px;
@@ -394,6 +419,7 @@ form {
 }
 
 @media (min-width: 800px) {
+
 	#nojsContactForm textarea,
 	#jsContactForm textarea {
 		width: 50%;
@@ -415,6 +441,7 @@ form {
 	border: none;
 	margin-bottom: 50px;
 }
+
 /* ev andre ting    */
 #sendinn:hover {
 	background-color: #3d2634;
@@ -433,6 +460,7 @@ form {
 	/* margin-bottom: 50px; */
 	outline: none;
 }
+
 #borghildknapp {
 	margin-left: 10%;
 	margin-top: 35px;
@@ -489,7 +517,7 @@ form {
 	margin: auto;
 }
 
-.card-container > div {
+.card-container>div {
 	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 	transition: 0.3s;
 	border-radius: 5px;
@@ -502,7 +530,7 @@ form {
 	background-color: #ffffff;
 }
 
-.card-container > div:hover {
+.card-container>div:hover {
 	box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
 }
 
@@ -532,9 +560,11 @@ form {
 .brukernesoppskrifter {
 	padding-bottom: 15vh;
 }
+
 .card-container {
 	padding-bottom: 18%;
 }
+
 .utvalgteoppskrifter {
 	padding-bottom: 40%;
 }
@@ -542,9 +572,11 @@ form {
 /*for alle linker generelt?*/
 a {
 	color: #4d3142;
-	text-decoration: none; /*hvis ikke får den underline til vanlig også, 
+	text-decoration: none;
+	/*hvis ikke får den underline til vanlig også, 
     men hva med når man er innpå den siden?*/
 }
+
 /*for når man hover over en link*/
 /* a:hover,
 a:active {
@@ -579,6 +611,7 @@ footer {
 	grid-template-columns: 33% 33% 33%;
 	background-color: #eae8e6;
 }
+
 #footerLogo {
 	/* object-fit: contain;
 	width: 20%;
@@ -589,6 +622,7 @@ footer {
 	position: relative;
 	left: 10%;
 }
+
 .footerLeft {
 	/* width: 37%;
 	float: left;
@@ -599,6 +633,7 @@ footer {
 	grid-template-rows: 50% 25% 25%;
 	padding: 10%;
 }
+
 .footerRight {
 	/* width: 47%;
 	float: left;
@@ -674,10 +709,12 @@ a.NavBarBtn:hover {
 		display: inline-block;
 		padding: 0.3em 4% 0.3em 4%;
 	}
+
 	/*disse to henger sammen!*/
 	.NavigationBar {
 		position: relative;
 	}
+
 	body {
 		padding-top: 0;
 	}
@@ -687,6 +724,7 @@ a.NavBarBtn:hover {
 	#recipeBtn {
 		margin-left: 10%;
 	}
+
 	.NavBarBtn {
 		margin-left: 8%;
 		margin-top: 0;
@@ -695,6 +733,13 @@ a.NavBarBtn:hover {
 }
 
 /* SLIDESHOW */
+.imageGradient {
+	width: 100%;
+	height: 100vh;
+	background-color: rgba(114, 42, 0, 0.50);
+	position: absolute;
+}
+
 #left,
 #right {
 	position: absolute;
@@ -746,6 +791,7 @@ a.NavBarBtn:hover {
 .arrow_left_lower {
 	left: 17%;
 }
+
 .arrow_right_upper,
 .arrow_right_lower {
 	right: 17%;
@@ -758,22 +804,28 @@ a.NavBarBtn:hover {
 
 .arrow_left_upper,
 .arrow_right_upper {
-	-ms-transform: rotate(-45deg); /* IE 9 */
-	-webkit-transform: rotate(-45deg); /* Safari */
+	-ms-transform: rotate(-45deg);
+	/* IE 9 */
+	-webkit-transform: rotate(-45deg);
+	/* Safari */
 	transform: rotate(-45deg);
 }
 
 .arrow_left_lower,
 .arrow_right_lower {
-	-ms-transform: rotate(45deg); /* IE 9 */
-	-webkit-transform: rotate(45deg); /* Safari */
+	-ms-transform: rotate(45deg);
+	/* IE 9 */
+	-webkit-transform: rotate(45deg);
+	/* Safari */
 	transform: rotate(45deg);
 }
+
 .slideshowplaceholder {
 	margin: 0px;
 	width: 100%;
 	height: 100vh;
 }
+
 /* END SLIDESHOW */
 
 /* Media queries for navbar*/

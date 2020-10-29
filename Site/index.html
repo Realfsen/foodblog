@@ -2,14 +2,16 @@
 <html lang="en">
 
 <head id="pageHeader">
-    <meta charset="UTF-8" />
-    <script src="./js/modularity_head.js"></script> 
-    <title>Bestemor Borghilds Bakebonanza</title>
+	<meta charset="UTF-8" />
+	<script src="./js/modularity_head.js"></script>
+	<title>Bestemor Borghilds Bakebonanza</title>
 </head>
-  
-	<body>
-		<div class="bodyContent">
+
+<body>
+	<div class="bodyContent">
 		<div class="overskrift">
+			<div class="imageGradient">
+			</div>
 			<div class="headercentered">
 				<h1>
 					Velkommen til <br />
@@ -17,13 +19,8 @@
 					Bakebonanza
 				</h1>
 			</div>
-			<img
-				id="imgTag"
-				class="slideshowplaceholder"
-				src="img/slide_1.jpg"
-				alt="placeholder til slideshow"
-				style="width: 100%"
-			/>
+			<img id="imgTag" class="slideshowplaceholder" src="img/slide_1.jpg" alt="placeholder til slideshow"
+				style="width: 100%" />
 			<!-- Picture credits to the people at https://unsplash.com -->
 			<div id="left" onclick="backward()">
 				<div class="arrow_position">
@@ -54,26 +51,17 @@
 			</div>
 
 			<div class="bildeklipp" id="introbilde">
-				<img
-					class="BestemorB"
-					src="img/BestemorB2.jpeg"
-					alt="Illustrasjonsbilde av Bestemor Borghild."
-				/>
+				<img class="BestemorB" src="img/BestemorB2.jpeg" alt="Illustrasjonsbilde av Bestemor Borghild." />
 			</div>
 		</div>
 
 		<div class="utvalgteoppskrifter">
 			<h2>Borghilds beste oppskrifter</h2>
 
-			<div
-				class="card-container"
-				card-list="recipes"
-				data-template="card"
-				data-file="beste"
-			></div>
+			<div class="card-container" card-list="recipes" data-template="card" data-file="beste"></div>
 		</div>
 	</div>
-</div>
+	</div>
 	<script src="./js/slideshow.js"></script>
 	<script src="./js/jsonLoader_new.js"></script>
 	<script src="./js/modularity.js"></script>
