@@ -1,8 +1,9 @@
 {
-	"picture": "img/chocolatecake.jpeg",
+	"picture": "img/chocolatecake.jpg",
 	"name": "Sjokoladekake",
 	"type": "recipe",
 	"link": "Cake",
+	"description": "En kjempegod sjokoladekake som passer til enhver anledning.",
 	"ingredients": {
 		"500 g": "sukker",
 		"Kakaopulver": "2 dl",
