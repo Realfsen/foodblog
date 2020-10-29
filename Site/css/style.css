@@ -7,9 +7,9 @@ body {
 	font-family: 'Poppins', Arial, sans-serif;
 	background-color: white;
 	position: relative;
+	/*for plass til navbaren*/
 	padding-top: 80px;
-	/*gjør plass til navbaren*/
-	/*burde kanskje gjøres på annen måte*/
+
 	display: grid;
 	grid-template-areas: 'header' 'content' 'footer';
 }
@@ -27,11 +27,9 @@ h1 {
 	font-size: 7vw;
 	text-align: center;
 	position: relative;
-	/* padding-top: 80px; */
-	/*må ev med fordi navbaren tar plass*/
 }
 
-/*for å sentrere tekst, setter overskriften midt i slideshowet/bildet på indexsiden*/
+/*for å sentrere. setter overskriften midt i slideshowet/bildet på indexsiden*/
 .headercentered {
 	position: absolute;
 	top: 50%;
@@ -40,13 +38,9 @@ h1 {
 	transform: translate(0%, -50%);
 	text-align: center;
 }
-
+/*for den på indexsiden*/
 .overskrift {
 	position: relative;
-	display: block;
-}
-
-img.slideshowplaceholder {
 	display: block;
 }
 
@@ -58,9 +52,7 @@ h2 {
 	/*for å få det litt inn på siden, som i design-eksemplene. skjer flere steder*/
 	margin-left: 10%;
 	margin-right: 10%;
-	/*mulig det burde være en annen løsning her*/
 	margin-top: 50px;
-	/*?*/
 }
 
 /*fungerende løsning for strek under h2-elementer*/
@@ -75,12 +67,12 @@ h2:after {
 	margin-top: 15px;
 	/*avstand fra h2*/
 	margin-left: 2px;
-	/*foreløpig iaf for å få streken til å starte samme sted som h2-teksten*/
+	/*for å få streken til å starte samme sted som h2-teksten*/
 	margin-bottom: 30px;
 	/*så ikke det under kan komme helt oppi*/
 }
 
-/*under-underoverskrifter, brukes på contact-siden*/
+/*under-underoverskrifter, brukes bl.a. på contact-siden*/
 h3 {
 	color: #4d3142;
 	font-size: 16px;
@@ -98,7 +90,6 @@ form {
 	color: #4d3142;
 	font-size: 14px;
 	margin-left: 10%;
-	/*hvis vi ikke bruker noe annet for dette*/
 }
 
 .emailLink {
@@ -196,6 +187,40 @@ img {
 	max-height: 250px;
 }
 
+/*media query for bildene ved siden av teksten istedenfor under ved store skjermer*/
+@media (min-width: 800px) {
+	.todelt {
+		margin-top: 10%;
+		margin-left: 6%;
+		display: grid;
+		grid-template-columns: 50% 50%;
+	}
+
+	/*spesifikt for contactsiden*/
+	#contacttodelt {
+		margin-top: 1.5em;
+		margin-bottom: 1.5em;
+	}
+
+	.bildeklipp {
+		margin-right: 10%;
+		margin-left: auto;
+		margin-top: auto;
+		margin-bottom: auto;
+	}
+}
+
+/*bakgrunnsfarge og sånt for "beste oppskrifter"-delen*/
+.utvalgteoppskrifter {
+	height: auto;
+	background: #e3dcd1;
+	/*noe form for marginer må kanskje legges til på en litt annen måte, 
+	sjekk html-delen for å se. mulig ekstra div, eller å style cards direkte (hvis det ikke alt er gjort)*/
+	/* margin: none; */
+	/* margin-bottom: 10%; */
+	padding-top: 2.5%;
+}
+
 /* START recipe.html */
 
 .ingredientlist {
@@ -243,6 +268,7 @@ img {
 	height: auto;
 }
 
+/*recipe for stor skjerm*/
 @media all and (min-width: 40em) {
 	.ingredientlist {
 		float: left;
@@ -301,7 +327,6 @@ img {
 	}
 
 	.recipeimage {
-		/* max-height: 80vh; */
 		object-fit: contain;
 		margin: auto;
 		grid-area: image;
@@ -309,40 +334,6 @@ img {
 }
 
 /* END recipe.html */
-
-/*media query for bildene ved siden av teksten istedenfor under*/
-@media (min-width: 800px) {
-	.todelt {
-		margin-top: 10%;
-		margin-left: 6%;
-		display: grid;
-		grid-template-columns: 50% 50%;
-	}
-
-	/*spesifikt for contactsiden*/
-	#contacttodelt {
-		margin-top: 1.5em;
-		margin-bottom: 1.5em;
-	}
-
-	.bildeklipp {
-		margin-right: 10%;
-		margin-left: auto;
-		margin-top: auto;
-		margin-bottom: auto;
-	}
-}
-
-/*bakgrunnsfarge og sånt for "beste oppskrifter"-delen*/
-.utvalgteoppskrifter {
-	height: auto;
-	background: #e3dcd1;
-	/*noe form for marginer må kanskje legges til på en litt annen måte, 
-	sjekk html-delen for å se. mulig ekstra div, eller å style cards direkte (hvis det ikke alt er gjort)*/
-	/* margin: none; */
-	/* margin-bottom: 10%; */
-	padding-top: 2.5%;
-}
 
 /*for epost-delen på contact-side*/
 #epost {
@@ -366,6 +357,7 @@ img {
 	top: 5%;
 }
 
+/*responsivitet for epost*/
 @media (max-width: 350px) {
 	.emailLink {
 		display: block;
@@ -381,8 +373,10 @@ img {
 /*html-forms/kontaktskjemaet*/
 form {
 	margin-left: 10%;
+	padding-bottom: 5%;
 }
 
+/*felles for de ulike delene av formen*/
 form input,
 textarea,
 select {
@@ -392,6 +386,7 @@ select {
 	border: 1px solid #4d3142;
 }
 
+/*egenartede form-ting*/
 form label {
 	font-weight: bold;
 }
@@ -410,23 +405,11 @@ form select {
 
 form textarea {
 	padding: 10px;
-	width: 90%;
-	/* max-width: 300px; */
+	width: 80%;
 	height: 200px;
 }
 
-/*media query for forms*/
-@media (min-width: 800px) {
-	form textarea {
-		width: 50%;
-		min-width: 578px;
-	}
-}
-
 /*js-form*/
-form {
-	padding-bottom: 5%;
-}
 
 #nojsContactForm textarea,
 #jsContactForm textarea {
@@ -434,13 +417,21 @@ form {
 	width: 80%;
 }
 
+/*media query for forms ved store sider, for ikke å bli for stor, og å matche til små skjermer*/
 @media (min-width: 800px) {
+	form textarea,
 	#nojsContactForm textarea,
 	#jsContactForm textarea {
-		width: 50%;
-		min-width: 578px;
+		width: 40%;
+		min-width: 570px;
 	}
 }
+
+/*benyttes kanskje ikke*/
+/* textarea {
+	resize: both;
+	overflow: auto;
+} */
 
 /*send inn-knapp på kontaktsiden*/
 #sendinn,
@@ -457,11 +448,11 @@ form {
 	margin-bottom: 50px;
 }
 
-/* ev andre ting    */
 #sendinn:hover {
-	background-color: #3d2634;
+	background-color: #331f2b;
 }
 
+/* generell utforming av de ulike sortering-/filterknappene */
 .sorteringsknapp {
 	font-size: 16px;
 	color: #4d3142;
@@ -471,30 +462,27 @@ form {
 	border-radius: 50px;
 	border: #4d3142 solid 1px;
 	background-color: #ffffff;
-	/* margin-top: 5%; */
-	/* margin-bottom: 50px; */
 	outline: none;
 }
 
+/*spesifikke utforminger av de nevnte knappene*/
 #borghildknapp {
 	margin-left: 10%;
 	margin-top: 35px;
 	margin-bottom: 25px;
 }
 
-#brukereknapp {
+/*mellomrom mellom knappene borghilds oppskrifter og brukernes oppskrifter*/
+#brukernesknapp {
 	margin-left: 25px;
-}
-
-.tommeoppskrifter {
-	height: 50vh;
 }
 
 #borghildsoppskrifter {
 	margin-top: 30px;
 }
 
-#teknikknapp {
+#teknikknapp,
+#brukereknapp {
 	margin-left: 10%;
 }
 
@@ -503,6 +491,7 @@ form {
 	color: #ffffff;
 }
 
+/*for å få brukernes oppskrifter-knappen under og lik borghildknappen ved mindre skjermer*/
 @media (max-width: 500px) {
 	#brukereknapp {
 		margin-left: 10%;
@@ -512,8 +501,12 @@ form {
 	}
 }
 
-/*for den spesifikke teknikksiden, må ordnes*/
+/*for når ingen oppskriftsyper er valgt*/
+.tommeoppskrifter {
+	height: 50vh;
+}
 
+/*for den spesifikke teknikksiden*/
 .techniquetext {
 	width: 80%;
 	display: block;
@@ -605,8 +598,6 @@ form {
 a {
 	color: #4d3142;
 	text-decoration: none;
-	/*hvis ikke får den underline til vanlig også, 
-    men hva med når man er innpå den siden?*/
 }
 
 /*for når man hover over en link*/
@@ -619,12 +610,7 @@ a.emailLink {
 	text-decoration: underline;
 }
 
-textarea {
-	resize: both;
-	overflow: auto;
-}
-
-/*fiks herfra og ned for modularity*/
+/* For modularity */
 
 /* Styling of the footer */
 .boldfooter {
@@ -644,6 +630,7 @@ footer {
 	background-color: #eae8e6;
 }
 
+/*deler footeren i to istedenfor tre for mindre skjermer*/
 @media (max-width: 600px) {
 	footer {
 		grid-template-columns: 50% 50%;
@@ -734,10 +721,6 @@ footer {
 	z-index: 50;
 }
 
-/* Add a background color to navbar links on hover 
-  Inspired by: https://www.w3schools.com/howto/howto_css_navbar_border.asp
-  */
-
 /*str for navbaren, og at den "forsvinner" når det scrolles opp på små skjermer*/
 @media (max-width: 580px) {
 	.NavBarBtn {
@@ -746,7 +729,7 @@ footer {
 		padding: 0.3em 4% 0.3em 4%;
 	}
 
-	/*disse to henger sammen!*/
+	/*disse to henger sammen! for å "forsvinne" navbaren*/
 	.NavigationBar {
 		position: relative;
 	}
@@ -765,6 +748,13 @@ footer {
 		margin-left: 8%;
 		margin-top: 0;
 		padding-bottom: 0;
+	}
+}
+
+/* For fast skriftstørrelse på navbar på stor skjerm*/
+@media (min-width: 800px) {
+	.NavBarBtn {
+		font-size: 20px;
 	}
 }
 
@@ -872,10 +862,3 @@ footer {
 }
 
 /* END SLIDESHOW */
-
-/* Media queries for navbar*/
-@media (min-width: 800px) {
-	.NavBarBtn {
-		font-size: 20px;
-	}
-}
