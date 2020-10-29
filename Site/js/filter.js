@@ -5,6 +5,7 @@ let sorted = false
  * getCards
  * gets all the HTML elements with the .card-container class
  * pushes all of them into the cards-array and removes them from the page
+ *
  */
 function getCards() {
 	let container = document.querySelector('.card-container')
@@ -76,29 +77,35 @@ function printCards() {
  * @param {string} who either 'bb' or 'user' depending on which button was pressed
  */
 function toggleContent(who) {
+	const bbDiv = document.querySelector('.borghildsoppskrifter')
+	const usrDiv = document.querySelector('.brukernesoppskrifter')
+	const emptyDiv = document.querySelector('.tommeoppskrifter')
 	if (who === 'bb') {
-		const div = document.querySelector('.borghildsoppskrifter')
 		const knapp = document.querySelector('#borghildknapp')
-		if (div.style.display === 'none') {
-			console.log('show')
-			div.style.display = 'block'
+		if (bbDiv.style.display === 'none') {
+			bbDiv.style.display = 'block'
 			knapp.classList.add('selected')
 		} else {
-			console.log('hide')
-			div.style.display = 'none'
+			bbDiv.style.display = 'none'
 			knapp.classList.remove('selected')
 		}
 	} else if (who === 'user') {
-		const div = document.querySelector('.brukernesoppskrifter')
 		const knapp = document.querySelector('#brukereknapp')
-		if (div.style.display === 'none') {
+		if (usrDiv.style.display === 'none') {
 			console.log('show')
-			div.style.display = 'block'
+			usrDiv.style.display = 'block'
 			knapp.classList.add('selected')
 		} else {
 			console.log('hide')
-			div.style.display = 'none'
+			usrDiv.style.display = 'none'
 			knapp.classList.remove('selected')
 		}
+	}
+	if (bbDiv.style.display === 'none' && usrDiv.style.display === 'none') {
+		console.log('show')
+		emptyDiv.style.display = 'block'
+	} else {
+		console.log('hide')
+		emptyDiv.style.display = 'none'
 	}
 }
