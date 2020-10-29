@@ -106,7 +106,7 @@ function toggleContent(who) {
 			knapp.classList.remove('selected')
 		}
 	} else if (who === 'user') {
-		const knapp = document.querySelector('#brukereknapp')
+		const knapp = document.querySelector('#brukernesknapp')
 		if (usrDiv.style.display === 'none') {
 			console.log('show')
 			usrDiv.style.display = 'block'

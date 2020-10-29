@@ -5,7 +5,7 @@ window.onload = function(){  // Make the JS version of form visibile, also hides
 }
 
 function submitForm(){  // Message to user that the form was sent!
-    window.alert("Hei "+document.getElementById("jsContactForm").user.value+".\nDin henvendelse til borghild er blitt sendt! \nBorghild vil sende svar til"+document.getElementById("jsContactForm").userEmail.value);
+    window.alert("Hei "+document.getElementById("jsContactForm").user.value+".\nDin henvendelse til borghild er blitt sendt! \nBorghild vil sende svar til "+document.getElementById("jsContactForm").userEmail.value);
 }
 
 /* Function that validates the form inputs */
