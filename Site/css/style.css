@@ -11,7 +11,7 @@ body {
 	/*gjør plass til navbaren*/
 	/*burde kanskje gjøres på annen måte*/
 	display: grid;
-	grid-template-areas: 'header''content''footer';
+	grid-template-areas: 'header' 'content' 'footer';
 }
 
 .bodyContent {
@@ -435,7 +435,6 @@ form {
 }
 
 @media (min-width: 800px) {
-
 	#nojsContactForm textarea,
 	#jsContactForm textarea {
 		width: 50%;
@@ -563,7 +562,7 @@ form {
 	}
 }
 
-.card-container>div {
+.card-container > div {
 	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 	transition: 0.3s;
 	border-radius: 5px;
@@ -576,7 +575,7 @@ form {
 	background-color: #ffffff;
 }
 
-.card-container>div:hover {
+.card-container > div:hover {
 	box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
 }
 
@@ -739,7 +738,6 @@ footer {
   Inspired by: https://www.w3schools.com/howto/howto_css_navbar_border.asp
   */
 
-
 /*str for navbaren, og at den "forsvinner" når det scrolles opp på små skjermer*/
 @media (max-width: 580px) {
 	.NavBarBtn {
@@ -858,7 +856,6 @@ footer {
 }
 
 @media all and (min-width: 40em) {
-
 	.slideshowplaceholder {
 		height: 90vh;
 	}
@@ -866,14 +863,13 @@ footer {
 	#left,
 	#right {
 		width: 7%;
-		height: 100vh;
+		height: 90vh;
 	}
 
 	.arrow_position {
-		height: 50vh;
+		margin-top: 42.5vh;
 	}
 }
-
 
 /* END SLIDESHOW */
 
