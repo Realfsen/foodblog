@@ -2,7 +2,7 @@
 	"picture": "img/chocolatecake.jpeg",
 	"name": "Sjokoladekake",
 	"type": "recipe",
-	"link": "cake",
+	"link": "Cake",
 	"ingredients": {
 		"500 g": "sukker",
 		"Kakaopulver": "2 dl",
