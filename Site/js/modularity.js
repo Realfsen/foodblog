@@ -142,13 +142,13 @@ function persistantActiveNavigationBar() {
 		currentElement.style.borderBottom = activeBarStyling
 	} else if (subPage.toLowerCase() === 'baking101') {
 		// For "Baketips"
-		console.log(currentElement)
 		let currentElement = document.getElementById('NavBarTechnique')
+		console.log(currentElement)
 		currentElement.style.borderBottom = activeBarStyling
 	} else if (subPage.toLowerCase() === 'recipe_list') {
 		// For "Oppskrifter"
-		console.log(currentElement)
 		let currentElement = document.getElementById('NavBarRecipes')
+		console.log(currentElement)
 		currentElement.style.borderBottom = activeBarStyling
 	} else {
 	}
