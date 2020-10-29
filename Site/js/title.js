@@ -14,25 +14,25 @@ function titlesForJson() {
     let tittel = '';
     for (i; i < lengde; i++) {
         //for delen som kan være unicode
-        var tull = (fullTittel.slice(i, i+6));
+        var unicodetekst = (fullTittel.slice(i, i+6));
         
         //for æ (%C3%A6)
-        if (tull == ('%C3%A6')) { 
+        if (unicodetekst == ('%C3%A6')) { 
             tittel = tittel + 'æ'
             i = i + 5;
         }
         // for é (%C3%A9)
-        else if ((tull) == ('%C3%A9')) { 
+        else if ((unicodetekst) == ('%C3%A9')) { 
             tittel = tittel + 'é'
             i = i + 5;
         }
         //for ø (%C3%B8)
-        else if ((tull) == ('%C3%B8')) { 
+        else if ((unicodetekst) == ('%C3%B8')) { 
             tittel = tittel + 'ø'
             i = i + 5;
         }
         //for å (%C3%A5)
-        else if ((tull) == ('%C3%A5')) { 
+        else if ((unicodetekst) == ('%C3%A5')) { 
             tittel = tittel + 'å'
             i = i + 5;
         }
@@ -42,7 +42,7 @@ function titlesForJson() {
             i = i + 2;
         }
         else {
-            tittel = tittel + fullTittel[i];
+            tittel += fullTittel[i];
         }
     }
     //legger til tittelen som tittel på siden
