@@ -92,7 +92,8 @@ form {
 	margin-left: 10%;
 }
 
-.emailLink {
+.emailLink,
+#footerEmailLink {
 	color: #4d3142;
 	font-size: 14px;
 }
@@ -121,23 +122,24 @@ form {
 	ul,
 	ol,
 	form,
-	.emailLink {
+	.emailLink,
+	#footerEmailLink {
 		font-size: 16px;
 	}
 }
 
 /*veldig liten skjerm, så ting ikke blir knøttsmått*/
-@media (max-width: 350px) {
+@media (max-width: 400px) {
 	h1 {
 		font-size: 24px;
 	}
 
 	h2 {
-		font-size: 18px;
+		font-size: 20px;
 	}
 
 	h2:after {
-		width: 70px;
+		width: 80px;
 	}
 }
 
@@ -214,10 +216,6 @@ img {
 .utvalgteoppskrifter {
 	height: auto;
 	background: #e3dcd1;
-	/*noe form for marginer må kanskje legges til på en litt annen måte, 
-	sjekk html-delen for å se. mulig ekstra div, eller å style cards direkte (hvis det ikke alt er gjort)*/
-	/* margin: none; */
-	/* margin-bottom: 10%; */
 	padding-top: 2.5%;
 }
 
@@ -335,6 +333,11 @@ img {
 
 /* END recipe.html */
 
+/*for når ingen oppskriftsyper er valgt*/
+.tommeoppskrifter {
+	height: 50vh;
+}
+
 /*for epost-delen på contact-side*/
 #epost {
 	margin-bottom: 100px;
@@ -427,12 +430,6 @@ form textarea {
 	}
 }
 
-/*benyttes kanskje ikke*/
-/* textarea {
-	resize: both;
-	overflow: auto;
-} */
-
 /*send inn-knapp på kontaktsiden*/
 #sendinn,
 #sendinnnojs {
@@ -477,12 +474,14 @@ form textarea {
 	margin-left: 25px;
 }
 
-#borghildsoppskrifter {
+#borghildsoppskrifter,
+#brukernesoppskrifter,
+#ingenoppskriftervalgt {
 	margin-top: 30px;
 }
 
 #teknikknapp,
-#brukereknapp {
+.brukereknapp {
 	margin-left: 10%;
 }
 
@@ -493,7 +492,7 @@ form textarea {
 
 /*for å få brukernes oppskrifter-knappen under og lik borghildknappen ved mindre skjermer*/
 @media (max-width: 500px) {
-	#brukereknapp {
+	#brukernesknapp {
 		margin-left: 10%;
 		margin-top: 2%;
 		margin-bottom: 5%;
@@ -501,18 +500,13 @@ form textarea {
 	}
 }
 
-/*for når ingen oppskriftsyper er valgt*/
-.tommeoppskrifter {
-	height: 50vh;
-}
-
 /*for den spesifikke teknikksiden*/
 .techniquetext {
 	width: 80%;
 	display: block;
 	float: left;
-	margin-left: 10%;
-	margin-bottom: 10%;
+	padding-left: 2%;
+	margin-bottom: 5%;
 }
 
 .techniqueimage {
@@ -525,8 +519,7 @@ form textarea {
 @media (min-width: 800px) {
 	.techniquetext {
 		max-width: 40%;
-		float: left;
-		margin-left: 10%;
+		padding-left: 6%;
 	}
 
 	.techniqueimage {
@@ -548,10 +541,13 @@ form textarea {
 	margin: auto;
 }
 
+/* justering av container for små sider */
 @media (max-width: 500px) {
 	.card-container {
-		padding-right: 5%;
-		padding-left: 5%;
+		padding-right: 2.5%;
+		padding-left: 2.5%;
+		padding-top: 20px;
+		grid-template-columns: none;
 	}
 }
 
@@ -575,7 +571,16 @@ form textarea {
 .card img {
 	border-radius: 5px 5px 0 0;
 	width: 100%;
+	/*konsistent høyde på card-img slik at bildene ligger likt hverandre når cards ligger ved siden av hverandre*/
 	height: 15rem;
+	object-fit: cover;
+}
+
+/* riktig skalering av card-img når cardsene ligger under hverandre (skjer ved 784px) og ikke ved siden av */
+@media (max-width: 784px) {
+	.card img {
+		height: auto;
+	}
 }
 
 .card-content {
@@ -586,12 +591,17 @@ form textarea {
 .card-name {
 	color: #4d3142;
 	font-weight: bold;
-	font-size: 125%;
+	/* font-size: 125%; */
 }
 
 #content_container,
 .container {
 	padding-bottom: 20vh;
+}
+
+/* footer nederst hvis noen loker i url */
+#content_container {
+	min-height: 50vh;
 }
 
 /*for alle linker generelt?*/
@@ -613,9 +623,6 @@ a.emailLink {
 /* For modularity */
 
 /* Styling of the footer */
-.boldfooter {
-	font-weight: bold;
-}
 
 footer {
 	/* position: absolute;
@@ -626,11 +633,11 @@ footer {
 	clear: inline-start; */
 	grid-area: footer;
 	display: grid;
-	grid-template-columns: 33% 33% 33%;
+	grid-template-columns: 33% 67%;
 	background-color: #eae8e6;
 }
 
-/*deler footeren i to istedenfor tre for mindre skjermer*/
+/*deler footeren i to like istedenfor ujevne for mindre skjermer*/
 @media (max-width: 600px) {
 	footer {
 		grid-template-columns: 50% 50%;
@@ -647,6 +654,7 @@ footer {
 	object-fit: contain;
 	position: relative;
 	left: 10%;
+	padding-bottom: 1em;
 }
 
 .footerLeft {
@@ -665,7 +673,7 @@ footer {
 	float: left;
 	display: block;
 	padding: 2% 2% 0 2%; */
-	padding: 10%;
+	padding: 5%;
 }
 
 .footerRight p {
@@ -674,8 +682,24 @@ footer {
 
 .footerEmailIcon {
 	object-fit: contain;
-	height: 25%;
+	height: 3em;
 	float: left;
+	transform: translate(0%, -20%);
+}
+
+#footerEmailLink {
+	margin-left: 0;
+	padding-left: 10px;
+	text-decoration: underline;
+}
+
+@media (max-width: 600px) {
+	.footerRight {
+		padding: 10%;
+	}
+	.footerEmailIcon {
+		transform: translate(0%, 0%);
+	}
 }
 
 /* Navigation Bar styling */
@@ -706,7 +730,6 @@ footer {
 
 #NavbarIcon {
 	float: left;
-	height: 100%;
 	padding: 15px 0 0 2.5%;
 	z-index: 10;
 }
@@ -726,7 +749,7 @@ footer {
 	.NavBarBtn {
 		font-size: 0.9em;
 		display: inline-block;
-		padding: 0.3em 4% 0.3em 4%;
+		padding: 0 4% 0 4%;
 	}
 
 	/*disse to henger sammen! for å "forsvinne" navbaren*/
@@ -745,9 +768,7 @@ footer {
 	}
 
 	.NavBarBtn {
-		margin-left: 8%;
-		margin-top: 0;
-		padding-bottom: 0;
+		margin-left: 0 8% 0 8%;
 	}
 }
 
@@ -843,6 +864,7 @@ footer {
 	margin: 0px;
 	width: 100%;
 	height: 50vh;
+	object-fit: cover;
 }
 
 @media all and (min-width: 40em) {

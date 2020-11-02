@@ -93,7 +93,6 @@
 	innerPL.innerHTML += 'BESTEMOR BORGHILD'
 	innerPL.appendChild(document.createElement('br'))
 	innerPL.appendChild(document.createElement('br'))
-	innerPL.appendChild(document.createElement('br'))
 	innerPL.innerHTML += 'Bestemor Borghilds Bakebonanza 2020'
 	innerDivL.appendChild(innerPL)
 	foot.appendChild(innerDivL)
@@ -105,7 +104,7 @@
 	// 	'Trenger du hjelp?\nVi sleter gjerne på spørsmålene dine.'
 	// )
 	// innerTextR.appendChild(innerTextContent)
-	innerTextR.innerHTML += 'Trenger du hjelp?'
+	innerTextR.innerHTML += 'Trenger du hjelp?'.bold()
 	innerTextR.appendChild(document.createElement('br'))
 	innerTextR.innerHTML += 'Vi svarer gjerne på spørsmålene dine.'
 	innerDivR.appendChild(innerTextR)
@@ -117,7 +116,8 @@
 	let innerLink = document.createElement('a')
 	innerLink.appendChild(mailIcon)
 	let innerLinkText = document.createTextNode('Send oss en melding')
-	innerLink.className = 'emailLink'
+	// innerLink.className = 'emailLink'
+	innerLink.id = 'footerEmailLink'
 	innerLink.href = 'contact.html'
 	innerLink.appendChild(innerLinkText)
 	innerDivR.appendChild(innerLink)

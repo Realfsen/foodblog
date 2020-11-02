@@ -3,5 +3,6 @@
 	"type": "technique",
 	"link": "Dough",
 	"name": "Deig",
-	"description": "Deigen er grunnmuren for mange forskjellige oppskrifter. I bakernes verden bruker man noe som heter baker's percentage, som tar utgangspunkt i melet (satt til 100%) og en andel vann (60% hydration f.eks.). Deiger heves ved å tilsette bakepulver eller gjær, som gjør deigen luftig og fin."
+	"description": "Deigen er grunnmuren for mange forskjellige oppskrifter.",
+	"furtherdescription": "I bakernes verden bruker man noe som heter baker's percentage, som tar utgangspunkt i melet (satt til 100%) og en andel vann (60% hydration f.eks.). Deiger heves ved å tilsette bakepulver eller gjær, som gjør deigen luftig og fin."
 }
