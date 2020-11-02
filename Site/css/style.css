@@ -763,12 +763,8 @@ footer {
 }
 
 @media (max-width: 450px) {
-	#recipeBtn {
-		margin-left: 10%;
-	}
-
 	.NavBarBtn {
-		margin-left: 0 8% 0 8%;
+		margin: 0 8% 0 8%;
 	}
 }
 
