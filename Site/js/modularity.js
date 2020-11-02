@@ -24,7 +24,7 @@
 	RecipeButton.id = 'recipeBtn'
 	RecipeButton.href = 'recipe_list.html'
 	RecipeButton.id = 'NavBarRecipes'
-	// Event listeners to format element on mouseover in the navigation bar.
+	// Event listeners to format element on mouseover/mouseout in the navigation bar.
 	RecipeButton.addEventListener('mouseover', function () {
 		this.style.borderBottom = '0.2vw solid #4D3142'
 	})
@@ -58,7 +58,7 @@
 	ContactButton.className = 'NavBarBtn'
 	ContactButton.href = 'contact.html'
 	ContactButton.id = 'NavBarContact'
-	// Event listeners to format element on mouseover in the navigation bar.
+	// Event listeners to format element on mouseover/mouseout in the navigation bar.
 	ContactButton.addEventListener('mouseover', function () {
 		this.style.borderBottom = '0.2vw solid #4D3142'
 	})
@@ -74,10 +74,12 @@
 	document.body.insertBefore(navBar, document.body.childNodes[0])
 
 	// FOOTER ADDED BELOW HERE
-	console.log('Footer generation script initiated')
+	// Create target and insert the footer element on the bottom of the body
 	let foot = document.createElement('footer')
 	document.body.appendChild(foot)
 
+	// Make the left part of the footer
+	// Left footer logo
 	let innerDivL = document.createElement('div')
 	innerDivL.className = 'footerLeft'
 	let innerImgL = document.createElement('img')
@@ -85,11 +87,8 @@
 	innerImgL.alt = 'Bestemor Borghilds Bakebonanza logo'
 	innerImgL.id = 'footerLogo'
 	innerDivL.appendChild(innerImgL)
+	// Left footer text
 	let innerPL = document.createElement('p')
-	// let innerTextL = document.createTextNode('BESTEMOR BORGHILD')
-	// let innerTextM = document.createTextNode(
-	// 	'Bestemor Borghilds Bakebonanza 2020'
-	// )
 	innerPL.innerHTML += 'BESTEMOR BORGHILD'
 	innerPL.appendChild(document.createElement('br'))
 	innerPL.appendChild(document.createElement('br'))
@@ -97,18 +96,16 @@
 	innerDivL.appendChild(innerPL)
 	foot.appendChild(innerDivL)
 
+	// Make the right part of the footer
+	// Right footer Text
 	let innerDivR = document.createElement('div')
 	innerDivR.className = 'footerRight'
 	let innerTextR = document.createElement('p')
-	// let innerTextContent = document.createTextNode(
-	// 	'Trenger du hjelp?\nVi sleter gjerne på spørsmålene dine.'
-	// )
-	// innerTextR.appendChild(innerTextContent)
 	innerTextR.innerHTML += 'Trenger du hjelp?'.bold()
 	innerTextR.appendChild(document.createElement('br'))
 	innerTextR.innerHTML += 'Vi svarer gjerne på spørsmålene dine.'
 	innerDivR.appendChild(innerTextR)
-
+	// Right footer email link and link to contact.html
 	let mailIcon = document.createElement('img')
 	mailIcon.src = 'img/lilla_konvolutt.PNG'
 	mailIcon.alt = 'epostbilde'
@@ -123,17 +120,18 @@
 	innerDivR.appendChild(innerLink)
 	foot.appendChild(innerDivR)
 
-	// Function run to add bar beneath the currently active page in the navigation bar.
+	// Function run to add bar beneath the currently active page in the navigation bar on page load.
 	persistantActiveNavigationBar()
 })()
 
+// This function provide underline in navigation bar for the currently active site.
 function persistantActiveNavigationBar() {
-	// Coloring active site in navigation bar.
-	let fullURL = window.location.href
+	// Retrieve the full URL of the current page.
+	let fullURL = window.location.href 
 	stringPositionStart = fullURL.lastIndexOf('/Site/') + 6 // Finds the place in the URL (starting from the back) where "/Site" is and return the index. +6 means we start after the /Site/
 	stringPositionEnd = fullURL.lastIndexOf('.html') // Find the ".html" in the URL
-	let subPage = fullURL.slice(stringPositionStart, stringPositionEnd)
-	let activeBarStyling = '0.2vw solid #4D3142' // Just to make it quicker to change values
+	let subPage = fullURL.slice(stringPositionStart, stringPositionEnd) // Select the current "subPage"
+	let activeBarStyling = '0.2vw solid #4D3142' // Bar styling added here to make it quicker to change values
 	// Check what page we are on and retrieve the correct element based on the URL
 	if (subPage.toLowerCase() === 'contact') {
 		// For "kontakt oss"
