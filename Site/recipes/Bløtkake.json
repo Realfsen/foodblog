@@ -2,7 +2,7 @@
 	"picture": "img/blotkake.jpg",
 	"name": "Bløtkake",
 	"type": "recipe",
-	"link": "blotkake",
+	"link": "Bløtkake",
 	"description": "For 17. mai eller bursdag, en bløtkake er den perfekte kaken for feiringer",
 	"ingredients": [
         {"amount": "5 stk", "name": "egg"},

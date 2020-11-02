@@ -37,12 +37,12 @@
 			<div class="borghildsoppskrifter">
 				<h2 id="borghildsoppskrifter">Borghilds oppskrifter</h2>
 				<button
-					class="sorteringsknapp"
-					id="brukereknapp"
+					class="sorteringsknapp brukereknapp"
 					onclick="nameSort('bb')"
 				>
 					Sorter alfabetisk
 				</button>
+				<!-- card-list custom attribute som vil gi error i validator -->
 				<div
 					id="bb-cards"
 					class="card-container"
@@ -53,14 +53,14 @@
 			</div>
 
 			<div class="brukernesoppskrifter" style="display: none">
-				<h2>Brukernes oppskrifter</h2>
+				<h2 id="brukernesoppskrifter">Brukernes oppskrifter</h2>
 				<button
-					class="sorteringsknapp"
-					id="brukereknapp"
+					class="sorteringsknapp brukereknapp"
 					onclick="nameSort('user')"
 				>
 					Sorter alfabetisk
 				</button>
+				<!-- card-list custom attribute som vil gi error i validator -->
 				<div
 					id="usr-cards"
 					class="card-container"
@@ -71,7 +71,7 @@
 			</div>
 
 			<div class="tommeoppskrifter" style="display: none">
-				<h2>Ingen oppskrifter er valgt</h2>
+				<h2 id="ingenoppskriftervalgt">Ingen oppskrifter er valgt</h2>
 			</div>
 		</div>
 		<script src="./js/filter.js"></script>
