@@ -1,4 +1,4 @@
-(function() { // Use IIFE since head element essential to load quickly. Read more: https://developer.mozilla.org/en-US/docs/Glossary/IIFE
+(function() { // Use IIFE since head element essential to load, but only required to be loaded once per site. Read more: https://developer.mozilla.org/en-US/docs/Glossary/IIFE
     // Retrieve the head element
     var head = document.getElementById("pageHeader");
     // charSet not input by script as it needs to be defined by parser, cant be changed after HTML
@@ -9,12 +9,6 @@
     viewPort.name = "viewport";
     viewPort.content = "width=device-width, initial-scale=1.0";
     head.appendChild(viewPort);
-
-    // Include the common CSS file for the website
-    var styleSheet = document.createElement("link");
-    styleSheet.rel = "stylesheet";
-    styleSheet.href = "css/style.css";
-    head.appendChild(styleSheet);
 
     // Adding some new fonts
     var fontPoppins = document.createElement("link");
