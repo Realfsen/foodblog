@@ -23,7 +23,7 @@
 
 
     // Favicons and compatability with a lot of devices!
-    // Includes short-cut images, mac touchbar icons, windows start icon etc.
+    // Includes different favicon sizes, short-cut images, mac touchbar icons, windows start icon etc.
     // Favicons and input code generatored by http://www.realfavicongenerator.net based on "Kun_logo.png" found in /img.
     var faviconLink = document.createElement("link");
     faviconLink.rel = "apple-touch-icon";
