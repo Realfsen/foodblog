@@ -124,8 +124,8 @@
 	persistantActiveNavigationBar()
 })()
 
+// This function provide underline in navigation bar for the currently active site.
 function persistantActiveNavigationBar() {
-	// Coloring active site in navigation bar.
 	// Retrieve the full URL of the current page.
 	let fullURL = window.location.href 
 	stringPositionStart = fullURL.lastIndexOf('/Site/') + 6 // Finds the place in the URL (starting from the back) where "/Site" is and return the index. +6 means we start after the /Site/
