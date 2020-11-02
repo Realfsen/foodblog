@@ -1,0 +1,19 @@
+{
+	"picture": "img/blotkake.jpg",
+	"name": "Bløtkake",
+	"type": "recipe",
+	"link": "Bløtkake",
+	"description": "For 17. mai eller bursdag, en bløtkake er den perfekte kaken for feiringer",
+	"ingredients": [
+        {"amount": "5 stk", "name": "egg"},
+        {"amount": "150 g", "name": "sukker"},
+        {"amount": "150 g", "name": "mel"},
+        {"amount": "1 ts", "name": "bakepulver"},
+        {"amount": "3 pk", "name": "kremfløte"},
+        {"amount": "2 ss", "name": "melis"},
+        {"amount": "1 dl", "name": "melk"},
+        {"amount": "8 ss", "name": "jordbærsyltetøy"},
+        {"amount": ""}],
+	"steps": ["Set stekeovnen til 160°C. Pisk deretter egg og sukker til eggedosis (omtrent 8 minutter)","Sikt mel og bakepulver over eggedosisen. Vend melet forsiktig inn i eggedosisen med en slikkepott.", "Smør en rund form (24 cm) og overfør røren til formen. Bruk slikkepotten på overflaten til overflaten blir jevn.", "Set røren på nederste rille og stek i omtrent 40 minutter, ta sukkerbrødet ut når det er blitt gyllent.", "Pisk kremfløte og melis sammen til det blir stivt.","Kutt sukkerbrødet i tre og dynk det i melken. Smør deretter på jordbærsyltetøy og krem. Repeter for de to andre sukkerbrød bitene.", "Sett sammen kaken og dekk kaken med krem. Pynt med krem og fersk frukt."]
+
+}

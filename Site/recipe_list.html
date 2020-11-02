@@ -1,9 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-  </head>
-  <body></body>
+	<head id="pageHeader">
+		<meta charset="UTF-8" />
+		<link rel="stylesheet" href="css/style.css">
+		<script src="./js/modularity_head.js"></script>
+		<title>Oppskrifter - Bestemor Borghild</title>
+	</head>
+
+	<body>
+		<div class="bodyContent">
+			<div>
+				<button
+					class="sorteringsknapp selected"
+					id="borghildknapp"
+					onclick="toggleContent('bb')"
+				>
+					Borghilds oppskrifter
+				</button>
+				<button
+					class="sorteringsknapp"
+					id="brukernesknapp"
+					onclick="toggleContent('user')"
+				>
+					Innsendte oppskrifter
+				</button>
+			</div>
+			<div class="borghildsoppskrifter">
+				<h2 id="borghildsoppskrifter">Borghilds oppskrifter</h2>
+				<button
+					class="sorteringsknapp brukereknapp"
+					onclick="nameSort('bb')"
+				>
+					Sorter alfabetisk
+				</button>
+				<!-- card-list custom attribute som vil gi error i validator -->
+				<div
+					id="bb-cards"
+					class="card-container"
+					card-list="recipes"
+					data-template="card"
+					data-file="recipes"
+				></div>
+			</div>
+
+			<div class="brukernesoppskrifter" style="display: none">
+				<h2 id="brukernesoppskrifter">Innsendte oppskrifter</h2>
+				<button
+					class="sorteringsknapp brukereknapp"
+					onclick="nameSort('user')"
+				>
+					Sorter alfabetisk
+				</button>
+				<!-- card-list custom attribute som vil gi error i validator -->
+				<div
+					id="usr-cards"
+					class="card-container"
+					card-list="recipes"
+					data-template="card"
+					data-file="user-recipes"
+				></div>
+			</div>
+
+			<div class="tommeoppskrifter" style="display: none">
+				<h2 id="ingenoppskriftervalgt">Ingen oppskrifter er valgt</h2>
+			</div>
+		</div>
+		<script src="./js/filter.js"></script>
+		<script src="./js/jsonLoader_new.js"></script>
+		<script src="./js/modularity.js"></script>
+	</body>
 </html>

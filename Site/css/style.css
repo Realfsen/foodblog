@@ -1,0 +1,893 @@
+* {
+	margin: 0;
+}
+
+body {
+	font-size: 16px;
+	font-family: 'Poppins', Arial, sans-serif;
+	background-color: white;
+	position: relative;
+	/*for plass til navbaren*/
+	padding-top: 80px;
+	display: grid;
+	grid-template-areas: 'header' 'content' 'footer';
+}
+
+.bodyContent {
+	grid-area: content;
+}
+
+/*bruker vw (viewport width) som enhet for mindre sider, for et responsivt design. Da vil det skalere dynamisk.
+media-queries vil brukes for at større sider blir som beskrevet i oppgaven.*/
+/*over-overskrift, kun brukt på index-siden*/
+h1 {
+	font-weight: bold;
+	color: #fce6de;
+	/* color: #f09ca2; */
+	font-size: 7vw;
+	text-align: center;
+	position: relative;
+}
+
+/*for å sentrere. setter overskriften midt i slideshowet/bildet på indexsiden*/
+.headercentered {
+	position: absolute;
+	top: 50%;
+	left: 10%;
+	right: 10%;
+	transform: translate(0%, -50%);
+	text-align: center;
+}
+/*for den på indexsiden*/
+.overskrift {
+	position: relative;
+	display: block;
+}
+
+/*underoverskrift, eller overskriften brukt på alle sider (den med streken under)*/
+h2 {
+	font-weight: bold;
+	color: #4d3142;
+	font-size: 5vw;
+	/*for å få det litt inn på siden, som i design-eksemplene. skjer flere steder*/
+	margin-left: 10%;
+	margin-right: 10%;
+	margin-top: 50px;
+}
+
+/*fungerende løsning for strek under h2-elementer*/
+h2:after {
+	content: ' ';
+	display: block;
+	border: 2px solid #f09ca2;
+	background-color: #f09ca2;
+	/*fordi det bare er en boks, så uten så blir det en hvit(ufarget) strek inni lol*/
+	width: 20vw;
+	/*lengden på streken*/
+	margin-top: 15px;
+	/*avstand fra h2*/
+	margin-left: 2px;
+	/*for å få streken til å starte samme sted som h2-teksten*/
+	margin-bottom: 30px;
+	/*så ikke det under kan komme helt oppi*/
+}
+
+/*under-underoverskrifter, brukes bl.a. på contact-siden*/
+h3 {
+	color: #4d3142;
+	font-size: 16px;
+	margin-left: 10%;
+	margin-bottom: 10px;
+	letter-spacing: 3px;
+}
+
+/*div vanlig skrift*/
+p,
+blockquote,
+ul,
+ol,
+form {
+	color: #4d3142;
+	font-size: 14px;
+	margin-left: 10%;
+}
+
+.emailLink,
+#footerEmailLink {
+	color: #4d3142;
+	font-size: 14px;
+}
+
+/*media query for skriftstørrelser*/
+/*stor skjerm*/
+@media (min-width: 800px) {
+	h1 {
+		font-size: 56px;
+	}
+
+	h2 {
+		font-size: 40px;
+	}
+
+	h2:after {
+		width: 160px;
+	}
+
+	h3 {
+		font-size: 18px;
+	}
+
+	p,
+	blockquote,
+	ul,
+	ol,
+	form,
+	.emailLink,
+	#footerEmailLink {
+		font-size: 16px;
+	}
+}
+
+/*veldig liten skjerm, så ting ikke blir knøttsmått*/
+@media (max-width: 400px) {
+	h1 {
+		font-size: 24px;
+	}
+
+	h2 {
+		font-size: 20px;
+	}
+
+	h2:after {
+		width: 80px;
+	}
+}
+
+/*for bilder generelt*/
+img {
+	display: block;
+	height: 100%;
+}
+
+/*sette intro/info-delen til venstre og bildet til høyre*/
+.todelt {
+	display: block;
+	margin-bottom: 12.5%;
+	margin-left: 1%;
+	/*for å få ting til å ha likt innrykk*/
+	margin-top: 0;
+}
+
+/*tekstdel i .todelt*/
+.intro {
+	display: block;
+	margin-right: 10%;
+	/*så teksten ikke går helt bort i kanten på høyre siden*/
+	margin-bottom: 10%;
+	/*margin til bildet under*/
+	position: relative;
+}
+
+/*bildedel i .todelt. inkl å gjøre det rundt*/
+.bildeklipp {
+	width: 50vw;
+	height: 50vw;
+	max-width: 350px;
+	max-height: 350px;
+	position: relative;
+	overflow: hidden;
+	border-radius: 50%;
+	margin-left: 10%;
+	margin-bottom: 10%;
+}
+
+/*annen str for kontaktbildet på contact*/
+#kontaktbilde {
+	width: 45vw;
+	height: 45vw;
+	max-width: 250px;
+	max-height: 250px;
+}
+
+/*media query for bildene ved siden av teksten istedenfor under ved store skjermer*/
+@media (min-width: 800px) {
+	.todelt {
+		margin-top: 10%;
+		margin-left: 6%;
+		display: grid;
+		grid-template-columns: 50% 50%;
+	}
+
+	/*spesifikt for contactsiden*/
+	#contacttodelt {
+		margin-top: 1.5em;
+		margin-bottom: 1.5em;
+	}
+
+	.bildeklipp {
+		margin-right: 10%;
+		margin-left: auto;
+		margin-top: auto;
+		margin-bottom: auto;
+	}
+}
+
+/*bakgrunnsfarge og sånt for "beste oppskrifter"-delen*/
+.utvalgteoppskrifter {
+	height: auto;
+	background: #e3dcd1;
+	padding-top: 2.5%;
+}
+
+/* START recipe.html */
+
+.ingredientlist {
+	margin: 0 0 10% 0;
+	grid-area: ingredients;
+}
+
+.ingredientlist ul {
+	list-style-type: none;
+}
+
+.fremgangliste {
+	max-width: 90%;
+	margin: auto;
+	grid-area: process;
+	position: relative;
+	right: 5%;
+}
+
+.recipe {
+	margin: auto;
+	display: grid;
+	grid-template-areas:
+		'image'
+		'nameIntro'
+		'ingredients'
+		'process';
+}
+
+.recipe h2 {
+	margin-top: 2rem;
+}
+
+.nameIntro {
+	margin-bottom: 2rem;
+	margin-right: 5%;
+	grid-area: nameIntro;
+}
+
+.recipeimage {
+	max-width: 100vw;
+	object-fit: contain;
+	margin: auto;
+	width: 100%;
+	height: auto;
+}
+
+/*recipe for stor skjerm*/
+@media all and (min-width: 40em) {
+	.ingredientlist {
+		float: left;
+		max-width: 300px;
+		margin-top: 0;
+		margin-left: 0;
+		grid-area: ingredients;
+	}
+
+	.ingredientlist ul {
+		list-style-type: none;
+	}
+
+	.fremgangliste {
+		float: left;
+		max-width: 90%;
+		margin-top: 0;
+		grid-area: process;
+	}
+
+	.recipe {
+		width: 80%;
+		margin: auto;
+		display: grid;
+		grid-template-areas:
+			'image image'
+			'nameIntro nameIntro'
+			'ingredients process';
+		grid-template-columns: 50% 50%;
+	}
+
+	.recipe h2,
+	.recipe p {
+		margin-top: 3rem;
+		margin-left: 0;
+		padding-left: 0;
+	}
+
+	.recipe h3,
+	.recipe ul {
+		margin-top: 0;
+		margin-left: 0;
+		padding-left: 0;
+	}
+
+	.recipe ol {
+		margin-top: 3rem;
+		margin-left: 0;
+		padding-left: 1em;
+	}
+
+	.nameIntro {
+		margin-bottom: 3rem;
+		margin-right: 0;
+		grid-area: nameIntro;
+	}
+
+	.recipeimage {
+		object-fit: contain;
+		margin: auto;
+		grid-area: image;
+	}
+}
+
+/* END recipe.html */
+
+/*for når ingen oppskriftsyper er valgt*/
+.tommeoppskrifter {
+	height: 50vh;
+}
+
+/*for epost-delen på contact-side*/
+#epost {
+	margin-bottom: 100px;
+}
+
+.epostbilde {
+	margin-left: 10%;
+	display: inline;
+	/* width: 40px; */
+	border-radius: 50%;
+	transform: translate(0%, 40%);
+}
+
+.emailLink {
+	margin-top: auto;
+	margin-left: 2.5%;
+	margin-bottom: 30px;
+	text-decoration: underline;
+	position: relative;
+	top: 5%;
+}
+
+/*responsivitet for epost*/
+@media (max-width: 350px) {
+	.emailLink {
+		display: block;
+		margin-left: 10%;
+		margin-top: 40px;
+	}
+
+	#epost {
+		margin-bottom: 15%;
+	}
+}
+
+/*html-forms/kontaktskjemaet*/
+form {
+	margin-left: 10%;
+	padding-bottom: 5%;
+}
+
+/*felles for de ulike delene av formen*/
+form input,
+textarea,
+select {
+	margin-top: 10px;
+	margin-bottom: 30px;
+	border-radius: 3px;
+	border: 1px solid #4d3142;
+}
+
+/*egenartede form-ting*/
+form label {
+	font-weight: bold;
+}
+
+form input {
+	padding: 10px;
+	width: 80%;
+	max-width: 278px;
+}
+
+form select {
+	padding: 10px;
+	width: 86%;
+	max-width: 300px;
+}
+
+form textarea {
+	padding: 10px;
+	width: 80%;
+	height: 200px;
+}
+
+/*js-form*/
+
+#nojsContactForm textarea,
+#jsContactForm textarea {
+	height: 200px;
+	width: 80%;
+}
+
+/*media query for forms ved store sider, for ikke å bli for stor, og å matche til små skjermer*/
+@media (min-width: 800px) {
+	form textarea,
+	#nojsContactForm textarea,
+	#jsContactForm textarea {
+		width: 40%;
+		min-width: 570px;
+	}
+}
+
+/*send inn-knapp på kontaktsiden*/
+#sendinn,
+#sendinnnojs {
+	background-color: #4d3142;
+	font-size: 16px;
+	font-weight: bold;
+	color: white;
+	cursor: pointer;
+	width: 250px;
+	height: 50px;
+	border-radius: 7.5px;
+	border: none;
+	margin-bottom: 50px;
+}
+
+#sendinn:hover {
+	background-color: #331f2b;
+}
+
+/* generell utforming av de ulike sortering-/filterknappene */
+.sorteringsknapp {
+	font-size: 16px;
+	color: #4d3142;
+	cursor: pointer;
+	width: 200px;
+	height: 50px;
+	border-radius: 50px;
+	border: #4d3142 solid 1px;
+	background-color: #ffffff;
+	outline: none;
+}
+
+/*spesifikke utforminger av de nevnte knappene*/
+#borghildknapp {
+	margin-left: 10%;
+	margin-top: 35px;
+	margin-bottom: 25px;
+}
+
+/*mellomrom mellom knappene borghilds oppskrifter og brukernes oppskrifter*/
+#brukernesknapp {
+	margin-left: 25px;
+}
+
+#borghildsoppskrifter,
+#brukernesoppskrifter,
+#ingenoppskriftervalgt {
+	margin-top: 30px;
+}
+
+#teknikknapp,
+.brukereknapp {
+	margin-left: 10%;
+}
+
+.selected {
+	background-color: #4d3142;
+	color: #ffffff;
+}
+
+/*for å få brukernes oppskrifter-knappen under og lik borghildknappen ved mindre skjermer*/
+@media (max-width: 500px) {
+	#brukernesknapp {
+		margin-left: 10%;
+		margin-top: 2%;
+		margin-bottom: 5%;
+		display: block;
+	}
+}
+
+/*for den spesifikke teknikksiden*/
+.techniquetext {
+	width: 80%;
+	display: block;
+	float: left;
+	padding-left: 2%;
+	margin-bottom: 5%;
+}
+
+.techniqueimage {
+	display: block;
+	width: 80%;
+	margin-left: 10%;
+}
+
+/*media query for spesifikke teknikker*/
+@media (min-width: 800px) {
+	.techniquetext {
+		max-width: 40%;
+		padding-left: 6%;
+	}
+
+	.techniqueimage {
+		display: inline;
+		float: right;
+		width: 35%;
+		margin-right: 10%;
+		margin-left: 0;
+	}
+}
+
+/* cards */
+.card-container {
+	padding: 3rem;
+	display: grid;
+	grid-gap: 2rem;
+	grid-template-columns: repeat(auto-fit, minmax(18.2rem, 1fr));
+	width: 80%;
+	margin: auto;
+}
+
+/* justering av container for små sider */
+@media (max-width: 500px) {
+	.card-container {
+		padding-right: 2.5%;
+		padding-left: 2.5%;
+		padding-top: 20px;
+		grid-template-columns: none;
+	}
+}
+
+.card-container > div {
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+	transition: 0.3s;
+	border-radius: 5px;
+	position: relative;
+	display: grid;
+	grid-template-rows: auto auto;
+	object-fit: fill;
+	width: 80%;
+	margin: 0 auto;
+	background-color: #ffffff;
+}
+
+.card-container > div:hover {
+	box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+.card img {
+	border-radius: 5px 5px 0 0;
+	width: 100%;
+	/*konsistent høyde på card-img slik at bildene ligger likt hverandre når cards ligger ved siden av hverandre*/
+	height: 15rem;
+	object-fit: cover;
+}
+
+/* riktig skalering av card-img når cardsene ligger under hverandre (skjer ved 784px) og ikke ved siden av */
+@media (max-width: 784px) {
+	.card img {
+		height: auto;
+	}
+}
+
+.card-content {
+	padding: 1.25rem;
+	line-height: 150%;
+}
+
+.card-name {
+	color: #4d3142;
+	font-weight: bold;
+	/* font-size: 125%; */
+}
+
+#content_container,
+.container {
+	padding-bottom: 20vh;
+}
+
+/* footer nederst hvis noen loker i url */
+#content_container {
+	min-height: 50vh;
+}
+
+/*for alle linker generelt?*/
+a {
+	color: #4d3142;
+	text-decoration: none;
+}
+
+/*for når man hover over en link*/
+/* a:hover,
+a:active {
+	text-decoration: underline;
+} */
+
+a.emailLink {
+	text-decoration: underline;
+}
+
+/* For modularity */
+
+/* Styling of the footer */
+
+footer {
+	/* position: absolute;
+	bottom: 0;
+	background-color: #eae8e6;
+	width: 100%;
+	max-height: 25%;
+	clear: inline-start; */
+	grid-area: footer;
+	display: grid;
+	grid-template-columns: 33% 67%;
+	background-color: #eae8e6;
+}
+
+/*deler footeren i to like istedenfor ujevne for mindre skjermer*/
+@media (max-width: 600px) {
+	footer {
+		grid-template-columns: 50% 50%;
+	}
+}
+
+#footerLogo {
+	/* object-fit: contain;
+	width: 20%;
+	padding: 2% 2% 0 2%;
+	margin-left: 15%; */
+	width: 3em;
+	height: 3em;
+	object-fit: contain;
+	position: relative;
+	left: 10%;
+	padding-bottom: 1em;
+}
+
+.footerLeft {
+	/* width: 37%;
+	float: left;
+	display: block;
+	padding: 2% 2% 0 2%;
+	padding-left: 10%; */
+	display: grid;
+	grid-template-rows: 35% 30% 35%;
+	padding: 10%;
+}
+
+.footerRight {
+	/* width: 47%;
+	float: left;
+	display: block;
+	padding: 2% 2% 0 2%; */
+	padding: 5%;
+}
+
+.footerRight p {
+	margin: 0 0 1rem 0;
+}
+
+.footerEmailIcon {
+	object-fit: contain;
+	height: 3em;
+	float: left;
+	transform: translate(0%, -20%);
+}
+
+#footerEmailLink {
+	margin-left: 0;
+	padding-left: 10px;
+	text-decoration: underline;
+}
+
+@media (max-width: 600px) {
+	.footerRight {
+		padding: 10%;
+	}
+	.footerEmailIcon {
+		transform: translate(0%, 0%);
+	}
+}
+
+/* Navigation Bar styling */
+/* Navbar container */
+.NavigationBar {
+	grid-area: header;
+	font-family: 'Poppins', Arial, sans-serif;
+	background-color: #ffffff;
+	height: 80px;
+	width: 100%;
+	display: inline-block;
+	position: fixed;
+	top: 0;
+	z-index: 5;
+}
+
+/* Format the text links */
+.NavBarBtn {
+	display: inline;
+	font-size: 2.5vw;
+	color: #4d3142;
+	text-align: center;
+	padding: 20px 0px 0px 0px;
+	margin-left: 2em;
+	margin-right: 2em;
+	border-bottom: 5px solid transparent;
+}
+
+#NavbarIcon {
+	float: left;
+	padding: 15px 0 0 2.5%;
+	z-index: 10;
+}
+
+#NavbarIcon img {
+	height: auto;
+	width: auto;
+	/* box-sizing: fill; */
+	max-height: 50px;
+	max-width: 75px;
+	margin: 0;
+	z-index: 50;
+}
+
+/*str for navbaren, og at den "forsvinner" når det scrolles opp på små skjermer*/
+@media (max-width: 580px) {
+	.NavBarBtn {
+		font-size: 0.9em;
+		display: inline-block;
+		padding: 0 4% 0 4%;
+	}
+
+	/*disse to henger sammen! for å "forsvinne" navbaren*/
+	.NavigationBar {
+		position: relative;
+	}
+
+	body {
+		padding-top: 0;
+	}
+}
+
+@media (max-width: 450px) {
+	.NavBarBtn {
+		margin: 0 8% 0 8%;
+	}
+}
+
+/* For fast skriftstørrelse på navbar på stor skjerm*/
+@media (min-width: 800px) {
+	.NavBarBtn {
+		font-size: 20px;
+	}
+}
+
+/* SLIDESHOW */
+.imageGradient {
+	width: 100%;
+	height: 50vh;
+	background-color: rgba(77, 49, 66, 0.4);
+	position: absolute;
+}
+
+#left,
+#right {
+	position: absolute;
+	top: 0;
+	width: 7%;
+	height: 50vh;
+	font-size: 1000%;
+	z-index: 4;
+	text-align: center;
+	color: rgba(158, 158, 158, 0.5);
+	-moz-user-select: none;
+	-webkit-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	-o-user-select: none;
+}
+
+#left:hover,
+#right:hover {
+	background-color: rgba(165, 165, 165, 0.116);
+}
+
+#left {
+	left: 0;
+}
+
+#right {
+	right: 0;
+}
+
+.arrow_position {
+	margin-top: 25vh;
+	position: relative;
+}
+
+.arrow_left_upper,
+.arrow_left_lower,
+.arrow_right_upper,
+.arrow_right_lower {
+	width: 25px;
+	height: 3px;
+	background-color: rgba(255, 255, 255, 0.781);
+	margin: 0px;
+	padding: 0px;
+	position: absolute;
+}
+
+.arrow_left_upper,
+.arrow_left_lower {
+	left: 17%;
+}
+
+.arrow_right_upper,
+.arrow_right_lower {
+	right: 17%;
+}
+
+.arrow_left_lower,
+.arrow_right_upper {
+	top: 16px;
+}
+
+.arrow_left_upper,
+.arrow_right_upper {
+	-ms-transform: rotate(-45deg);
+	/* IE 9 */
+	-webkit-transform: rotate(-45deg);
+	/* Safari */
+	transform: rotate(-45deg);
+}
+
+.arrow_left_lower,
+.arrow_right_lower {
+	-ms-transform: rotate(45deg);
+	/* IE 9 */
+	-webkit-transform: rotate(45deg);
+	/* Safari */
+	transform: rotate(45deg);
+}
+
+.slideshowplaceholder {
+	margin: 0px;
+	width: 100%;
+	height: 50vh;
+	object-fit: cover;
+}
+
+@media all and (min-width: 40em) {
+	.slideshowplaceholder {
+		height: 90vh;
+	}
+
+	.imageGradient {
+		height: 90vh;
+	}
+
+	#left,
+	#right {
+		width: 7%;
+		height: 90vh;
+	}
+
+	.arrow_position {
+		margin-top: 42.5vh;
+	}
+}
+
+/* END SLIDESHOW */

@@ -1,0 +1,16 @@
+{
+    "picture": "./img/muffins.jpg",
+    "name": "Muffins",
+    "type": "recipe", 
+    "link": "Muffins", 
+    "description": "Gode saftige muffins.",
+    "ingredients": [
+        {"amount": "200 g", "name": "smør"},
+        {"amount": "2 dl", "name": "sukker"},
+        {"amount": "4 stk", "name": "egg"},
+        {"amount": "5 dl", "name": "mel"},
+        {"amount": "2 ts", "name": "bakepulver"},
+        {"amount": "2 dl", "name": "kefir/kulturmelk"}
+    ],
+    "steps": ["Rør sammen sukker og smør til blandingen blir hvit. Tilsett deretter ett og ett egg mens man rør godt mellom hvert egg.", "Sikt mel og bakepulver, tilsett vekselvis melk, bland godt.", "Fordel røren i muffinsformer, ikke fyll dem helt opp.", "Stek muffinsene midt i ovnen ved 200°C i omtrent 20 minutter. Avkjøl muffinsene på rist."]
+}

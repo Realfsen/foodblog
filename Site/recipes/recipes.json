@@ -1,3 +1,9 @@
 {
-	"list": ["cake.json"]
+	"list": [
+		"Enkle vafler.json",
+		"Trøffelkake.json",
+		"Sjokoladekake.json", 
+		"Bløtkake.json",
+		"Muffins.json"
+	]
 }
