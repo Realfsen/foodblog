@@ -9,7 +9,6 @@ body {
 	position: relative;
 	/*for plass til navbaren*/
 	padding-top: 80px;
-
 	display: grid;
 	grid-template-areas: 'header' 'content' 'footer';
 }
@@ -23,7 +22,8 @@ media-queries vil brukes for at større sider blir som beskrevet i oppgaven.*/
 /*over-overskrift, kun brukt på index-siden*/
 h1 {
 	font-weight: bold;
-	color: #f09ca2;
+	color: #fce6de;
+	/* color: #f09ca2; */
 	font-size: 7vw;
 	text-align: center;
 	position: relative;
@@ -776,6 +776,13 @@ footer {
 }
 
 /* SLIDESHOW */
+.imageGradient {
+	width: 100%;
+	height: 50vh;
+	background-color: rgba(77, 49, 66, 0.4);
+	position: absolute;
+}
+
 #left,
 #right {
 	position: absolute;
@@ -865,6 +872,10 @@ footer {
 
 @media all and (min-width: 40em) {
 	.slideshowplaceholder {
+		height: 90vh;
+	}
+
+	.imageGradient {
 		height: 90vh;
 	}
 
