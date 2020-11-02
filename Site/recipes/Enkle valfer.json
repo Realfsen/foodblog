@@ -2,7 +2,7 @@
     "picture": "./img/vafler.jpg",
     "name": "Enkle vafler",
     "type": "recipe",
-    "link": "Vafler",
+    "link": "Enkle vafler",
     "description": "Om du feirer bursdag eller bare har lyst på noe godt er vafler alltid et godt valg. Her er en enkel oppskrift for vafler",
 	"ingredients": [
         {"amount": "5 ss", "name": "sukker"},
