@@ -53,8 +53,7 @@
 					style="display: none"
 				>
 					<!-- Contact form for javascript, JS version will be changed to visible in JS-->
-					<!-- <label for="inquiry">Hva gjelder henvendelsen?</label><br> -->
-					<select id="inquiry" name="inquiry" required>
+					<select id="inquiry" name="inquiry" required oninvalid="this.setCustomValidity('Du må velge en type henvendelse.')" onchange="this.setCustomValidity('')">
 						<option value="" hidden>Type henvendelse</option>
 						<option value="recipe">Send inn egen oppskrift</option>
 						<option value="question">
