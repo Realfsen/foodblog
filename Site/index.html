@@ -1,82 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
+	<head id="pageHeader">
+		<meta charset="UTF-8" />
+		<link rel="stylesheet" href="css/style.css" />
+		<script src="./js/modularity_head.js"></script>
+		<title>Bestemor Borghilds Bakebonanza</title>
+	</head>
 
-<head id="pageHeader">
-	<meta charset="UTF-8" />
-	<link rel="stylesheet" href="css/style.css">
-    <script src="./js/modularity_head.js"></script> 
-    <title>Bestemor Borghilds Bakebonanza</title>
-</head>
-  
 	<body>
 		<div class="bodyContent">
-		<div class="overskrift">
-			<div class="imageGradient"></div>
-			<div class="headercentered">
-				<h1>
-					Velkommen til <br />
-					Bestemor Borghilds <br />
-					Bakebonanza
-				</h1>
-			</div>
-			<img
-				id="imgTag"
-				class="slideshowplaceholder"
-				src="img/slide_1.jpg"
-				alt="Illustrasjonsbilde i slideshow"
-				style="width: 100%"
-			/>
-			<!-- Picture credits to the people at https://unsplash.com -->
-			<div id="left" onclick="backward()">
-				<div class="arrow_position">
-					<div class="arrow_left_upper"></div>
-					<div class="arrow_left_lower"></div>
+			<div class="overskrift">
+				<div class="imageGradient"></div>
+				<div class="headercentered">
+					<h1>
+						Velkommen til <br />
+						Bestemor Borghilds <br />
+						Bakebonanza
+					</h1>
 				</div>
-			</div>
-			<div id="right" onclick="forward()">
-				<div class="arrow_position">
-					<div class="arrow_right_upper"></div>
-					<div class="arrow_right_lower"></div>
-				</div>
-			</div>
-		</div>
-
-		<div class="todelt">
-			<div class="intro">
-				<h2>Møt Borghild</h2>
-				<p id="ombordhild">
-					Jeg er Bestemor Borghild, og er veldig glad i å bake alt som er mulig å bake. Helt siden jeg var ei lita jente, har jeg
-					alltid vært med min mor og bestemor på kjøkkenet, og lært mange gode oppskrifter til kaker, boller og all mulig annen gjærbakst. 
-					I tillegg har jeg selv disket opp en del oppskrifter gjennom årene, og er fortsatt på leting etter flere gode oppskrifter og baketips.
-					Jeg finner stor glede i å bake til mine nærmeste, og de finner stor glede i å spise opp baksten.
-				</p>
-			</div>
-
-			<div class="bildeklipp" id="introbilde">
 				<img
-					class="BestemorB"
-					src="img/BestemorB2.jpeg"
-					alt="Illustrasjonsbilde av Bestemor Borghild."
+					id="imgTag"
+					class="slideshowplaceholder"
+					src="img/slide_1.jpg"
+					alt="Illustrasjonsbilde i slideshow"
+					style="width: 100%"
 				/>
+				<!-- Picture credits to the people at https://unsplash.com -->
+				<div id="left" onclick="backward()">
+					<div class="arrow_position">
+						<div class="arrow_left_upper"></div>
+						<div class="arrow_left_lower"></div>
+					</div>
+				</div>
+				<div id="right" onclick="forward()">
+					<div class="arrow_position">
+						<div class="arrow_right_upper"></div>
+						<div class="arrow_right_lower"></div>
+					</div>
+				</div>
+			</div>
+
+			<div class="todelt">
+				<div class="intro">
+					<h2>Møt Borghild</h2>
+					<p id="ombordhild">
+						Jeg er Bestemor Borghild, og er veldig glad i å bake alt som er
+						mulig å bake. Helt siden jeg var ei lita jente, har jeg alltid vært
+						med min mor og bestemor på kjøkkenet, og lært mange gode oppskrifter
+						til kaker, boller og all mulig annen gjærbakst. I tillegg har jeg
+						selv disket opp en del oppskrifter gjennom årene, og er fortsatt på
+						leting etter flere gode oppskrifter og baketips. Jeg finner stor
+						glede i å bake til mine nærmeste, og de finner stor glede i å spise
+						opp baksten.
+					</p>
+				</div>
+
+				<div class="bildeklipp" id="introbilde">
+					<img
+						class="BestemorB"
+						src="img/BestemorB2.jpeg"
+						alt="Illustrasjonsbilde av Bestemor Borghild."
+					/>
+				</div>
+			</div>
+
+			<div class="utvalgteoppskrifter">
+				<h2>Borghilds beste oppskrifter</h2>
+
+				<!-- card-list custom attribute som vil gi error i validator -->
+				<div
+					class="card-container"
+					card-list="recipes"
+					data-template="card"
+					data-file="beste"
+				></div>
 			</div>
 		</div>
 
-		<div class="utvalgteoppskrifter">
-			<h2>Borghilds beste oppskrifter</h2>
-
-			<!-- card-list custom attribute som vil gi error i validator -->
-			<div
-				class="card-container"
-				card-list="recipes"
-				data-template="card"
-				data-file="beste"
-			></div>
-		</div>
-	</div>
-
-	<script src="./js/slideshow.js"></script>
-	<script src="./js/jsonLoader_new.js"></script>
-	<script src="./js/modularity.js"></script>
-</body>
-
+		<script src="./js/slideshow.js"></script>
+		<script src="./js/jsonLoader.js"></script>
+		<script src="./js/modularity.js"></script>
+	</body>
 </html>

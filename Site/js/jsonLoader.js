@@ -50,7 +50,7 @@ function parseTemplate(content, template) {
 	const ptrn = new RegExp(/{{\s*([a-z.]+)\s*}}/, 'g')
 	let pairs = []
 	let match
-	// console.log(content)
+
 	// Continues to fill the pairs-list until no matches
 	// between template-tags and json object are found
 	while ((match = ptrn.exec(template)) !== null) {
@@ -66,8 +66,6 @@ function parseTemplate(content, template) {
 		let matchedObject = new Object(matchedData)
 		pairs.push(matchedObject)
 	}
-	// console.log(pairs)
-	// console.log(content.ingredients)
 
 	// Replaces the templateString with the content for all the
 	// elements in the pairs-array in the template file
