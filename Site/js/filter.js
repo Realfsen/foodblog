@@ -62,7 +62,6 @@ function nameSort(who) {
 		})
 		sorted = false
 	}
-	console.log(cards)
 	// Then adds the sorted cards to the page
 	printCards(who)
 }
@@ -81,7 +80,6 @@ function printCards(who) {
 		var container = document.querySelector('.card-container')
 	}
 	for (let i = 0; i <= cards.length - 1; i++) {
-		// console.log(cards[i])
 		container.appendChild(cards[i].html)
 	}
 	cards = []
@@ -108,20 +106,16 @@ function toggleContent(who) {
 	} else if (who === 'user') {
 		const knapp = document.querySelector('#brukernesknapp')
 		if (usrDiv.style.display === 'none') {
-			console.log('show')
 			usrDiv.style.display = 'block'
 			knapp.classList.add('selected')
 		} else {
-			console.log('hide')
 			usrDiv.style.display = 'none'
 			knapp.classList.remove('selected')
 		}
 	}
 	if (bbDiv.style.display === 'none' && usrDiv.style.display === 'none') {
-		console.log('show')
 		emptyDiv.style.display = 'block'
 	} else {
-		console.log('hide')
 		emptyDiv.style.display = 'none'
 	}
 }

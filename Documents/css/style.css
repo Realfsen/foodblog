@@ -101,11 +101,11 @@ th {
     background-color: #FCE6DE;
 }
 
-#fileList {
+/* #fileList {
     width: 25%;
     float: right;
     margin: 1rem 0;
-}
+} */
 
 #frontLogo {
     width: 15%;
@@ -113,9 +113,9 @@ th {
     margin: 0.5rem 0.5rem;
 }
 
-#textLeft {
+/* #textLeft {
     float: left
-}
+} */
 table{
     width: 100%;
     table-layout: fixed;
@@ -136,4 +136,8 @@ th.tblDue{
 .mockup_img {
     width: 50%;
     margin: auto 25%;
+}
+
+dt {
+    font-weight: bold;
 }
