@@ -68,6 +68,7 @@ footer {
 }
 
 dt {
+    font-weight: bold;
     font-size: 14pt;
     color: #4D3142;
 }
@@ -138,6 +139,6 @@ th.tblDue{
     margin: auto 25%;
 }
 
-dt {
-    font-weight: bold;
+.tableImg {
+    width: 100%;
 }
