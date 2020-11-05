@@ -85,7 +85,7 @@
 						Andre endringer ble vurdert implementert som følge av responsivitet
 						for små skjermer. En endring som (eksempelvis) ble vurdert
 						implementert som følge av responsivitet var en drop-down meny
-						(hamburgermeny) for navbaren (med javascript). Da dette ikke var
+						(hamburgermeny) for navbaren (med JavaScript). Da dette ikke var
 						spesifisert i designet, det strengt tatt fungerte uten pga. få
 						elementer i navbaren, og det allerede var lagt til flere nye
 						funksjoner, ble det besluttet å ikke prioritere å implementere dette
@@ -191,7 +191,7 @@
 						<dt>Endringer i recipeFromUrl.js:</dt>
 						<dd>
 							Omdøpt til contentFromUrl.js, da det ikke bare er recipe som skal
-							hentes inn, men også techniques
+							hentes inn, men også techniques.
 						</dd>
 						<dt>Endringer i slideshow.js:</dt>
 						<dd>
@@ -207,15 +207,15 @@
 							definisjon av viewport, innlastning av brukt font (Poppins), og
 							innlastning av favicons (for ulike typer enheter). Dette har
 							fordeler, da man ikke trenger mye kode i head på de ulike HTML
-							sidene, men har også ulempe at de ikke lastet hvis brukerens
-							nettleser ikke støtter javascript. Selv om brukere uten javascript
-							dermed ikke laster viktige elementer, ble dette gjort siden
-							navigasjonsbaren (som er hvordan brukeren kommer seg rundt på
-							siden) også er avhengig av javascript, så brukere uten javascript
-							vil uansett få problemer med å benytte siden. I utgangspunktet så
-							ble CSS fil lastet inn via dette scriptet, men i dialog med
-							veileder ble det flyttet ut og manuelt lagt inn i head for hver
-							html fil.
+							sidene, men har også ulemper i form av at de ikke laster hvis
+							brukerens nettleser ikke støtter JavaScript. Selv om brukere uten
+							JavaScript dermed ikke laster viktige elementer, ble dette gjort
+							siden navigasjonsbaren (som er hvordan brukeren kommer seg rundt
+							på siden) også er avhengig av JavaScript, så brukere uten
+							JavaScript vil uansett få problemer med å benytte siden. I
+							utgangspunktet så ble CSS fil lastet inn via dette scriptet, men i
+							dialog med veileder ble det flyttet ut og manuelt lagt inn i head
+							for hver HTML fil.
 						</dd>
 						<dt>Ny JavaScript-fil, title.js:</dt>
 						<dd>
@@ -232,7 +232,7 @@
 							en stor mengde brukbare .json filer. Oppskrifter hentet fra
 							tine.no med denne web-skraperen ble plassert som “innsendte
 							oppskrifter”, mens oppskrifter skrevet inn manuelt ble plassert
-							som “borghilds oppskrifter”.
+							som “Borghilds oppskrifter”.
 						</dd>
 					</dl>
 				</section>
@@ -250,22 +250,23 @@
 					<dl>
 						<dt>Stian</dt>
 						<dd>
-							Stian brukte javascript for å validere kontaktskjema (form) som
-							primærløsning for contact.html, med html5 validering hvis
-							javascript ikke er tilgjengelig for brukeren. Stian brukte også
-							javascript for å generere gjenbrukbar kode i head (favicon,
+							Stian brukte JavaScript for å validere kontaktskjema (form) som
+							primærløsning for contact.html, med HTML5-validering hvis
+							JavaScript ikke er tilgjengelig for brukeren. Stian brukte også
+							JavaScript for å generere gjenbrukbar kode i head (favicon,
 							importere font, og definere viewport), navigasjonsbar (Tre
 							knapper/linker, logo med link til forside) og footer (Logo, noe
 							tekst, og link til contact.html) for alle sidene.
 						</dd>
 						<dt>Inga</dt>
 						<dd>
-							Ingabrukte JavaScript til å satt en passende tittel
+							Inga brukte JavaScript til å sette en passende tittel
 							(document.title) til de ulike sidene for spesifikke
 							oppskrifter/teknikker som ellers ville fått samme tittel fra
 							content.html. Inga brukte også JavaScript sammen med Andreas for å
 							få sortering til å bli inkludert for de to oppskriftdelene i
-							recipe_list.html, basert på Andreas’ sortering for technique.html.
+							recipe_list.html, basert på Andreas sin sortering for
+							technique.html.
 						</dd>
 						<dt>Jeeviga</dt>
 						<dd>
@@ -282,15 +283,15 @@
 					</dl>
 					<h3>Modularitet</h3>
 					<p>
-						Modularitet ble implementert av Stian ved hjelp av javascript.
+						Modularitet ble implementert av Stian ved hjelp av JavaScript.
 						Modularitet i head ved å legge til flere genererte noder til et head
 						element in HTML filene med spesifikk id. Navigasjonsbar ble generert
 						ved å lage et nytt div element som plasseres først i body, med
 						icon/forside link helt til venstre og en sentrert div for de andre
 						sidene/linkene. Hver av de sentrerte elementene linker til relevant
-						side og bruker javascript for å lage strek under element ved
-						mouseover, nåværende side har også en understrek i navigasjonsbar
-						som genereres av javascript. Footer er laget ved å lage et nytt
+						side og bruker JavaScript for å lage strek under element ved
+						mouseover. Nåværende side har også en understrek i navigasjonsbar
+						som genereres av JavaScript. Footer er laget ved å lage et nytt
 						footer element som legges bakerst i body, denne footeren inkluderer
 						logo, noe text, og en link til contact.html.
 					</p>
@@ -330,7 +331,7 @@
 							modularity_head.js, se endringer vi har gjort), style.css (for det
 							relatert til footer og navbar), og lagde noen json filer. Han
 							gjorde også små endringer i index.html og linker til inkluderte
-							javascript så de fungerer uavhengig av filplassering (paths
+							JavaScript så de fungerer uavhengig av filplassering (paths
 							relativt til root dir).
 						</dd>
 						<dt>Inga</dt>
@@ -344,8 +345,8 @@
 						</dd>
 						<dt>Andreas</dt>
 						<dd>
-							Andreas satte opp skjelettet for siden med alle html-filene, og
-							implementert innlasting av innhold fra json-filer. Han har også
+							Andreas satte opp skjelettet for siden med alle HTML-filene, og
+							implementerte innlasting av innhold fra json-filer. Han har også
 							samarbeidet om filter og slideshow med Inga og Jeeviga. Andreas
 							har i tillegg også jobbet med å fylle inn innhold i diverse
 							HTML-sider og tilhørende CSS der det har vært nødvendig, og
@@ -356,7 +357,7 @@
 						<dd>
 							Jeeviga er hovedpersonen bak designet av mockups-ene fra P2 som er
 							brukt i kodingen, laget i Figma. I tillegg har hun arbeidet med
-							recipe.html, technique.html og småting i style.css.
+							slideshow.js, recipe.html, technique.html og småting i style.css.
 						</dd>
 					</dl>
 					<h3>Tabeller med arbeidsfordeling</h3>
@@ -388,7 +389,7 @@
 							<td>index.html</td>
 							<td>
 								Forsiden for nettstedet. Inneholder et slideshow, litt tekst om
-								borghild, og et par utvalgte oppskrifter
+								Borghild, og et par utvalgte oppskrifter.
 							</td>
 							<td>Andreas, Inga, Jeeviga, Stian</td>
 						</tr>
@@ -433,17 +434,17 @@
 						</tr>
 						<tr>
 							<td>contact.html</td>
-							<td>HTML med skjema for å kontakte Borghild</td>
+							<td>HTML med skjema for å kontakte Borghild.</td>
 							<td>Stian, Inga</td>
 						</tr>
 						<tr>
 							<td>style.css</td>
-							<td>CSS for design av HTML-filene</td>
+							<td>CSS for design av HTML-filene.</td>
 							<td>Andreas, Inga, Jeeviga, Stian</td>
 						</tr>
 						<tr>
 							<td>form.js</td>
-							<td>Script for innsending av forms (oppskrifter/meldinger)</td>
+							<td>Script for innsending av forms (oppskrifter/meldinger).</td>
 							<td>Stian</td>
 						</tr>
 						<tr>
@@ -465,17 +466,17 @@
 						</tr>
 						<tr>
 							<td>modularity_head.js</td>
-							<td>En javascript funksjon for å lage head-tags med innhold</td>
+							<td>En JavaScript funksjon for å lage head-tags med innhold.</td>
 							<td>Stian</td>
 						</tr>
 						<tr>
 							<td>loadFromUrl.js</td>
-							<td>Kjører jsonLoader på en url for å hente inn riktig fil</td>
+							<td>Kjører jsonLoader på en url for å hente inn riktig fil.</td>
 							<td>Andreas</td>
 						</tr>
 						<tr>
 							<td>slideshow.js</td>
-							<td>Karusell på hovedsiden som veksler mellom bilder</td>
+							<td>Karusell på hovedsiden som veksler mellom bilder.</td>
 							<td>Jeeviga, Andreas</td>
 						</tr>
 						<tr>
@@ -485,7 +486,7 @@
 						</tr>
 						<tr>
 							<td>filter.js</td>
-							<td>Script som filtrerer hvilke oppskrifter som lastes inn</td>
+							<td>Script som filtrerer hvilke oppskrifter som lastes inn.</td>
 							<td>Inga, Andreas</td>
 						</tr>
 						<tr>
