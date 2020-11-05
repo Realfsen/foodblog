@@ -16,30 +16,52 @@ function validate(){
     var navn = document.getElementById("jsContactForm").user;
     var epost = document.getElementById("jsContactForm").userEmail;
     var melding = document.getElementById("jsContactForm").userMessage;
-    // Check each field for valid input, if invalid input return an error as a window.alert
+    // Check each field for valid input, if invalid input change placeholder and border of input field.
     // Check a dropdown box has been selected
+    // If not selected add placeholder and * to label that ask user to fill in field. 
     if (inquiry.value == ""){
-        window.alert("Velg et alternativ for din melding"); 
+        inquiry.focus();
         return false; 
     // Check tittel field
     } else if (tittel.value == ""){
-        window.alert("Skriv inn en tittel for din forespørsel!"); 
+        tittel.placeholder = "Vennligst fyll ut dette feltet.";
+        if (document.getElementById("contactTitleLabel").innerHTML.includes("*")) {
+        
+        } else { 
+            document.getElementById("contactTitleLabel").innerHTML += "*";
+        }
         tittel.focus(); // Refocus the input field if invalid input
         return false;
     // Check name field
     } else if (navn.value == ""){
-        window.alert("Skriv inn navnet ditt så borghild vet hvem som sender meldingen!"); 
+        navn.placeholder = "Vennligst fyll ut dette feltet.";
+        if (document.getElementById("userNameLabel").innerHTML.includes("*")) {
+        
+        } else { 
+            document.getElementById("userNameLabel").innerHTML += "*";
+        }
         navn.focus(); // Refocus the input field if invalid input
         return false; 
     // Check email field
     } else if (epost.value == "" || epost.value.includes("@")==false){  // Requires both some input and needs to include a "@"
-        window.alert("Vennligst skriv inn en epost så borghild kan svare deg!"); 
+        epost.placeholder = "Vennligst fyll ut dette feltet."; // Uses HTML5 validation message if text but no @
+        if (document.getElementById("emailLabel").innerHTML.includes("*")) {
+        } else { 
+            document.getElementById("emailLabel").innerHTML += "*";
+        }
         epost.focus(); // Refocus the input field if invalid input
         return false;
     // Check message text field
     } else if (melding.value == ""){
-        window.alert("Fyll inn meldingen du ønsker å sende borghild."); 
+        melding.placeholder = "Vennligst fyll ut dette feltet.";
+        if (document.getElementById("inquiryTextLabel").innerHTML.includes("*")) {
+        } else { 
+            document.getElementById("inquiryTextLabel").innerHTML += "*";
+        }
+
         melding.focus(); // Refocus the input field if invalid input
         return false;
+    } else {
+        submitForm()
     }
 }
