@@ -1,21 +1,22 @@
 html {
-    background: #E3DCD1;
+	background: #e3dcd1;
 }
 
 .wrapper {
-    max-width: 960px;
-    margin: auto;
-    padding: 20px;
+	max-width: 960px;
+	margin: auto;
+	padding: 20px;
 }
 
 .card {
-    background: #fff;
-    -webkit-box-shadow: 0 10px 20px rgba(0, 0, 0, .19), 0 6px 6px rgba(0, 0, 0, .23);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, .19), 0 6px 6px rgba(0, 0, 0, .23);
-    padding: 10px 20px;
-    margin: 10px;
-    line-height: 1.5;
-    color: #4D3142;
+	background: #fff;
+	-webkit-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19),
+		0 6px 6px rgba(0, 0, 0, 0.23);
+	box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+	padding: 10px 20px;
+	margin: 10px;
+	line-height: 1.5;
+	color: #4d3142;
 }
 
 /* #logo {
@@ -25,124 +26,117 @@ html {
 } */
 
 .border-side {
-    border-left: 20px solid #FCE6DE;
+	border-left: 20px solid #fce6de;
 }
 
 .card header {
-    border-bottom: 1px solid rgba(26, 26, 26, 0.54);
-    color: #4D3142;
+	border-bottom: 1px solid rgba(26, 26, 26, 0.54);
+	color: #4d3142;
 }
 
 #title {
-    font-size: 17pt;
+	font-size: 17pt;
 }
 
 section {
-    margin: 40px auto;
-    font-family: "Helvetica Neue", "Helvetica", sans-serif;
+	margin: 40px auto;
+	font-family: 'Helvetica Neue', 'Helvetica', sans-serif;
 }
 
 header {
-    text-align: center;
-    font-family: 'Raleway', sans-serif;
+	text-align: center;
+	font-family: 'Raleway', sans-serif;
 }
 
 header p {
-    font-family: "Helvetica Neue", "Helvetica", sans-serif;
-    font-size: 12pt;
+	font-family: 'Helvetica Neue', 'Helvetica', sans-serif;
+	font-size: 12pt;
 }
 
 .important {
-    padding: 5px 8px;
-    list-style-type: none;
-    width: fit-content;
+	padding: 5px 8px;
+	list-style-type: none;
+	width: fit-content;
 }
 
 footer {
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 8pt;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 8pt;
 }
 
 .content {
-    width: 100%;
+	width: 100%;
 }
 
 dt {
-    font-weight: bold;
-    font-size: 14pt;
-    color: #4D3142;
+	font-weight: bold;
+	font-size: 14pt;
+	color: #4d3142;
 }
 
 dd {
-    margin-bottom: 10px;
+	margin-bottom: 10px;
 }
 
 li {
-    font-size: 12pt;
+	font-size: 12pt;
 }
 
 .divider {
-    width: 100%;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.43);
-    height: 1px;
-    margin: 10px auto;
+	width: 100%;
+	border-bottom: 1px solid rgba(0, 0, 0, 0.43);
+	height: 1px;
+	margin: 10px auto;
 }
 
 .divider.big-gap {
-    margin: 50px auto;
+	margin: 50px auto;
 }
 
-table, th, td {
-    width: 100%;
-    border: 1px solid black;
-    text-align: center;
+table,
+th,
+td {
+	width: 100%;
+	border: 1px solid black;
+	text-align: center;
 }
 
 th {
-    background-color: #FCE6DE;
+	background-color: #fce6de;
 }
-
-/* #fileList {
-    width: 25%;
-    float: right;
-    margin: 1rem 0;
-} */
 
 #frontLogo {
-    width: 15%;
-    float: right;
-    margin: 0.5rem 0.5rem;
+	width: 15%;
+	float: right;
+	margin: 0.5rem 0.5rem;
 }
 
-/* #textLeft {
-    float: left
-} */
-table{
-    width: 100%;
-    table-layout: fixed;
+table {
+	width: 100%;
+	table-layout: fixed;
 }
 
-th.tblName{
-    width: 25%;
+th.tblName {
+	width: 25%;
 }
 
-th.tblResp{
-    width: 20%;
+th.tblResp {
+	width: 20%;
 }
 
-th.tblDue{
-    width: 15%;
+th.tblDue {
+	width: 15%;
 }
 
 .mockup_img {
-    width: 50%;
-    margin: auto 25%;
+	width: 50%;
+	margin: auto 25%;
 }
 
 .tableImg {
-    width: 100%;
+	width: 100%;
 }
 
 .testImg {
-    width: 100%;
+	width: 100%;
 }
