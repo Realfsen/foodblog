@@ -30,11 +30,10 @@
 				<button class="sorteringsknapp brukereknapp" onclick="nameSort('bb')">
 					Sorter alfabetisk
 				</button>
-				<!-- card-list custom attribute som vil gi error i validator -->
 				<div
 					id="bb-cards"
 					class="card-container"
-					card-list="recipes"
+					data-card-list="recipes"
 					data-template="card"
 					data-file="recipes"
 				></div>
@@ -49,7 +48,7 @@
 				<div
 					id="usr-cards"
 					class="card-container"
-					card-list="recipes"
+					data-card-list="recipes"
 					data-template="card"
 					data-file="user-recipes"
 				></div>

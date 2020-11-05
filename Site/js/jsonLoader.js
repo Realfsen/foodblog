@@ -107,10 +107,10 @@ function parseTemplate(content, template) {
  * as handy cards
  */
 async function loadCardList() {
-	let containers = document.querySelectorAll('[card-list]')
+	let containers = document.querySelectorAll('[data-card-list]')
 	for (let c of containers) {
 		// Checks whether it's recipes or techniques and gets template
-		let type = c.getAttribute('card-list')
+		let type = c.getAttribute('data-card-list')
 		let template = c.getAttribute('data-template')
 		template = template === null ? 'default' : template
 		type = type === null ? 'default' : type
